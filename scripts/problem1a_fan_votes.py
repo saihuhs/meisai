@@ -55,6 +55,7 @@ OUTPUT_SENSITIVITY = OUTPUT_DIR / "fan_vote_sensitivity_weights_q1a.csv"
 OUTPUT_JUDGE_UNCERTAINTY = OUTPUT_DIR / "fan_vote_judge_variability_uncertainty_q1a.csv"
 PLOT_FEASIBLE_SPACE = FIG_DIR / "fan_vote_feasible_space_q1a.png"
 PLOT_PRESSURE = FIG_DIR / "fan_vote_elimination_pressure_q1a.png"
+OUTPUT_DATA_QUALITY = OUTPUT_DIR / "fan_vote_data_quality_q1a.csv"
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 FIG_DIR.mkdir(parents=True, exist_ok=True)
@@ -63,6 +64,12 @@ FIG_DIR.mkdir(parents=True, exist_ok=True)
 # Absolute vote assumption
 # ============================
 TOTAL_VOTES_PER_WEEK = 10_000_000
+
+# ============================
+# Multi-elimination sampling control
+# ============================
+MULTI_SAMPLE_SIZE = 2000
+RANDOM_SEED = 42
 
 # ============================
 # Helper functions
@@ -116,6 +123,50 @@ def compute_week_scores(df: pd.DataFrame, weeks):
         df[f"week{w}_sum"] = s
         df[f"week{w}_avg"] = (s / m).where((m > 0) & (s > 0), np.nan)
     return df
+
+
+def validate_data_quality(df: pd.DataFrame, weeks):
+    """Basic data quality checks for judge scores and placement consistency."""
+    issues = []
+
+    # Score range checks per week
+    for w in weeks:
+        judge_cols = [c for c in df.columns if c.startswith(f"week{w}_") and c.endswith("_score")]
+        scores = df[judge_cols].replace("N/A", np.nan).astype(float)
+        out_low = (scores < 1).sum().sum()
+        out_high = (scores > 10).sum().sum()
+        total = scores.count().sum()
+        na_count = scores.isna().sum().sum()
+        issues.append({
+            "issue": "score_out_of_range_low",
+            "week": w,
+            "count": int(out_low),
+        })
+        issues.append({
+            "issue": "score_out_of_range_high",
+            "week": w,
+            "count": int(out_high),
+        })
+        issues.append({
+            "issue": "missing_rate",
+            "week": w,
+            "count": int(na_count),
+            "ratio": float(na_count / total) if total > 0 else np.nan,
+        })
+
+    # Placement vs last_active_week (finalists should reach max week)
+    if "placement" in df.columns:
+        for season, season_df in df.groupby("season"):
+            max_week = season_df["last_active_week"].max()
+            finalists = season_df[season_df["placement"].isin([1, 2, 3])]
+            mismatch = finalists[finalists["last_active_week"] != max_week]
+            issues.append({
+                "issue": "finalist_not_at_final_week",
+                "season": season,
+                "count": int(mismatch.shape[0]),
+            })
+
+    return pd.DataFrame(issues)
 
 
 def last_active_week(row, weeks):
@@ -442,8 +493,7 @@ def simplex_grid(k, step):
 
 def estimate_votes_percent_based_multi(judge_scores, eliminated_indices, prev_share, grid_step=0.05,
                                        smooth_w: float = SMOOTHNESS_WEIGHT,
-                                       corr_w: float = CORRELATION_WEIGHT,
-                                       max_k: int = 2):
+                                       corr_w: float = CORRELATION_WEIGHT):
     contestants = list(judge_scores.index)
     n = len(contestants)
     pJ = judge_scores / judge_scores.sum()
@@ -453,9 +503,11 @@ def estimate_votes_percent_based_multi(judge_scores, eliminated_indices, prev_sh
     solutions = []
 
     k = len(eliminated_indices)
-    if k > max_k:
-        return None, []
-    grid_points = simplex_grid(k, grid_step)
+    if k <= 2:
+        grid_points = simplex_grid(k, grid_step)
+    else:
+        rng = np.random.default_rng(RANDOM_SEED)
+        grid_points = rng.dirichlet(np.ones(k), size=MULTI_SAMPLE_SIZE).tolist()
 
     for point in grid_points:
         pF_e = {e: v for e, v in zip(eliminated_indices, point)}
@@ -495,6 +547,119 @@ def estimate_votes_percent_based_multi(judge_scores, eliminated_indices, prev_sh
     return best_solution, solutions
 
 
+def run_estimation_for_weights(df: pd.DataFrame, weeks, smooth_w: float, corr_w: float) -> float:
+    """Run full estimation pipeline for given weights and return consistency rate."""
+    prev_share_by_season = {}
+    consistent = 0
+    total = 0
+
+    for season, season_df in df.groupby("season"):
+        season_df = season_df.copy()
+        max_week = season_df["last_active_week"].max()
+        scheme = season_rule(int(season))
+
+        for t in range(1, max_week + 1):
+            active_mask = season_df["last_active_week"] >= t
+            active_df = season_df.loc[active_mask].copy()
+            if active_df.empty:
+                continue
+
+            elimination_candidates = season_df[(season_df["last_active_week"] == t) & (t < max_week)]
+            eliminated_list = elimination_candidates.index.tolist()
+
+            judge_scores_raw = active_df.set_index(active_df.index)[f"week{t}_avg"]
+            judge_scores = judge_scores_raw.copy()
+            if STANDARDIZE_WITHIN_WEEK:
+                judge_scores = standardize_week_scores(judge_scores, method=STANDARDIZE_METHOD)
+
+            prev_share = prev_share_by_season.get(season, None)
+
+            if scheme == "rank":
+                rank_judge = judge_scores.rank(ascending=False, method="average")
+                if len(eliminated_list) == 0:
+                    fan_rank = rank_judge.copy()
+                    n = len(rank_judge)
+                    fan_score = (n + 1 - fan_rank).astype(float)
+                    fan_share = fan_score / fan_score.sum()
+                elif len(eliminated_list) == 1:
+                    eliminated_idx = eliminated_list[0]
+                    estimate = estimate_votes_rank_based(
+                        rank_judge,
+                        eliminated_idx,
+                        judge_scores,
+                        prev_share,
+                        smooth_w=smooth_w,
+                        corr_w=corr_w,
+                    )
+                    if estimate is None:
+                        continue
+                    (fan_rank, fan_share), _ = estimate
+                else:
+                    estimate = estimate_votes_rank_based_multi(
+                        rank_judge,
+                        eliminated_list,
+                        judge_scores,
+                        prev_share,
+                        smooth_w=smooth_w,
+                        corr_w=corr_w,
+                    )
+                    if estimate is None:
+                        continue
+                    (fan_rank, fan_share, _), _ = estimate
+
+                if len(eliminated_list) > 0:
+                    combined = rank_judge + fan_rank
+                    k = len(eliminated_list)
+                    bottom_k = combined.nlargest(k).index.tolist()
+                    match = set(bottom_k) == set(eliminated_list)
+                    consistent += int(match)
+                    total += 1
+
+                prev_share_by_season[season] = fan_share
+
+            else:
+                if STANDARDIZE_WITHIN_WEEK:
+                    min_v = judge_scores.min()
+                    if min_v <= 0:
+                        judge_scores = judge_scores - min_v + 1e-6
+
+                if len(eliminated_list) == 0:
+                    fan_share = judge_scores / judge_scores.sum()
+                elif len(eliminated_list) == 1:
+                    eliminated_idx = eliminated_list[0]
+                    fan_share, _ = estimate_votes_percent_based(
+                        judge_scores,
+                        eliminated_idx,
+                        prev_share,
+                        smooth_w=smooth_w,
+                        corr_w=corr_w,
+                    )
+                    if fan_share is None:
+                        continue
+                else:
+                    fan_share, _ = estimate_votes_percent_based_multi(
+                        judge_scores,
+                        eliminated_list,
+                        prev_share,
+                        smooth_w=smooth_w,
+                        corr_w=corr_w,
+                    )
+                    if fan_share is None:
+                        continue
+
+                if len(eliminated_list) > 0:
+                    combined = (judge_scores / judge_scores.sum()) + fan_share
+                    k = len(eliminated_list)
+                    bottom_k = combined.nsmallest(k).index.tolist()
+                    match = set(bottom_k) == set(eliminated_list)
+                    consistent += int(match)
+                    total += 1
+
+                prev_share_by_season[season] = fan_share
+
+    return (consistent / total) if total > 0 else np.nan
+
+
 # ============================
 # Main process
 # ============================
@@ -509,6 +674,10 @@ def main():
 
     # Compute last active week for each contestant
     df["last_active_week"] = df.apply(lambda r: last_active_week(r, weeks), axis=1)
+
+    # Data quality checks
+    quality_df = validate_data_quality(df, weeks)
+    quality_df.to_csv(OUTPUT_DATA_QUALITY, index=False, encoding="utf-8-sig")
 
     results = []
     status_rows = []
@@ -713,7 +882,7 @@ def main():
                             "season": season,
                             "week": t,
                             "scheme": scheme,
-                            "status": "no feasible fan shares (multi or k>2)"
+                            "status": "no feasible fan shares (multi)"
                         })
                         continue
                     status = "processed (multi elimination)"
@@ -908,7 +1077,7 @@ def main():
             r_spearman = rank_df["judge_std"].rank().corr(rank_df["fan_rank_std_mean"].rank())
             print(f"评委评分差异性-不确定性（排名法）相关：Pearson={r_corr:.3f}, Spearman={r_spearman:.3f}")
 
-    # Sensitivity analysis for preference weights (fixed logic)
+    # Sensitivity analysis for preference weights (full re-run)
     weight_grid = [
         (0.5, 0.5),
         (1.0, 1.0),
@@ -917,53 +1086,11 @@ def main():
     ]
     sensitivity_rows = []
     for w_smooth, w_corr in weight_grid:
-        consistent = 0
-        total = 0
-        for (season, week), df_week in results_df.groupby(["season", "week"]):
-            if df_week["eliminated_end_of_week"].sum() == 0:
-                continue
-            scheme = df_week["scheme"].iloc[0]
-            judge_scores = df_week.set_index("celebrity_name")["judge_total"].astype(float)
-            if scheme == "rank":
-                rank_judge = judge_scores.rank(ascending=False, method="average")
-                eliminated = df_week[df_week["eliminated_end_of_week"] == 1]["celebrity_name"].tolist()
-                if len(eliminated) == 1:
-                    est = estimate_votes_rank_based(
-                        rank_judge,
-                        eliminated[0],
-                        judge_scores,
-                        None,
-                        smooth_w=w_smooth,
-                        corr_w=w_corr,
-                    )
-                    if est is None:
-                        continue
-                    (fan_rank, fan_share), _ = est
-                    combined = rank_judge + fan_rank
-                    bottom_k = combined.nlargest(1).index.tolist()
-                    consistent += int(set(bottom_k) == set(eliminated))
-                    total += 1
-            else:
-                eliminated = df_week[df_week["eliminated_end_of_week"] == 1]["celebrity_name"].tolist()
-                if len(eliminated) == 1:
-                    fan_share, _ = estimate_votes_percent_based(
-                        judge_scores,
-                        eliminated[0],
-                        None,
-                        smooth_w=w_smooth,
-                        corr_w=w_corr,
-                    )
-                    if fan_share is None:
-                        continue
-                    combined = (judge_scores / judge_scores.sum()) + fan_share
-                    bottom_k = combined.nsmallest(1).index.tolist()
-                    consistent += int(set(bottom_k) == set(eliminated))
-                    total += 1
-
+        consistency_rate = run_estimation_for_weights(df, weeks, w_smooth, w_corr)
         sensitivity_rows.append({
             "smoothness_weight": w_smooth,
             "correlation_weight": w_corr,
-            "consistency_rate": (consistent / total) if total > 0 else np.nan
+            "consistency_rate": consistency_rate
         })
 
     sensitivity_df = pd.DataFrame(sensitivity_rows)
@@ -1005,6 +1132,7 @@ def main():
     print(f"排名法不确定性已保存至：{OUTPUT_UNCERTAINTY_RANK}")
     print(f"百分比法不确定性已保存至：{OUTPUT_UNCERTAINTY_PERCENT}")
     print(f"评委差异性与不确定性关系已保存至：{OUTPUT_JUDGE_UNCERTAINTY}")
+    print(f"数据质量检查已保存至：{OUTPUT_DATA_QUALITY}")
     print(f"不确定性热力图已保存至：{HEATMAP_FILE}")
     print(f"可行解空间图已保存至：{PLOT_FEASIBLE_SPACE}")
     print(f"淘汰压力分布图已保存至：{PLOT_PRESSURE}")
