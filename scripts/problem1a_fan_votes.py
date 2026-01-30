@@ -56,6 +56,7 @@ OUTPUT_JUDGE_UNCERTAINTY = OUTPUT_DIR / "fan_vote_judge_variability_uncertainty_
 PLOT_FEASIBLE_SPACE = FIG_DIR / "fan_vote_feasible_space_q1a.png"
 PLOT_PRESSURE = FIG_DIR / "fan_vote_elimination_pressure_q1a.png"
 OUTPUT_DATA_QUALITY = OUTPUT_DIR / "fan_vote_data_quality_q1a.csv"
+PLOT_JUDGE_UNCERTAINTY = FIG_DIR / "fan_vote_judge_variability_uncertainty_q1a.png"
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 FIG_DIR.mkdir(parents=True, exist_ok=True)
@@ -1077,6 +1078,33 @@ def main():
             r_spearman = rank_df["judge_std"].rank().corr(rank_df["fan_rank_std_mean"].rank())
             print(f"评委评分差异性-不确定性（排名法）相关：Pearson={r_corr:.3f}, Spearman={r_spearman:.3f}")
 
+        # Visualization: judge variability vs uncertainty
+        plt.figure(figsize=(8, 5))
+        if not percent_df.empty:
+            plt.scatter(
+                percent_df["judge_std"],
+                percent_df["fan_share_width_mean"],
+                alpha=0.6,
+                label="百分比法",
+                color="#4C78A8",
+            )
+        if not rank_df.empty:
+            plt.scatter(
+                rank_df["judge_std"],
+                rank_df["fan_rank_std_mean"],
+                alpha=0.6,
+                label="排名法",
+                color="#F58518",
+            )
+        plt.title("评委评分差异性与不确定性关系")
+        plt.xlabel("评委评分标准差")
+        plt.ylabel("不确定性指标")
+        plt.grid(True, linestyle="--", alpha=0.4)
+        plt.legend()
+        plt.tight_layout()
+        plt.savefig(PLOT_JUDGE_UNCERTAINTY, dpi=300)
+        plt.show()
+
     # Sensitivity analysis for preference weights (full re-run)
     weight_grid = [
         (0.5, 0.5),
@@ -1132,6 +1160,7 @@ def main():
     print(f"排名法不确定性已保存至：{OUTPUT_UNCERTAINTY_RANK}")
     print(f"百分比法不确定性已保存至：{OUTPUT_UNCERTAINTY_PERCENT}")
     print(f"评委差异性与不确定性关系已保存至：{OUTPUT_JUDGE_UNCERTAINTY}")
+    print(f"评委差异性与不确定性关系图已保存至：{PLOT_JUDGE_UNCERTAINTY}")
     print(f"数据质量检查已保存至：{OUTPUT_DATA_QUALITY}")
     print(f"不确定性热力图已保存至：{HEATMAP_FILE}")
     print(f"可行解空间图已保存至：{PLOT_FEASIBLE_SPACE}")
