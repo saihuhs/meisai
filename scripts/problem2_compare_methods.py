@@ -11,6 +11,7 @@ This script follows the model structure in the paper:
 """
 
 from pathlib import Path
+import math
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -40,6 +41,10 @@ OUTPUT_BIAS = OUTPUT_DIR / "rule_bias_metrics_q2.csv"
 OUTPUT_CONTROVERSY_ANALYSIS = OUTPUT_DIR / "rule_controversy_analysis_q2.csv"
 OUTPUT_NONCONTROVERSY = OUTPUT_DIR / "rule_non_controversy_summary_q2.csv"
 OUTPUT_RECOMMENDATION = OUTPUT_DIR / "rule_recommendation_q2.md"
+OUTPUT_SEASON_BIAS = OUTPUT_DIR / "rule_bias_by_season_q2.csv"
+PLOT_BIAS = FIG_DIR / "rule_bias_alignment_q2.png"
+PLOT_CONFLICT = FIG_DIR / "rule_conflict_override_q2.png"
+PLOT_CONTROVERSY = FIG_DIR / "rule_controversy_proxy_rank_q2.png"
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 FIG_DIR.mkdir(parents=True, exist_ok=True)
@@ -98,6 +103,21 @@ def bottom_two_judges_choice(df_week, scheme="rank"):
     judge_total_bottom = df_week.loc[bottom_two, "judge_total"]
     eliminated_idx = judge_total_bottom.idxmin()
     return bottom_two, eliminated_idx
+
+
+def chi2_pvalue_df1(chi2_stat: float) -> float:
+    """Approximate p-value for chi-square with 1 df using erf."""
+    if np.isnan(chi2_stat):
+        return np.nan
+    return 1.0 - math.erf(math.sqrt(max(chi2_stat, 0.0) / 2.0))
+
+
+def mcnemar_test(b: int, c: int) -> tuple[float, float]:
+    """McNemar's test with continuity correction for paired binary outcomes."""
+    if b + c == 0:
+        return np.nan, np.nan
+    chi2 = (abs(b - c) - 1) ** 2 / (b + c)
+    return chi2, chi2_pvalue_df1(chi2)
 
 
 def compute_proxy_rank(df_season: pd.DataFrame, scheme: str) -> pd.DataFrame:
@@ -166,6 +186,12 @@ def main():
         rank_judge_elim_name = df_week.loc[rank_judge_elim_idx, "celebrity_name"]
         pct_judge_elim_name = df_week.loc[pct_judge_elim_idx, "celebrity_name"]
 
+        # Judge-choice override of fan worst when fan worst is in bottom two
+        rank_fan_in_bottom2 = int(fan_worst_name in df_week.loc[rank_bottom_two, "celebrity_name"].tolist())
+        pct_fan_in_bottom2 = int(fan_worst_name in df_week.loc[pct_bottom_two, "celebrity_name"].tolist())
+        rank_judge_overrides_fan = int(rank_fan_in_bottom2 and rank_judge_elim_name != fan_worst_name)
+        pct_judge_overrides_fan = int(pct_fan_in_bottom2 and pct_judge_elim_name != fan_worst_name)
+
         week_rows.append({
             "season": season,
             "week": week,
@@ -188,6 +214,10 @@ def main():
             "percent_judge_aligned": int(pct_elim_name == judge_worst_name),
             "rank_judge_save_diff": int(rank_judge_elim_name != rank_elim_name),
             "percent_judge_save_diff": int(pct_judge_elim_name != pct_elim_name),
+            "rank_fan_in_bottom2": rank_fan_in_bottom2,
+            "percent_fan_in_bottom2": pct_fan_in_bottom2,
+            "rank_judge_overrides_fan": rank_judge_overrides_fan,
+            "percent_judge_overrides_fan": pct_judge_overrides_fan,
         })
 
         judge_only_rows.append({
@@ -215,6 +245,17 @@ def main():
 
     # Bias metrics (overall and by season)
     conflict_weeks = bias_df[bias_df["conflict"] == 1]
+    # McNemar for fan alignment in conflict weeks (rank vs percent)
+    if not conflict_weeks.empty:
+        b = int(((conflict_weeks["rank_fan_aligned"] == 1) & (conflict_weeks["percent_fan_aligned"] == 0)).sum())
+        c = int(((conflict_weeks["rank_fan_aligned"] == 0) & (conflict_weeks["percent_fan_aligned"] == 1)).sum())
+        chi2_fan, p_fan = mcnemar_test(b, c)
+
+        b_j = int(((conflict_weeks["rank_judge_aligned"] == 1) & (conflict_weeks["percent_judge_aligned"] == 0)).sum())
+        c_j = int(((conflict_weeks["rank_judge_aligned"] == 0) & (conflict_weeks["percent_judge_aligned"] == 1)).sum())
+        chi2_judge, p_judge = mcnemar_test(b_j, c_j)
+    else:
+        chi2_fan = p_fan = chi2_judge = p_judge = np.nan
     overall_bias = {
         "scope": "overall",
         "weeks": len(bias_df),
@@ -227,6 +268,12 @@ def main():
         "percent_fan_override_rate": conflict_weeks["percent_fan_aligned"].mean() if not conflict_weeks.empty else np.nan,
         "rank_judge_save_change_rate": bias_df["rank_judge_save_diff"].mean(),
         "percent_judge_save_change_rate": bias_df["percent_judge_save_diff"].mean(),
+        "rank_judge_overrides_fan_rate": conflict_weeks["rank_judge_overrides_fan"].mean() if not conflict_weeks.empty else np.nan,
+        "percent_judge_overrides_fan_rate": conflict_weeks["percent_judge_overrides_fan"].mean() if not conflict_weeks.empty else np.nan,
+        "mcnemar_fan_chi2": chi2_fan,
+        "mcnemar_fan_p": p_fan,
+        "mcnemar_judge_chi2": chi2_judge,
+        "mcnemar_judge_p": p_judge,
     }
 
     season_bias = (
@@ -240,12 +287,15 @@ def main():
             percent_judge_align_rate=("percent_judge_aligned", "mean"),
             rank_judge_save_change_rate=("rank_judge_save_diff", "mean"),
             percent_judge_save_change_rate=("percent_judge_save_diff", "mean"),
+            rank_judge_overrides_fan_rate=("rank_judge_overrides_fan", "mean"),
+            percent_judge_overrides_fan_rate=("percent_judge_overrides_fan", "mean"),
         )
         .reset_index()
     )
     season_bias.insert(0, "scope", "season")
     overall_bias_df = pd.DataFrame([overall_bias])
     bias_metrics_df = pd.concat([overall_bias_df, season_bias], ignore_index=True)
+    season_bias.to_csv(OUTPUT_SEASON_BIAS, index=False, encoding="utf-8-sig")
 
     # Save outputs
     week_df.to_csv(OUTPUT_WEEK_DIFF, index=False, encoding="utf-8-sig")
@@ -274,6 +324,7 @@ def main():
     print(f"赛季汇总结果已保存至：{OUTPUT_SEASON_SUM}")
     print(f"图像已保存至：{PLOT_FILE}")
     print(f"偏向性指标已保存至：{OUTPUT_BIAS}")
+    print(f"分赛季偏向性指标已保存至：{OUTPUT_SEASON_BIAS}")
 
     # ============================
     # Controversy cases (Q2b)
@@ -406,7 +457,8 @@ def main():
             "rank_vs_percent_same_finalist": int(
                 (rank_proxy_rank is not None and percent_proxy_rank is not None) and
                 ((rank_proxy_rank <= 3) == (percent_proxy_rank <= 3))
-            )
+            ),
+            "status": "processed",
         })
 
     controversy_df = pd.DataFrame(controversy_rows)
@@ -445,13 +497,61 @@ def main():
     non_summary_df.to_csv(OUTPUT_NONCONTROVERSY, index=False, encoding="utf-8-sig")
 
     # ============================
+    # Visualization
+    # ============================
+    plt.figure(figsize=(8, 5))
+    labels = ["rank_fan", "percent_fan", "rank_judge", "percent_judge"]
+    values = [
+        overall_bias["rank_fan_align_rate"],
+        overall_bias["percent_fan_align_rate"],
+        overall_bias["rank_judge_align_rate"],
+        overall_bias["percent_judge_align_rate"],
+    ]
+    plt.bar(labels, values, color=["#4C78A8", "#72B7B2", "#F58518", "#E45756"])
+    plt.title("两种规则对粉丝/评委选择的一致率")
+    plt.ylabel("一致率")
+    plt.ylim(0, 1)
+    plt.grid(axis="y", linestyle="--", alpha=0.4)
+    plt.tight_layout()
+    plt.savefig(PLOT_BIAS, dpi=300)
+    plt.show()
+
+    if not conflict_weeks.empty:
+        plt.figure(figsize=(6, 4))
+        labels = ["rank_override", "percent_override"]
+        values = [
+            overall_bias["rank_judge_overrides_fan_rate"],
+            overall_bias["percent_judge_overrides_fan_rate"],
+        ]
+        plt.bar(labels, values, color=["#A05195", "#FFA600"])
+        plt.title("评委选择对粉丝淘汰的覆盖率（冲突周次）")
+        plt.ylabel("覆盖率")
+        plt.ylim(0, 1)
+        plt.grid(axis="y", linestyle="--", alpha=0.4)
+        plt.tight_layout()
+        plt.savefig(PLOT_CONFLICT, dpi=300)
+        plt.show()
+
+    if not analysis_df.empty:
+        plot_df = analysis_df.dropna(subset=["rank_proxy_rank", "percent_proxy_rank"])\
+            .set_index("celebrity_name")[["rank_proxy_rank", "percent_proxy_rank"]]
+        if not plot_df.empty:
+            plot_df.plot(kind="bar", figsize=(8, 5))
+            plt.title("争议选手代理最终名次对比（排名法 vs 百分比法）")
+            plt.ylabel("代理名次（数值越小越好）")
+            plt.grid(axis="y", linestyle="--", alpha=0.4)
+            plt.tight_layout()
+            plt.savefig(PLOT_CONTROVERSY, dpi=300)
+            plt.show()
+
+    # ============================
     # Recommendation (Q2c)
     # ============================
     rank_fan = overall_bias["rank_fan_align_rate"]
     pct_fan = overall_bias["percent_fan_align_rate"]
     rank_judge = overall_bias["rank_judge_align_rate"]
     pct_judge = overall_bias["percent_judge_align_rate"]
-    preferred = "percent" if (pct_fan - pct_judge) > (rank_fan - rank_judge) else "rank"
+    preferred = "percent" if pct_fan > rank_fan else "rank"
     judge_save_effect_rank = overall_bias["rank_judge_save_change_rate"]
     judge_save_effect_pct = overall_bias["percent_judge_save_change_rate"]
     recommend_judge_save = (judge_save_effect_rank > 0.05) or (judge_save_effect_pct > 0.05)
@@ -463,10 +563,13 @@ def main():
         f"- 排名法：粉丝一致率={rank_fan:.3f}，评委一致率={rank_judge:.3f}",
         f"- 百分比法：粉丝一致率={pct_fan:.3f}，评委一致率={pct_judge:.3f}",
         "",
-        f"**偏向性结论**：{('百分比法' if preferred=='percent' else '排名法')} 更偏向观众投票。",
+        f"**偏向性结论**：{('百分比法' if preferred=='percent' else '排名法')} 更偏向观众投票（基于粉丝一致率比较）。",
+        f"**显著性检验（冲突周次）**：粉丝一致率 McNemar p={overall_bias['mcnemar_fan_p']:.4f}，评委一致率 McNemar p={overall_bias['mcnemar_judge_p']:.4f}",
         "",
         f"- 底二评委选择改变淘汰的比例（排名法）={judge_save_effect_rank:.3f}",
         f"- 底二评委选择改变淘汰的比例（百分比法）={judge_save_effect_pct:.3f}",
+        f"- 评委对粉丝淘汰的覆盖率（排名法）={overall_bias['rank_judge_overrides_fan_rate']:.3f}",
+        f"- 评委对粉丝淘汰的覆盖率（百分比法）={overall_bias['percent_judge_overrides_fan_rate']:.3f}",
         "",
         f"**额外环节建议**：{'建议增加' if recommend_judge_save else '不建议强制增加'}（依据改变比例与争议样本稳定性）",
         "",

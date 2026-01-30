@@ -1,5 +1,5 @@
-﻿season,celebrity_name,actual_placement,rank_proxy_rank,percent_proxy_rank,rank_finalist_proxy,percent_finalist_proxy,rank_judge_save_hits,percent_judge_save_hits,rank_vs_percent_same_finalist
-2,Jerry Rice,2,3,1,1,1,3,1,1
-4,Billy Ray Cyrus,5,7,5,0,0,2,4,1
-11,Bristol Palin,3,5,3,0,1,2,3,0
-27,Bobby Bones,1,7,4,0,0,2,1,1
+﻿season,celebrity_name,actual_placement,rank_proxy_rank,percent_proxy_rank,rank_finalist_proxy,percent_finalist_proxy,rank_judge_save_hits,percent_judge_save_hits,rank_vs_percent_same_finalist,status
+2,Jerry Rice,2,3,1,1,1,3,1,1,processed
+4,Billy Ray Cyrus,5,7,5,0,0,2,4,1,processed
+11,Bristol Palin,3,5,3,0,1,2,3,0,processed
+27,Bobby Bones,1,7,4,0,0,2,1,1,processed
