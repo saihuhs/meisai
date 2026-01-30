@@ -36,8 +36,10 @@
 **有效性**：公平规则在周次层面可生成唯一淘汰结果，并与输出文件 [outputs/fair_rule_weekly_q4.csv](../outputs/fair_rule_weekly_q4.csv) 一致。  
 **公平性定义与量化**：在冲突周次中比较“粉丝一致率 vs 评委一致率”的差距，并结合与实际淘汰的重合度（`overlap`）衡量平衡性与稳定性，详见 [outputs/fair_rule_metrics_q4.csv](../outputs/fair_rule_metrics_q4.csv) 与 [outputs/fair_rule_weekly_compare_q4.csv](../outputs/fair_rule_weekly_compare_q4.csv)。  
 **对比分析**：公平规则与排名法、百分比法的对比指标（bottom_k_match、overlap、recall/precision、冲突对齐率）已输出，并可在争议案例中对照淘汰周次与名次变化（见 [outputs/fair_rule_controversy_q4.csv](../outputs/fair_rule_controversy_q4.csv)、[outputs/fair_rule_placement_q4.csv](../outputs/fair_rule_placement_q4.csv)）。  
-**灵敏度**：对 $\alpha\in\{0.4,0.5,0.6\}$ 的权重变动进行一致性与重合度评估，见 [outputs/fair_rule_sensitivity_q4.csv](../outputs/fair_rule_sensitivity_q4.csv)。  
-**结论与建议**：结构化建议报告见 [outputs/fair_rule_recommendation_q4.md](../outputs/fair_rule_recommendation_q4.md)，总结公平性优势与对制作方的积极意义。
+**灵敏度与稳健性**：权重敏感性见 [outputs/fair_rule_sensitivity_q4.csv](../outputs/fair_rule_sensitivity_q4.csv) 与 [figures/fair_rule_sensitivity_heatmap_q4.png](../figures/fair_rule_sensitivity_heatmap_q4.png)，Bootstrap 稳健性区间见 [outputs/fair_rule_robustness_q4.csv](../outputs/fair_rule_robustness_q4.csv)。  
+**子样本与交叉验证**：分赛季评估见 [outputs/fair_rule_subsample_q4.csv](../outputs/fair_rule_subsample_q4.csv)，留一赛季交叉验证见 [outputs/fair_rule_cv_q4.csv](../outputs/fair_rule_cv_q4.csv)。  
+**结论与建议**：结构化建议报告见 [outputs/fair_rule_recommendation_q4.md](../outputs/fair_rule_recommendation_q4.md)，总结公平性优势与对制作方的积极意义。  
+**收视率关联**：当前数据集中未包含收视率/收视份额字段，需引入外部数据后进一步检验。
 
 ---
 
@@ -66,4 +68,10 @@
 - [outputs/fair_rule_controversy_q4.csv](../outputs/fair_rule_controversy_q4.csv)
 - [outputs/fair_rule_placement_q4.csv](../outputs/fair_rule_placement_q4.csv)
 - [outputs/fair_rule_sensitivity_q4.csv](../outputs/fair_rule_sensitivity_q4.csv)
+- [outputs/fair_rule_subsample_q4.csv](../outputs/fair_rule_subsample_q4.csv)
+- [outputs/fair_rule_cv_q4.csv](../outputs/fair_rule_cv_q4.csv)
+- [outputs/fair_rule_robustness_q4.csv](../outputs/fair_rule_robustness_q4.csv)
 - [outputs/fair_rule_recommendation_q4.md](../outputs/fair_rule_recommendation_q4.md)
+- [figures/fair_rule_sensitivity_heatmap_q4.png](../figures/fair_rule_sensitivity_heatmap_q4.png)
+- [figures/fair_rule_rule_compare_q4.png](../figures/fair_rule_rule_compare_q4.png)
+- [figures/fair_rule_controversy_q4.png](../figures/fair_rule_controversy_q4.png)

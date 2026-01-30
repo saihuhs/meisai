@@ -46,8 +46,13 @@ OUTPUT_METRICS = OUTPUT_DIR / "fair_rule_metrics_q4.csv"
 OUTPUT_CONTROVERSY = OUTPUT_DIR / "fair_rule_controversy_q4.csv"
 OUTPUT_PLACEMENT = OUTPUT_DIR / "fair_rule_placement_q4.csv"
 OUTPUT_SENSITIVITY = OUTPUT_DIR / "fair_rule_sensitivity_q4.csv"
+OUTPUT_SUBSAMPLE = OUTPUT_DIR / "fair_rule_subsample_q4.csv"
+OUTPUT_CV = OUTPUT_DIR / "fair_rule_cv_q4.csv"
+OUTPUT_ROBUSTNESS = OUTPUT_DIR / "fair_rule_robustness_q4.csv"
 OUTPUT_RECOMMENDATION = OUTPUT_DIR / "fair_rule_recommendation_q4.md"
 PLOT_FILE = FIG_DIR / "fair_rule_components_q4.png"
+PLOT_SENSITIVITY = FIG_DIR / "fair_rule_sensitivity_heatmap_q4.png"
+PLOT_RULE_COMPARE = FIG_DIR / "fair_rule_rule_compare_q4.png"
 PLOT_CONTROVERSY = FIG_DIR / "fair_rule_controversy_q4.png"
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -135,12 +140,33 @@ def build_recommendation(metrics_df: pd.DataFrame) -> str:
         "- 兼顾专业性与热度：评委评分与粉丝投票均被保留影响力，降低极端争议。",
         "- 规则透明、易解释：加权平均机制直观，降低规则解释成本。",
         "- 可调参数：权重可按赛季策略微调，适配不同运营目标。",
+        "- 经济学含义：权重可视为对‘专业口碑’与‘观众需求’的边际价值取舍，等权代表两类信号同等重要。",
         "",
         "## 实施建议",
         "- 建议保留等权作为默认基线；必要时可用敏感性结果选择更稳健权重。",
         "- 定期监控冲突周次比例与一致性指标，作为规则优化触发条件。",
+        "- 收视率/收视份额关联：当前数据集中未包含相关字段，需引入收视数据后方可量化验证。",
     ]
     return "\n".join(lines)
+
+
+def summarize_metrics(compare_df: pd.DataFrame, rule: str) -> dict:
+    match_col = f"{rule}_bottom_k_match"
+    overlap_col = f"{rule}_overlap"
+    recall_col = f"{rule}_recall"
+    precision_col = f"{rule}_precision"
+    fan_align_col = f"{rule}_fan_aligned"
+    judge_align_col = f"{rule}_judge_aligned"
+    conflict_df = compare_df[compare_df["conflict"] == 1]
+    return {
+        "bottom_k_match": float(compare_df[match_col].mean()) if not compare_df.empty else np.nan,
+        "overlap": float(compare_df[overlap_col].mean()) if not compare_df.empty else np.nan,
+        "recall": float(compare_df[recall_col].mean()) if not compare_df.empty else np.nan,
+        "precision": float(compare_df[precision_col].mean()) if not compare_df.empty else np.nan,
+        "fan_align_conflict": float(conflict_df[fan_align_col].mean()) if not conflict_df.empty else np.nan,
+        "judge_align_conflict": float(conflict_df[judge_align_col].mean()) if not conflict_df.empty else np.nan,
+        "balance_gap": float(abs(conflict_df[fan_align_col].mean() - conflict_df[judge_align_col].mean())) if not conflict_df.empty else np.nan,
+    }
 
 
 # ============================
@@ -261,25 +287,9 @@ def main():
 
     metrics_rows = []
     for rule in ["fair", "rank", "percent"]:
-        match_col = f"{rule}_bottom_k_match"
-        overlap_col = f"{rule}_overlap"
-        recall_col = f"{rule}_recall"
-        precision_col = f"{rule}_precision"
-        fan_align_col = f"{rule}_fan_aligned"
-        judge_align_col = f"{rule}_judge_aligned"
-
-        conflict_df = compare_df[compare_df["conflict"] == 1]
-        metrics_rows.append({
-            "rule": rule,
-            "weeks": int(compare_df.shape[0]),
-            "bottom_k_match": float(compare_df[match_col].mean()) if not compare_df.empty else np.nan,
-            "overlap": float(compare_df[overlap_col].mean()) if not compare_df.empty else np.nan,
-            "recall": float(compare_df[recall_col].mean()) if not compare_df.empty else np.nan,
-            "precision": float(compare_df[precision_col].mean()) if not compare_df.empty else np.nan,
-            "fan_align_conflict": float(conflict_df[fan_align_col].mean()) if not conflict_df.empty else np.nan,
-            "judge_align_conflict": float(conflict_df[judge_align_col].mean()) if not conflict_df.empty else np.nan,
-            "balance_gap": float(abs(conflict_df[fan_align_col].mean() - conflict_df[judge_align_col].mean())) if not conflict_df.empty else np.nan,
-        })
+        base = summarize_metrics(compare_df, rule)
+        base.update({"rule": rule, "weeks": int(compare_df.shape[0])})
+        metrics_rows.append(base)
 
     metrics_df = pd.DataFrame(metrics_rows)
 
@@ -323,6 +333,15 @@ def main():
             })
 
     controversy_df = pd.DataFrame(controversy_rows)
+
+    # Subsample analysis by season
+    subsample_rows = []
+    for season, season_compare in compare_df.groupby("season"):
+        for rule in ["fair", "rank", "percent"]:
+            row = summarize_metrics(season_compare, rule)
+            row.update({"season": season, "rule": rule})
+            subsample_rows.append(row)
+    subsample_df = pd.DataFrame(subsample_rows)
 
     # Placement analysis by rule
     placement_rows = []
@@ -378,6 +397,89 @@ def main():
 
     sensitivity_df = pd.DataFrame(sensitivity_rows)
 
+    # Cross-validation (leave-one-season) for weight selection by overlap
+    seasons = sorted(df["season"].unique().tolist())
+    cv_rows = []
+    for held_out in seasons:
+        train_df = df[df["season"] != held_out]
+        test_df = df[df["season"] == held_out]
+        best_alpha = None
+        best_overlap = -np.inf
+        for a in SENSITIVITY_WEIGHTS:
+            b = 1.0 - a
+            train_rows = []
+            for (season, week), df_week in train_df.groupby(["season", "week"]):
+                actual_elim = df_week[df_week.get("eliminated_end_of_week", 0) == 1]
+                k = int(actual_elim.shape[0]) if actual_elim.shape[0] > 0 else 0
+                if k == 0:
+                    continue
+                fair_bottom, _, _, _ = fair_rule_bottom_k(df_week, k, a, b)
+                actual_set = set(actual_elim.index.tolist())
+                fair_set = set(fair_bottom)
+                _, _, overlap, _, _ = consistency_metrics(actual_set, fair_set)
+                train_rows.append(overlap)
+            train_overlap = float(np.nanmean(train_rows)) if len(train_rows) > 0 else np.nan
+            if not np.isnan(train_overlap) and train_overlap > best_overlap:
+                best_overlap = train_overlap
+                best_alpha = a
+
+        if best_alpha is None:
+            continue
+
+        # Evaluate on held-out season
+        test_rows = []
+        for (season, week), df_week in test_df.groupby(["season", "week"]):
+            actual_elim = df_week[df_week.get("eliminated_end_of_week", 0) == 1]
+            k = int(actual_elim.shape[0]) if actual_elim.shape[0] > 0 else 0
+            if k == 0:
+                continue
+            fair_bottom, _, _, _ = fair_rule_bottom_k(df_week, k, best_alpha, 1.0 - best_alpha)
+            actual_set = set(actual_elim.index.tolist())
+            fair_set = set(fair_bottom)
+            _, _, overlap, recall, precision = consistency_metrics(actual_set, fair_set)
+            test_rows.append({"overlap": overlap, "recall": recall, "precision": precision})
+
+        test_df_metric = pd.DataFrame(test_rows)
+        cv_rows.append({
+            "held_out_season": held_out,
+            "best_alpha": best_alpha,
+            "train_overlap": best_overlap,
+            "test_overlap": float(test_df_metric["overlap"].mean()) if not test_df_metric.empty else np.nan,
+            "test_recall": float(test_df_metric["recall"].mean()) if not test_df_metric.empty else np.nan,
+            "test_precision": float(test_df_metric["precision"].mean()) if not test_df_metric.empty else np.nan,
+        })
+
+    cv_df = pd.DataFrame(cv_rows)
+
+    # Robustness: bootstrap weeks for fair rule overlap/recall/precision
+    rng = np.random.default_rng(42)
+    boot_rows = []
+    for _ in range(200):
+        sample = compare_df.sample(n=compare_df.shape[0], replace=True, random_state=int(rng.integers(1, 1_000_000)))
+        summary = summarize_metrics(sample, "fair")
+        boot_rows.append({
+            "overlap": summary["overlap"],
+            "recall": summary["recall"],
+            "precision": summary["precision"],
+        })
+    boot_df = pd.DataFrame(boot_rows)
+    robustness_df = pd.DataFrame([{
+        "metric": "overlap",
+        "mean": float(boot_df["overlap"].mean()),
+        "p05": float(boot_df["overlap"].quantile(0.05)),
+        "p95": float(boot_df["overlap"].quantile(0.95)),
+    }, {
+        "metric": "recall",
+        "mean": float(boot_df["recall"].mean()),
+        "p05": float(boot_df["recall"].quantile(0.05)),
+        "p95": float(boot_df["recall"].quantile(0.95)),
+    }, {
+        "metric": "precision",
+        "mean": float(boot_df["precision"].mean()),
+        "p05": float(boot_df["precision"].quantile(0.05)),
+        "p95": float(boot_df["precision"].quantile(0.95)),
+    }])
+
     # Save outputs
     weekly_df.to_csv(OUTPUT_WEEKLY, index=False, encoding="utf-8-sig")
     season_sum.to_csv(OUTPUT_SEASON_SUM, index=False, encoding="utf-8-sig")
@@ -386,6 +488,9 @@ def main():
     controversy_df.to_csv(OUTPUT_CONTROVERSY, index=False, encoding="utf-8-sig")
     placement_df.to_csv(OUTPUT_PLACEMENT, index=False, encoding="utf-8-sig")
     sensitivity_df.to_csv(OUTPUT_SENSITIVITY, index=False, encoding="utf-8-sig")
+    subsample_df.to_csv(OUTPUT_SUBSAMPLE, index=False, encoding="utf-8-sig")
+    cv_df.to_csv(OUTPUT_CV, index=False, encoding="utf-8-sig")
+    robustness_df.to_csv(OUTPUT_ROBUSTNESS, index=False, encoding="utf-8-sig")
 
     OUTPUT_RECOMMENDATION.write_text(build_recommendation(metrics_df), encoding="utf-8")
 
@@ -423,6 +528,52 @@ def main():
         plt.savefig(PLOT_FILE, dpi=300)
         plt.show()
 
+    # Sensitivity heatmap (alpha vs metrics)
+    if not sensitivity_df.empty:
+        heat_metrics = ["bottom_k_match", "overlap", "recall", "precision"]
+        heat_data = sensitivity_df[heat_metrics].to_numpy()
+        plt.figure(figsize=(6, 4))
+        plt.imshow(heat_data, aspect="auto", cmap="YlGnBu")
+        plt.yticks(range(len(sensitivity_df)), [f"a={a:.1f}" for a in sensitivity_df["alpha"]])
+        plt.xticks(range(len(heat_metrics)), heat_metrics, rotation=30, ha="right")
+        plt.colorbar(label="value")
+        plt.title("权重敏感性热力图")
+        plt.tight_layout()
+        plt.savefig(PLOT_SENSITIVITY, dpi=300)
+        plt.show()
+
+    # Rule comparison bar chart
+    if not metrics_df.empty:
+        plt.figure(figsize=(7, 4))
+        x = np.arange(metrics_df.shape[0])
+        width = 0.35
+        plt.bar(x - width / 2, metrics_df["bottom_k_match"], width=width, label="bottom_k_match")
+        plt.bar(x + width / 2, metrics_df["overlap"], width=width, label="overlap")
+        plt.xticks(x, metrics_df["rule"].tolist())
+        plt.ylim(0, 1)
+        plt.title("三规则一致性对比")
+        plt.ylabel("指标均值")
+        plt.grid(axis="y", linestyle="--", alpha=0.4)
+        plt.legend()
+        plt.tight_layout()
+        plt.savefig(PLOT_RULE_COMPARE, dpi=300)
+        plt.show()
+
+    # Controversy comparison plot (predicted placement)
+    if not placement_df.empty:
+        case_names = ["Jerry Rice", "Billy Ray Cyrus", "Bristol Palin", "Bobby Bones"]
+        case_df = placement_df[placement_df["celebrity_name"].str.contains("|".join(case_names), case=False, na=False)]
+        if not case_df.empty:
+            pivot = case_df.pivot_table(index="celebrity_name", columns="rule", values="predicted_placement", aggfunc="mean")
+            pivot = pivot.reindex(sorted(pivot.index))
+            pivot.plot(kind="bar", figsize=(8, 4))
+            plt.title("争议选手最终名次对比")
+            plt.ylabel("预测名次（越小越好）")
+            plt.grid(axis="y", linestyle="--", alpha=0.4)
+            plt.tight_layout()
+            plt.savefig(PLOT_CONTROVERSY, dpi=300)
+            plt.show()
+
     print(f"\n周次结果已保存：{OUTPUT_WEEKLY}")
     print(f"赛季汇总已保存：{OUTPUT_SEASON_SUM}")
     print(f"对比指标已保存：{OUTPUT_COMPARE}")
@@ -430,6 +581,9 @@ def main():
     print(f"争议案例分析已保存：{OUTPUT_CONTROVERSY}")
     print(f"名次对比已保存：{OUTPUT_PLACEMENT}")
     print(f"敏感性分析已保存：{OUTPUT_SENSITIVITY}")
+    print(f"子样本分析已保存：{OUTPUT_SUBSAMPLE}")
+    print(f"交叉验证已保存：{OUTPUT_CV}")
+    print(f"稳健性检验已保存：{OUTPUT_ROBUSTNESS}")
     print(f"建议报告已保存：{OUTPUT_RECOMMENDATION}")
     print(f"图像已保存：{PLOT_FILE}")
 
