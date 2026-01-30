@@ -25,15 +25,21 @@ plt.rcParams["axes.unicode_minus"] = False
 # File paths
 # ============================
 ROOT_DIR = Path(__file__).resolve().parent.parent
+DATA_DIR = ROOT_DIR / "data"
 OUTPUT_DIR = ROOT_DIR / "outputs"
 FIG_DIR = ROOT_DIR / "figures"
 
 INPUT_VOTES = OUTPUT_DIR / "fan_vote_estimates_q1a.csv"
+DATA_FILE = DATA_DIR / "2026_MCM_Problem_C_Data.csv"
 OUTPUT_WEEK_DIFF = OUTPUT_DIR / "rule_comparison_weekly_q2a.csv"
 OUTPUT_SEASON_SUM = OUTPUT_DIR / "rule_comparison_season_q2a.csv"
 PLOT_FILE = FIG_DIR / "rule_comparison_diff_ratio_q2a.png"
 OUTPUT_CONTROVERSY = OUTPUT_DIR / "rule_comparison_controversy_q2b.csv"
 OUTPUT_CONTROVERSY_SUM = OUTPUT_DIR / "rule_comparison_controversy_summary_q2b.csv"
+OUTPUT_BIAS = OUTPUT_DIR / "rule_bias_metrics_q2.csv"
+OUTPUT_CONTROVERSY_ANALYSIS = OUTPUT_DIR / "rule_controversy_analysis_q2.csv"
+OUTPUT_NONCONTROVERSY = OUTPUT_DIR / "rule_non_controversy_summary_q2.csv"
+OUTPUT_RECOMMENDATION = OUTPUT_DIR / "rule_recommendation_q2.md"
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 FIG_DIR.mkdir(parents=True, exist_ok=True)
@@ -94,6 +100,29 @@ def bottom_two_judges_choice(df_week, scheme="rank"):
     return bottom_two, eliminated_idx
 
 
+def compute_proxy_rank(df_season: pd.DataFrame, scheme: str) -> pd.DataFrame:
+    """Proxy season rank by averaging weekly composite scores."""
+    df_season = df_season.copy()
+    if scheme == "rank":
+        judge_rank = df_season.groupby("week")["judge_total"].rank(ascending=False, method="average")
+        fan_rank = df_season.groupby("week")["fan_vote_share"].rank(ascending=False, method="average")
+        composite = -(judge_rank + fan_rank)  # higher is better
+    else:
+        judge_percent = df_season.groupby("week")["judge_total"].transform(lambda s: s / s.sum())
+        fan_percent = df_season["fan_vote_share"]
+        composite = judge_percent + fan_percent
+
+    df_season["composite"] = composite
+    agg = (
+        df_season.groupby("celebrity_name")["composite"]
+        .mean()
+        .reset_index()
+        .rename(columns={"composite": "proxy_score"})
+    )
+    agg["proxy_rank"] = agg["proxy_score"].rank(ascending=False, method="min")
+    return agg
+
+
 # ============================
 # Main process
 # ============================
@@ -101,6 +130,7 @@ def bottom_two_judges_choice(df_week, scheme="rank"):
 def main():
     # Load estimated fan votes
     df = pd.read_csv(INPUT_VOTES)
+    raw_df = pd.read_csv(DATA_FILE)
 
     # Ensure required columns
     required_cols = {"season", "week", "celebrity_name", "judge_total", "fan_vote_share"}
@@ -109,6 +139,8 @@ def main():
         raise ValueError(f"缺少必要字段: {missing}")
 
     week_rows = []
+    bias_rows = []
+    judge_only_rows = []
 
     for (season, week), df_week in df.groupby(["season", "week"]):
         df_week = df_week.reset_index(drop=True)
@@ -121,6 +153,19 @@ def main():
         pct_elim_idx, pct_scores = percent_based_elimination(df_week)
         pct_elim_name = df_week.loc[pct_elim_idx, "celebrity_name"]
 
+        # Judge-only and fan-only elimination (for bias analysis)
+        judge_worst_idx = df_week["judge_total"].idxmin()
+        judge_worst_name = df_week.loc[judge_worst_idx, "celebrity_name"]
+        fan_worst_idx = df_week["fan_vote_share"].idxmin()
+        fan_worst_name = df_week.loc[fan_worst_idx, "celebrity_name"]
+        conflict = int(judge_worst_name != fan_worst_name)
+
+        # Bottom-two + judges choice (for impact analysis)
+        rank_bottom_two, rank_judge_elim_idx = bottom_two_judges_choice(df_week, scheme="rank")
+        pct_bottom_two, pct_judge_elim_idx = bottom_two_judges_choice(df_week, scheme="percent")
+        rank_judge_elim_name = df_week.loc[rank_judge_elim_idx, "celebrity_name"]
+        pct_judge_elim_name = df_week.loc[pct_judge_elim_idx, "celebrity_name"]
+
         week_rows.append({
             "season": season,
             "week": week,
@@ -129,7 +174,33 @@ def main():
             "different": int(rank_elim_name != pct_elim_name)
         })
 
+        bias_rows.append({
+            "season": season,
+            "week": week,
+            "conflict": conflict,
+            "judge_worst": judge_worst_name,
+            "fan_worst": fan_worst_name,
+            "rank_eliminated": rank_elim_name,
+            "percent_eliminated": pct_elim_name,
+            "rank_fan_aligned": int(rank_elim_name == fan_worst_name),
+            "rank_judge_aligned": int(rank_elim_name == judge_worst_name),
+            "percent_fan_aligned": int(pct_elim_name == fan_worst_name),
+            "percent_judge_aligned": int(pct_elim_name == judge_worst_name),
+            "rank_judge_save_diff": int(rank_judge_elim_name != rank_elim_name),
+            "percent_judge_save_diff": int(pct_judge_elim_name != pct_elim_name),
+        })
+
+        judge_only_rows.append({
+            "season": season,
+            "week": week,
+            "rank_bottom_two": " / ".join(df_week.loc[rank_bottom_two, "celebrity_name"].tolist()),
+            "percent_bottom_two": " / ".join(df_week.loc[pct_bottom_two, "celebrity_name"].tolist()),
+            "rank_judges_eliminated": rank_judge_elim_name,
+            "percent_judges_eliminated": pct_judge_elim_name,
+        })
+
     week_df = pd.DataFrame(week_rows)
+    bias_df = pd.DataFrame(bias_rows)
 
     # Season summary
     season_sum = (
@@ -142,9 +213,44 @@ def main():
     )
     season_sum["difference_ratio"] = season_sum["differences"] / season_sum["weeks_compared"]
 
+    # Bias metrics (overall and by season)
+    conflict_weeks = bias_df[bias_df["conflict"] == 1]
+    overall_bias = {
+        "scope": "overall",
+        "weeks": len(bias_df),
+        "conflict_weeks": len(conflict_weeks),
+        "rank_fan_align_rate": bias_df["rank_fan_aligned"].mean(),
+        "rank_judge_align_rate": bias_df["rank_judge_aligned"].mean(),
+        "percent_fan_align_rate": bias_df["percent_fan_aligned"].mean(),
+        "percent_judge_align_rate": bias_df["percent_judge_aligned"].mean(),
+        "rank_fan_override_rate": conflict_weeks["rank_fan_aligned"].mean() if not conflict_weeks.empty else np.nan,
+        "percent_fan_override_rate": conflict_weeks["percent_fan_aligned"].mean() if not conflict_weeks.empty else np.nan,
+        "rank_judge_save_change_rate": bias_df["rank_judge_save_diff"].mean(),
+        "percent_judge_save_change_rate": bias_df["percent_judge_save_diff"].mean(),
+    }
+
+    season_bias = (
+        bias_df.groupby("season")
+        .agg(
+            weeks=("week", "count"),
+            conflict_weeks=("conflict", "sum"),
+            rank_fan_align_rate=("rank_fan_aligned", "mean"),
+            rank_judge_align_rate=("rank_judge_aligned", "mean"),
+            percent_fan_align_rate=("percent_fan_aligned", "mean"),
+            percent_judge_align_rate=("percent_judge_aligned", "mean"),
+            rank_judge_save_change_rate=("rank_judge_save_diff", "mean"),
+            percent_judge_save_change_rate=("percent_judge_save_diff", "mean"),
+        )
+        .reset_index()
+    )
+    season_bias.insert(0, "scope", "season")
+    overall_bias_df = pd.DataFrame([overall_bias])
+    bias_metrics_df = pd.concat([overall_bias_df, season_bias], ignore_index=True)
+
     # Save outputs
     week_df.to_csv(OUTPUT_WEEK_DIFF, index=False, encoding="utf-8-sig")
     season_sum.to_csv(OUTPUT_SEASON_SUM, index=False, encoding="utf-8-sig")
+    bias_metrics_df.to_csv(OUTPUT_BIAS, index=False, encoding="utf-8-sig")
 
     # Display key results
     print("=== Weekly Rule Comparison (Head) ===")
@@ -167,6 +273,7 @@ def main():
     print(f"\n周次对比结果已保存至：{OUTPUT_WEEK_DIFF}")
     print(f"赛季汇总结果已保存至：{OUTPUT_SEASON_SUM}")
     print(f"图像已保存至：{PLOT_FILE}")
+    print(f"偏向性指标已保存至：{OUTPUT_BIAS}")
 
     # ============================
     # Controversy cases (Q2b)
@@ -180,6 +287,7 @@ def main():
 
     controversy_rows = []
     summary_rows = []
+    analysis_rows = []
 
     for case in controversy_cases:
         season = case["season"]
@@ -204,6 +312,15 @@ def main():
         if "eliminated_end_of_week" in df_case.columns:
             elim_weeks = df_case[df_case["eliminated_end_of_week"] == 1]["week"].tolist()
             actual_elim_week = min(elim_weeks) if elim_weeks else None
+
+        # Actual placement from raw data if available
+        actual_place = None
+        if "placement" in raw_df.columns:
+            placement_rows = raw_df[(raw_df["season"] == season) & (raw_df["celebrity_name"] == name)]
+            if placement_rows.empty:
+                placement_rows = raw_df[(raw_df["season"] == season) & (raw_df["celebrity_name"].str.contains(name, case=False, na=False))]
+            if not placement_rows.empty:
+                actual_place = placement_rows["placement"].iloc[0]
 
         # Track predicted elimination week under each rule
         first_rank_elim = None
@@ -250,6 +367,21 @@ def main():
                 "percent_judges_eliminated": pct_judge_elim_name,
             })
 
+        # Proxy ranks under both rules
+        season_df = df[df["season"] == season].copy()
+        rank_proxy = compute_proxy_rank(season_df, scheme="rank")
+        percent_proxy = compute_proxy_rank(season_df, scheme="percent")
+        rank_proxy_row = rank_proxy[rank_proxy["celebrity_name"].str.contains(name, case=False, na=False)]
+        percent_proxy_row = percent_proxy[percent_proxy["celebrity_name"].str.contains(name, case=False, na=False)]
+
+        rank_proxy_rank = int(rank_proxy_row["proxy_rank"].iloc[0]) if not rank_proxy_row.empty else None
+        percent_proxy_rank = int(percent_proxy_row["proxy_rank"].iloc[0]) if not percent_proxy_row.empty else None
+
+        # Judge-save exposure
+        case_weeks_df = pd.DataFrame([r for r in controversy_rows if r["season"] == season and r["celebrity_name"] == name])
+        rank_judge_save_hits = int((case_weeks_df["rank_judges_eliminated"] == name).sum()) if not case_weeks_df.empty else 0
+        percent_judge_save_hits = int((case_weeks_df["percent_judges_eliminated"] == name).sum()) if not case_weeks_df.empty else 0
+
         summary_rows.append({
             "season": season,
             "celebrity_name": name,
@@ -261,11 +393,29 @@ def main():
             "status": "processed"
         })
 
+        analysis_rows.append({
+            "season": season,
+            "celebrity_name": name,
+            "actual_placement": actual_place,
+            "rank_proxy_rank": rank_proxy_rank,
+            "percent_proxy_rank": percent_proxy_rank,
+            "rank_finalist_proxy": int(rank_proxy_rank is not None and rank_proxy_rank <= 3),
+            "percent_finalist_proxy": int(percent_proxy_rank is not None and percent_proxy_rank <= 3),
+            "rank_judge_save_hits": rank_judge_save_hits,
+            "percent_judge_save_hits": percent_judge_save_hits,
+            "rank_vs_percent_same_finalist": int(
+                (rank_proxy_rank is not None and percent_proxy_rank is not None) and
+                ((rank_proxy_rank <= 3) == (percent_proxy_rank <= 3))
+            )
+        })
+
     controversy_df = pd.DataFrame(controversy_rows)
     summary_df = pd.DataFrame(summary_rows)
+    analysis_df = pd.DataFrame(analysis_rows)
 
     controversy_df.to_csv(OUTPUT_CONTROVERSY, index=False, encoding="utf-8-sig")
     summary_df.to_csv(OUTPUT_CONTROVERSY_SUM, index=False, encoding="utf-8-sig")
+    analysis_df.to_csv(OUTPUT_CONTROVERSY_ANALYSIS, index=False, encoding="utf-8-sig")
 
     print("\n=== 争议选手周次对比（前20行） ===")
     print(controversy_df.head(20))
@@ -274,6 +424,57 @@ def main():
 
     print(f"\n争议选手对比已保存：{OUTPUT_CONTROVERSY}")
     print(f"争议选手汇总已保存：{OUTPUT_CONTROVERSY_SUM}")
+    print(f"争议选手分析已保存：{OUTPUT_CONTROVERSY_ANALYSIS}")
+
+    # ============================
+    # Non-controversy seasons analysis
+    # ============================
+    controversy_seasons = {c["season"] for c in controversy_cases}
+    non_controversy_df = week_df[~week_df["season"].isin(controversy_seasons)]
+    non_controversy_bias = bias_df[~bias_df["season"].isin(controversy_seasons)]
+    non_summary = {
+        "scope": "non_controversy_seasons",
+        "weeks": int(non_controversy_df.shape[0]),
+        "difference_ratio": float(non_controversy_df["different"].mean()) if not non_controversy_df.empty else np.nan,
+        "rank_fan_align_rate": float(non_controversy_bias["rank_fan_aligned"].mean()) if not non_controversy_bias.empty else np.nan,
+        "percent_fan_align_rate": float(non_controversy_bias["percent_fan_aligned"].mean()) if not non_controversy_bias.empty else np.nan,
+        "rank_judge_save_change_rate": float(non_controversy_bias["rank_judge_save_diff"].mean()) if not non_controversy_bias.empty else np.nan,
+        "percent_judge_save_change_rate": float(non_controversy_bias["percent_judge_save_diff"].mean()) if not non_controversy_bias.empty else np.nan,
+    }
+    non_summary_df = pd.DataFrame([non_summary])
+    non_summary_df.to_csv(OUTPUT_NONCONTROVERSY, index=False, encoding="utf-8-sig")
+
+    # ============================
+    # Recommendation (Q2c)
+    # ============================
+    rank_fan = overall_bias["rank_fan_align_rate"]
+    pct_fan = overall_bias["percent_fan_align_rate"]
+    rank_judge = overall_bias["rank_judge_align_rate"]
+    pct_judge = overall_bias["percent_judge_align_rate"]
+    preferred = "percent" if (pct_fan - pct_judge) > (rank_fan - rank_judge) else "rank"
+    judge_save_effect_rank = overall_bias["rank_judge_save_change_rate"]
+    judge_save_effect_pct = overall_bias["percent_judge_save_change_rate"]
+    recommend_judge_save = (judge_save_effect_rank > 0.05) or (judge_save_effect_pct > 0.05)
+
+    rec_lines = [
+        "# 规则比较与建议（问题二）",
+        "",
+        f"- 总体周次数：{overall_bias['weeks']}，冲突周次数：{overall_bias['conflict_weeks']}",
+        f"- 排名法：粉丝一致率={rank_fan:.3f}，评委一致率={rank_judge:.3f}",
+        f"- 百分比法：粉丝一致率={pct_fan:.3f}，评委一致率={pct_judge:.3f}",
+        "",
+        f"**偏向性结论**：{('百分比法' if preferred=='percent' else '排名法')} 更偏向观众投票。",
+        "",
+        f"- 底二评委选择改变淘汰的比例（排名法）={judge_save_effect_rank:.3f}",
+        f"- 底二评委选择改变淘汰的比例（百分比法）={judge_save_effect_pct:.3f}",
+        "",
+        f"**额外环节建议**：{'建议增加' if recommend_judge_save else '不建议强制增加'}（依据改变比例与争议样本稳定性）",
+        "",
+        "**争议案例结论**：见 rule_controversy_analysis_q2.csv，给出代理最终名次（proxy_rank）与评委选择的淘汰风险（judge_save_hits）。",
+        "**非争议赛季结论**：见 rule_non_controversy_summary_q2.csv，用于验证常规赛季的稳定性。",
+    ]
+    OUTPUT_RECOMMENDATION.write_text("\n".join(rec_lines), encoding="utf-8")
+    print(f"推荐结论已保存：{OUTPUT_RECOMMENDATION}")
 
 
 if __name__ == "__main__":
