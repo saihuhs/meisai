@@ -1,152 +1,157 @@
 ﻿feature,coef
-intercept,0.2311314963733363
-ballroom_partner_Emma Slater/Kaitlyn Bristowe (week 9),0.0767294908114631
-celebrity_homestate_Maine,0.06285260544551066
-celebrity_homecountry/region_Croatia,0.06103630799371827
-celebrity_industry_Musician,0.0601647133039198
-celebrity_homecountry/region_South Korea,0.05515562445496136
-celebrity_homecountry/region_Wales,0.044260966789533375
-celebrity_homecountry/region_New Zealand,0.04039752685191967
-celebrity_homestate_Utah,0.03694179453869008
-celebrity_industry_Fitness Instructor,0.033115644437759384
-celebrity_homestate_Arkansas,0.03269205826078217
-celebrity_homecountry/region_Philippines,0.0312668376219213
-celebrity_homecountry/region_Venezuela,0.030206542109141334
-celebrity_homestate_Mississippi,0.02955952600627128
-ballroom_partner_Daniella Karagach (Rumer Willis week 9),0.02742382133726093
-ballroom_partner_Alan Bersten (Rashad Jennings week 9),0.025202640216574666
-ballroom_partner_Rylee Arnold,0.024359790749102342
-celebrity_homestate_Washington D.C.,0.0227710638781126
-celebrity_homestate_Louisiana,0.021486485911244742
-celebrity_industry_Politician,0.020802637490672987
-celebrity_homestate_Georgia,0.020722258723063932
-celebrity_homestate_Alaska,0.020215214040505677
-celebrity_homecountry/region_Brazil,0.018633579410788657
-celebrity_homestate_South Dakota,0.018082531807271436
-celebrity_homestate_Arizona,0.016416448870975875
-celebrity_homestate_Massachusetts,0.015889155493080565
-celebrity_industry_Motivational Speaker,0.015442002632106135
-celebrity_homecountry/region_Ireland,0.01380103816077236
-celebrity_homestate_Pennsylvania,0.012938907173023408
-celebrity_homestate_Nevada,0.012445214549119437
-ballroom_partner_Koko Iwasaki,0.012397558716184826
-celebrity_homestate_Tennessee,0.012237776649320797
-celebrity_homecountry/region_United States,0.011485923153518596
-celebrity_homecountry/region_Cuba,0.010813271383948275
-celebrity_homestate_Wisconsin,0.01056894453242874
-celebrity_homecountry/region_Canada,0.009420082692923624
-celebrity_homecountry/region_Germany,0.007612146399676263
-celebrity_homecountry/region_England,0.0049009471363956406
-celebrity_homecountry/region_France,0.004888542092212671
-celebrity_homecountry/region_Chile,0.0026342277307424694
-ballroom_partner_Daniella Karagach,0.0005483224729801277
-age,-0.0007940653679220089
-celebrity_homecountry/region_Australia,-0.001183466227548554
-celebrity_industry_Fashion Designer,-0.0017839785858656532
-season,-0.002402152606079276
-celebrity_industry_Military,-0.0027930962011737392
-celebrity_industry_Athlete,-0.0032979353343046205
-celebrity_homecountry/region_Mexico,-0.0035602607793448066
-celebrity_homestate_Florida,-0.004788802030388659
-celebrity_homestate_Texas,-0.005261287659486608
-celebrity_industry_News Anchor,-0.005556056967147765
-celebrity_homestate_New Jersey,-0.0057166007707417435
-celebrity_homestate_Hawaii,-0.005830387311418895
-celebrity_homestate_Kansas,-0.006204042011727157
-celebrity_homecountry/region_Poland,-0.006820066311345326
-celebrity_industry_Racing Driver,-0.007353950533634305
-celebrity_homestate_New York,-0.008756602386371338
-celebrity_industry_Conservationist,-0.008963109568518701
-ballroom_partner_Witney Carson (Xoshitl Gomez week 9),-0.008963109568521092
-ballroom_partner_Emma Slater,-0.009171938968197414
-celebrity_homestate_Iowa,-0.010175397808256211
-celebrity_homestate_Michigan,-0.010636173626110211
-celebrity_homestate_Minnesota,-0.01074548584939786
-celebrity_homestate_Washington,-0.01116357029639736
-celebrity_homestate_Connecticut,-0.011411313598602035
-celebrity_homestate_Kentucky,-0.012253274590461001
-celebrity_homestate_Oregon,-0.012668628532016394
-celebrity_homestate_California,-0.012816150023067296
-celebrity_homestate_New Hamshire,-0.012992723013130706
-celebrity_homestate_Colorado,-0.015953329078859296
-celebrity_homecountry/region_Spain,-0.016160310991621678
-celebrity_industry_Singer/Rapper,-0.01638731881211266
-celebrity_industry_Social media personality,-0.017562218328821686
-ballroom_partner_Val Chmerkovskiy (Joey Graziadei week 9),-0.01756221832882251
-celebrity_industry_Comedian,-0.017963129956574606
-celebrity_homestate_Illinois,-0.01821702144452702
-celebrity_homestate_Indiana,-0.0190327554348694
-ballroom_partner_Witney Carson,-0.019580841476422577
-celebrity_homestate_Maryland,-0.019828797639795157
-celebrity_homestate_North Carolina,-0.02037607046329252
-ballroom_partner_Sasha Farber,-0.020593159890349877
-ballroom_partner_Derek Hough,-0.02103296901120176
-celebrity_industry_TV Personality,-0.021520810123136835
-celebrity_homestate_Virginia,-0.022403431353683834
-ballroom_partner_Ezra Sosa (Apolo Anton Ohno week 9),-0.022607206947441963
-ballroom_partner_Lindsay Arnold,-0.022630907931640687
-celebrity_industry_Entrepreneur,-0.024732778589042437
-ballroom_partner_Jenna Johnson,-0.02480363319324467
-celebrity_homestate_Missouri,-0.025365444295250495
-ballroom_partner_Pasha Pashkov,-0.02626851816525947
-celebrity_homecountry/region_Taiwan China,-0.02634120115963334
-ballroom_partner_Damian Whitewood,-0.027188412458049288
-ballroom_partner_Peta Murgatroyd,-0.030031637164859497
-ballroom_partner_Allison Holker,-0.030397654837182108
-ballroom_partner_Dmitry Chaplin,-0.030692166057441704
-ballroom_partner_Gleb Savchenko,-0.030758318172220023
-ballroom_partner_Charlotte Jorgensen,-0.031221746827339265
-celebrity_homestate_South Carolina,-0.031230799830534693
-celebrity_homecountry/region_Russia,-0.03247291336783854
-ballroom_partner_Sharna Burgess,-0.033307723582164474
-ballroom_partner_Ashly DelGrosso,-0.03461175153407425
-celebrity_homestate_Delaware,-0.03473468867515343
-celebrity_industry_Social Media Personality,-0.035638900519928574
-ballroom_partner_Cheryl Burke,-0.03612684052255664
-celebrity_homecountry/region_Italy,-0.03692484214964481
-celebrity_industry_Sports Broadcaster,-0.03893318331962519
-celebrity_homecountry/region_Czechoslovakia,-0.04062308709218477
-celebrity_homestate_West Virginia,-0.040728554584253555
-celebrity_homestate_New Mexico,-0.04098737857548933
-ballroom_partner_Valentin Chmerkovskiy,-0.04112800745944248
-ballroom_partner_Maksim Chmerkoskiy,-0.041148795047530155
-ballroom_partner_Alec Mazo,-0.041383241602741594
-ballroom_partner_Val Chmerkovskiy,-0.041494942806601
-ballroom_partner_Julianne Hough,-0.04219513064342289
-celebrity_homestate_Ohio,-0.04304702723979327
-celebrity_industry_Producer,-0.04540160786423517
-celebrity_industry_Astronaut,-0.0461514026365641
-ballroom_partner_Jan Ravnik,-0.047483307533527336
-ballroom_partner_Brandon Armstrong,-0.047564759808395904
-ballroom_partner_Artem Chigvintsev,-0.04885558121225541
-ballroom_partner_Kym Herjavec,-0.05029218835306338
-ballroom_partner_Kym Johnson,-0.050421640760050776
-celebrity_industry_Model,-0.05048740557234541
-ballroom_partner_Corky Ballas,-0.05058812039232469
-ballroom_partner_Anna Trebunskaya,-0.0509605729872052
-ballroom_partner_Mark Ballas,-0.05194498109118998
-ballroom_partner_Edyta Sliwinska,-0.05269523278865018
-ballroom_partner_Lacey Schwimmer,-0.05269932179554218
-ballroom_partner_Karina Smirnoff,-0.05286483032068298
-celebrity_homestate_Rhode Island,-0.05515376486534601
-ballroom_partner_Jesse DeSoto,-0.05515376486534604
-ballroom_partner_Louis van Amstel,-0.05560154487604696
-ballroom_partner_Britt Stewart,-0.05662412123943797
-ballroom_partner_Tony Dovolani,-0.057191966508219935
-celebrity_homestate_Nebraska,-0.0584361786277693
-ballroom_partner_Keo Motsepe,-0.05945666309842142
-ballroom_partner_Jonathan Roberts,-0.06545035177274629
-ballroom_partner_Tristan MacManus,-0.06651671688911343
-ballroom_partner_Brian Fortuna,-0.06709252235477983
-celebrity_industry_Beauty Pagent,-0.06709252235478028
-celebrity_industry_Journalist,-0.06914552052768538
-celebrity_industry_Radio Personality,-0.07149720154943712
-ballroom_partner_Chelsie Hightower,-0.07174173731294609
-celebrity_homecountry/region_South Africa,-0.07382849216780499
-ballroom_partner_Fabian Sanchez,-0.07872315964699497
-ballroom_partner_Anna Demidova,-0.08042880864002776
-ballroom_partner_Tyne Stecklein,-0.11060599005409882
-ballroom_partner_Nick Kosovich,-0.11494261409384383
-ballroom_partner_Elena Grinenko,-0.12870424438100186
-ballroom_partner_Andrea Hale,-0.1330075355924743
-ballroom_partner_Henry Byalikov,-0.13650395134974064
+intercept,0.25536480087506114
+celebrity_homestate_Maine,0.08149063783201886
+celebrity_homestate_Utah,0.05555942779460954
+celebrity_industry_Musician,0.05224882394909329
+celebrity_homecountry/region_Wales,0.05073861793298356
+ballroom_partner_Emma Slater/Kaitlyn Bristowe (week 9),0.04966839000468842
+celebrity_homecountry/region_South Korea,0.04941256346535362
+celebrity_homecountry/region_New Zealand,0.04688689602923629
+celebrity_homestate_Mississippi,0.03973332548430892
+celebrity_industry_Motivational Speaker,0.03972300768218568
+celebrity_industry_Fitness Instructor,0.03870909552967631
+celebrity_homestate_South Dakota,0.03834114735147336
+celebrity_homestate_Arkansas,0.037795485265230015
+celebrity_homestate_Louisiana,0.03409591980630044
+celebrity_homestate_Oregon,0.03324930110228017
+celebrity_homestate_Washington D.C.,0.03297642159934685
+celebrity_homestate_Georgia,0.03248022584378692
+celebrity_homestate_Tennessee,0.03154337792577065
+celebrity_homestate_Alaska,0.03139468459891061
+celebrity_homestate_Pennsylvania,0.03020082517012746
+celebrity_homecountry/region_Croatia,0.029356665848117774
+celebrity_homecountry/region_Brazil,0.02835133797160964
+celebrity_homestate_Arizona,0.027470500352981778
+celebrity_homecountry/region_Ireland,0.022346092684971716
+ballroom_partner_Daniella Karagach (Rumer Willis week 9),0.020466692322946397
+celebrity_industry_News Anchor,0.01867014544186294
+celebrity_homestate_Massachusetts,0.018396391900383904
+celebrity_homestate_Nevada,0.015342003747251701
+celebrity_homestate_Connecticut,0.013643855130145485
+celebrity_homestate_Colorado,0.012031790293020428
+celebrity_industry_Military,0.010996398290019173
+celebrity_homestate_Washington,0.010926959008245838
+celebrity_homestate_Nebraska,0.01043066901229039
+celebrity_homecountry/region_Cuba,0.00927926804631872
+celebrity_homecountry/region_Philippines,0.007171275202937546
+celebrity_homestate_Illinois,0.006860765436331391
+celebrity_homestate_Texas,0.006532666142161633
+celebrity_homecountry/region_Canada,0.006132301014662816
+ballroom_partner_Rylee Arnold,0.0036700992228904973
+celebrity_homestate_Florida,0.003018550788465385
+ballroom_partner_Daniella Karagach,0.0028723116157447007
+ballroom_partner_Koko Iwasaki,0.0023508186746698813
+celebrity_homestate_Kansas,0.0021448577930009358
+celebrity_homestate_Iowa,0.001391740792022228
+celebrity_homestate_Virginia,0.0013086713342846772
+celebrity_homestate_Hawaii,0.0011262208782134193
+celebrity_homestate_Michigan,0.00021350823138837488
+age,-0.0012322783569473778
+celebrity_homestate_New York,-0.0012373035016726014
+ballroom_partner_Alan Bersten (Rashad Jennings week 9),-0.0012867907486234587
+celebrity_homecountry/region_England,-0.0018076962624933995
+season,-0.002250958810640879
+celebrity_industry_Producer,-0.0023260566102228184
+celebrity_homestate_Kentucky,-0.0042892487586701986
+celebrity_homestate_South Carolina,-0.004452241107932037
+celebrity_homestate_California,-0.005568730869000296
+celebrity_homecountry/region_Venezuela,-0.00570477932993667
+celebrity_homestate_New Jersey,-0.005772078279235707
+celebrity_homecountry/region_Australia,-0.006988180718836966
+celebrity_industry_Athlete,-0.007658254679915169
+celebrity_homestate_Missouri,-0.00823459835621454
+celebrity_homestate_Minnesota,-0.008350837671223334
+celebrity_industry_Racing Driver,-0.008604134668194409
+ballroom_partner_Val Chmerkovskiy (Joey Graziadei week 9),-0.009282088012186447
+celebrity_industry_Social media personality,-0.009282088012188001
+celebrity_homecountry/region_United States,-0.009315584750676975
+celebrity_homestate_Wisconsin,-0.009471693185167175
+celebrity_industry_Fashion Designer,-0.009867895616613914
+celebrity_homecountry/region_France,-0.010292040284074967
+celebrity_industry_Conservationist,-0.010811332269724486
+ballroom_partner_Witney Carson (Xoshitl Gomez week 9),-0.010811332269727133
+celebrity_industry_Politician,-0.011627039492731061
+ballroom_partner_Emma Slater,-0.012284962815926288
+celebrity_homecountry/region_Germany,-0.012723990972589224
+celebrity_homestate_Maryland,-0.013333872663797885
+ballroom_partner_Charlotte Jorgensen,-0.013674977298391797
+ballroom_partner_Derek Hough,-0.014192216413332487
+celebrity_homestate_Indiana,-0.014219751242432653
+celebrity_industry_Journalist,-0.015033218494530994
+celebrity_industry_Comedian,-0.01579314418634556
+celebrity_homecountry/region_Chile,-0.016678899340320935
+celebrity_industry_Singer/Rapper,-0.01692519588648954
+celebrity_homecountry/region_Mexico,-0.01729191533568146
+ballroom_partner_Sasha Farber,-0.017967680728082004
+celebrity_homestate_West Virginia,-0.01806772208151762
+celebrity_homecountry/region_Spain,-0.01924580855986773
+ballroom_partner_Witney Carson,-0.02003057073580891
+celebrity_homestate_North Carolina,-0.020085093887705005
+celebrity_industry_TV Personality,-0.02033492791372231
+celebrity_homestate_New Hamshire,-0.020802503383419865
+ballroom_partner_Lindsay Arnold,-0.023023275829256597
+ballroom_partner_Ashly DelGrosso,-0.02323914531313928
+ballroom_partner_Peta Murgatroyd,-0.02550164670105457
+celebrity_homestate_Ohio,-0.02555984479622594
+celebrity_industry_Entrepreneur,-0.026754412952288475
+ballroom_partner_Pasha Pashkov,-0.02737943366128492
+ballroom_partner_Gleb Savchenko,-0.027632586060066112
+celebrity_homestate_Delaware,-0.027653108549384804
+celebrity_industry_Astronaut,-0.027890314498195228
+ballroom_partner_Ezra Sosa (Apolo Anton Ohno week 9),-0.028137632233934517
+ballroom_partner_Corky Ballas,-0.02816514553160465
+ballroom_partner_Cheryl Burke,-0.02901479533106564
+ballroom_partner_Valentin Chmerkovskiy,-0.02955323935571237
+ballroom_partner_Val Chmerkovskiy,-0.029703595735900302
+ballroom_partner_Sharna Burgess,-0.030380164276090332
+ballroom_partner_Allison Holker,-0.03212147281291929
+ballroom_partner_Brandon Armstrong,-0.03223381238045145
+celebrity_industry_Social Media Personality,-0.032298281760855245
+ballroom_partner_Jenna Johnson,-0.03293336709307945
+celebrity_homecountry/region_Taiwan China,-0.033176049797778676
+ballroom_partner_Alec Mazo,-0.03363490581150243
+celebrity_industry_Model,-0.03405536167105539
+ballroom_partner_Ezra Sosa,-0.03542468183701651
+celebrity_industry_Con artist,-0.035424681837018815
+celebrity_homecountry/region_Poland,-0.036355786686229796
+celebrity_homecountry/region_Russia,-0.03660157770358166
+celebrity_industry_Radio Personality,-0.03847206495573228
+celebrity_homecountry/region_Czechoslovakia,-0.03960714696095993
+ballroom_partner_Maksim Chmerkoskiy,-0.04090212586619345
+celebrity_homestate_New Mexico,-0.04120301120107563
+celebrity_industry_Sports Broadcaster,-0.041221009889771454
+ballroom_partner_Artem Chigvintsev,-0.041427022222771254
+ballroom_partner_Kym Johnson,-0.042103913365315986
+ballroom_partner_Karina Smirnoff,-0.04714609907235562
+ballroom_partner_Keo Motsepe,-0.04728377105123358
+ballroom_partner_Damian Whitewood,-0.04839083168708748
+ballroom_partner_Tony Dovolani,-0.04891636170725894
+celebrity_homecountry/region_Italy,-0.04926042438067409
+ballroom_partner_Julianne Hough,-0.05060619815489506
+ballroom_partner_Mark Ballas,-0.0509538130657466
+ballroom_partner_Anna Trebunskaya,-0.05159160431900836
+ballroom_partner_Louis van Amstel,-0.052865842455574165
+ballroom_partner_Britt Stewart,-0.05304437667510187
+ballroom_partner_Kym Herjavec,-0.0542375911426991
+ballroom_partner_Dmitry Chaplin,-0.05746418014438462
+ballroom_partner_Tristan MacManus,-0.05772648262087428
+ballroom_partner_Lacey Schwimmer,-0.05781449642744694
+celebrity_homestate_Rhode Island,-0.05852017447801851
+ballroom_partner_Jesse DeSoto,-0.05852017447801862
+ballroom_partner_Edyta Sliwinska,-0.06010739825631971
+ballroom_partner_Brian Fortuna,-0.06470649604877887
+celebrity_industry_Beauty Pagent,-0.06470649604877973
+ballroom_partner_Jonathan Roberts,-0.06924420535801462
+ballroom_partner_Anna Demidova,-0.07282394412854121
+celebrity_homecountry/region_South Africa,-0.07716824116844136
+ballroom_partner_Chelsie Hightower,-0.08227681373096893
+ballroom_partner_Jan Ravnik,-0.08803258020783739
+ballroom_partner_Fabian Sanchez,-0.09068184041339986
+celebrity_homecountry/region_Yugoslavia,-0.09219492630621082
+ballroom_partner_Tyne Stecklein,-0.10051313504788734
+ballroom_partner_Nick Kosovich,-0.10599712445313686
+celebrity_industry_Magician,-0.11060337817780506
+ballroom_partner_Henry Byalikov,-0.11777058450662806
+ballroom_partner_Elena Grinenko,-0.12387269588245357
+ballroom_partner_Andrea Hale,-0.1363866250201794
+ballroom_partner_Inna Brayer,-0.1631098557335284

@@ -1,4 +1,10 @@
 ﻿season,week,celebrity_name,ballroom_partner,celebrity_industry,celebrity_homestate,celebrity_homecountry/region,celebrity_age_during_season,judge_total,fan_vote_share
+1,1,John O'Hurley,Charlotte Jorgensen,Actor/Actress,Maine,United States,50,6.666666666666667,0.238095238095238
+1,1,Kelly Monaco,Alec Mazo,Actor/Actress,Pennsylvania,United States,29,4.333333333333333,0.0476190476190476
+1,1,Evander Holyfield,Edyta Sliwinska,Athlete,Alabama,United States,42,6.0,0.119047619047619
+1,1,Rachel Hunter,Jonathan Roberts,Model,,New Zealand,35,6.666666666666667,0.238095238095238
+1,1,Joey McIntyre,Ashly DelGrosso,Singer/Rapper,Massachusetts,United States,32,6.666666666666667,0.238095238095238
+1,1,Trista Sutter,Louis van Amstel,TV Personality,Indiana,United States,32,6.0,0.119047619047619
 1,2,John O'Hurley,Charlotte Jorgensen,Actor/Actress,Maine,United States,50,8.666666666666666,0.0952380952380952
 1,2,Kelly Monaco,Alec Mazo,Actor/Actress,Pennsylvania,United States,29,5.666666666666667,0.238095238095238
 1,2,Evander Holyfield,Edyta Sliwinska,Athlete,Alabama,United States,42,4.666666666666667,0.2857142857142857
@@ -17,6 +23,8 @@
 1,5,John O'Hurley,Charlotte Jorgensen,Actor/Actress,Maine,United States,50,9.0,0.3333333333333333
 1,5,Kelly Monaco,Alec Mazo,Actor/Actress,Pennsylvania,United States,29,7.833333333333333,0.5
 1,5,Joey McIntyre,Ashly DelGrosso,Singer/Rapper,Massachusetts,United States,32,7.5,0.1666666666666666
+1,6,John O'Hurley,Charlotte Jorgensen,Actor/Actress,Maine,United States,50,9.0,0.3333333333333333
+1,6,Kelly Monaco,Alec Mazo,Actor/Actress,Pennsylvania,United States,29,9.166666666666666,0.6666666666666666
 2,1,Tatum O'Neal,Nick Kosovich,Actor/Actress,California,United States,42,7.666666666666667,0.0727272727272727
 2,1,Tia Carrere,Maksim Chmerkoskiy,Actor/Actress,Hawaii,United States,39,6.666666666666667,0.1272727272727272
 2,1,George Hamilton,Edyta Sliwinska,Actor/Actress,Tennessee,United States,66,6.0,0.1636363636363636
@@ -66,6 +74,9 @@
 2,7,Stacy Keibler,Tony Dovolani,Athlete,Maryland,United States,26,9.166666666666666,0.3
 2,7,Jerry Rice,Anna Trebunskaya,Athlete,Mississippi,United States,43,6.833333333333333,0.4
 2,7,Drew Lachey,Cheryl Burke,Singer/Rapper,Ohio,United States,29,9.166666666666666,0.2
+2,8,Stacy Keibler,Tony Dovolani,Athlete,Maryland,United States,26,9.5555,0.3333333333333333
+2,8,Jerry Rice,Anna Trebunskaya,Athlete,Mississippi,United States,43,8.888866666666667,0.1666666666666666
+2,8,Drew Lachey,Cheryl Burke,Singer/Rapper,Ohio,United States,29,9.6666,0.5
 3,1,Harry Hamlin,Ashly DelGrosso,Actor/Actress,California,United States,54,5.666666666666667,0.1
 3,1,Vivica A. Fox,Nick Kosovich,Actor/Actress,Indiana,United States,42,7.333333333333333,0.1
 3,1,Monique Coleman,Louis van Amstel,Actor/Actress,South Carolina,United States,25,6.333333333333333,0.1
@@ -104,6 +115,18 @@
 3,4,Willa Ford,Maksim Chmerkoskiy,Singer/Rapper,Florida,United States,25,9.333333333333334,0.1385281385281385
 3,4,Sara Evans,Tony Dovolani,Singer/Rapper,Missouri,United States,35,6.666666666666667,0.1587301587301587
 3,4,Jerry Springer,Kym Johnson,TV Personality,,England,62,7.333333333333333,0.1486291486291486
+3,5,Monique Coleman,Louis van Amstel,Actor/Actress,South Carolina,United States,25,9.0,0.1644751381215469
+3,5,Joey Lawrence,Edyta Sliwinska,Actor/Actress,Pennsylvania,United States,30,8.333333333333334,0.175524861878453
+3,5,Mario Lopez,Karina Smirnoff,Actor/Actress,California,United States,32,9.0,0.1644751381215469
+3,5,Emmitt Smith,Cheryl Burke,Athlete,Florida,United States,37,9.0,0.1644751381215469
+3,5,Willa Ford,Maksim Chmerkoskiy,Singer/Rapper,Florida,United States,25,9.0,0.15
+3,5,Sara Evans,Tony Dovolani,Singer/Rapper,Missouri,United States,35,8.0,0.0
+3,5,Jerry Springer,Kym Johnson,TV Personality,,England,62,8.0,0.1810497237569061
+3,6,Monique Coleman,Louis van Amstel,Actor/Actress,South Carolina,United States,25,7.666666666666667,0.1949152542372881
+3,6,Joey Lawrence,Edyta Sliwinska,Actor/Actress,Pennsylvania,United States,30,8.0,0.2033898305084745
+3,6,Mario Lopez,Karina Smirnoff,Actor/Actress,California,United States,32,9.333333333333334,0.2372881355932203
+3,6,Emmitt Smith,Cheryl Burke,Athlete,Florida,United States,37,8.333333333333334,0.211864406779661
+3,6,Jerry Springer,Kym Johnson,TV Personality,,England,62,6.0,0.1525423728813559
 3,7,Monique Coleman,Louis van Amstel,Actor/Actress,South Carolina,United States,25,9.0,0.24275
 3,7,Joey Lawrence,Edyta Sliwinska,Actor/Actress,Pennsylvania,United States,30,9.5,0.24275
 3,7,Mario Lopez,Karina Smirnoff,Actor/Actress,California,United States,32,9.333333333333334,0.24275
@@ -116,6 +139,19 @@
 3,9,Joey Lawrence,Edyta Sliwinska,Actor/Actress,Pennsylvania,United States,30,9.833333333333334,0.333
 3,9,Mario Lopez,Karina Smirnoff,Actor/Actress,California,United States,32,9.833333333333334,0.3334999999999999
 3,9,Emmitt Smith,Cheryl Burke,Athlete,Florida,United States,37,9.833333333333334,0.3334999999999999
+3,10,Mario Lopez,Karina Smirnoff,Actor/Actress,California,United States,32,9.888866666666667,0.5
+3,10,Emmitt Smith,Cheryl Burke,Athlete,Florida,United States,37,9.888866666666667,0.5
+4,1,John Ratzenberger,Edyta Sliwinska,Actor/Actress,Connecticut,United States,59,5.666666666666667,0.0825242718446602
+4,1,Ian Ziering,Cheryl Burke,Actor/Actress,New Jersey,United States,42,7.0,0.1019417475728155
+4,1,Clyde Drexler,Elena Grinenko,Athlete,Louisiana,United States,44,5.333333333333333,0.0776699029126213
+4,1,Laila Ali,Maksim Chmerkoskiy,Athlete,Florida,United States,29,7.666666666666667,0.1116504854368932
+4,1,Apolo Anton Ohno,Julianne Hough,Athlete,Washington,United States,24,7.0,0.1019417475728155
+4,1,Shandi Finnessey,Brian Fortuna,Beauty Pagent,Missouri,United States,28,6.333333333333333,0.0922330097087378
+4,1,Paulina Porizkova,Alec Mazo,Model,,Czechoslovakia,41,6.333333333333333,0.0922330097087378
+4,1,Heather Mills,Jonathan Roberts,Model,,England,39,6.0,0.087378640776699
+4,1,Billy Ray Cyrus,Karina Smirnoff,Singer/Rapper,Kentucky,United States,45,4.333333333333333,0.0631067961165048
+4,1,Joey Fatone,Kym Johnson,Singer/Rapper,New York,United States,30,8.0,0.116504854368932
+4,1,Leeza Gibbons,Tony Dovolani,TV Personality,South Carolina,United States,50,5.0,0.0728155339805825
 4,2,John Ratzenberger,Edyta Sliwinska,Actor/Actress,Connecticut,United States,59,7.0,0.0983673469387755
 4,2,Ian Ziering,Cheryl Burke,Actor/Actress,New Jersey,United States,42,7.333333333333333,0.0983673469387755
 4,2,Clyde Drexler,Elena Grinenko,Athlete,Louisiana,United States,44,6.0,0.1106122448979591
@@ -176,6 +212,9 @@
 4,9,Laila Ali,Maksim Chmerkoskiy,Athlete,Florida,United States,29,10.0,0.2925935302390998
 4,9,Apolo Anton Ohno,Julianne Hough,Athlete,Washington,United States,24,9.833333333333334,0.2968129395218002
 4,9,Joey Fatone,Kym Johnson,Singer/Rapper,New York,United States,30,10.0,0.2925935302390998
+4,10,Laila Ali,Maksim Chmerkoskiy,Athlete,Florida,United States,29,9.444400000000002,0.3281854310465651
+4,10,Apolo Anton Ohno,Julianne Hough,Athlete,Washington,United States,24,9.777733333333334,0.3397685007685367
+4,10,Joey Fatone,Kym Johnson,Singer/Rapper,New York,United States,30,9.5555,0.3320460681848982
 5,1,Cameron Mathison,Edyta Sliwinska,Actor/Actress,,Canada,38,7.0,0.0908181818181818
 5,1,Jane Seymour,Tony Dovolani,Actor/Actress,,England,56,8.0,0.0908181818181818
 5,1,Sabrina Bryan,Mark Ballas,Actor/Actress,California,United States,23,8.666666666666666,0.0908181818181818
@@ -248,6 +287,33 @@
 5,9,Helio Castroneves,Julianne Hough,Racing Driver,,Brazil,32,10.0,0.3304843304843305
 5,9,Mel B,Maksim Chmerkoskiy,Singer/Rapper,,England,32,10.0,0.3304843304843305
 5,9,Marie Osmond,Jonathan Roberts,Singer/Rapper,Utah,United States,47,9.333333333333334,0.339031339031339
+5,10,Helio Castroneves,Julianne Hough,Racing Driver,,Brazil,32,9.333300000000001,0.352940954028016
+5,10,Mel B,Maksim Chmerkoskiy,Singer/Rapper,,England,32,9.4444,0.3571422268889025
+5,10,Marie Osmond,Jonathan Roberts,Singer/Rapper,Utah,United States,47,7.666666666666667,0.2899168190830813
+6,1,Cristian de la Fuente,Cheryl Burke,Actor/Actress,,Chile,34,7.0,0.0864197530864197
+6,1,Steve Guttenberg,Anna Trebunskaya,Actor/Actress,New York,United States,49,6.0,0.074074074074074
+6,1,Priscilla Presley,Louis van Amstel,Actor/Actress,New York,United States,62,8.0,0.0987654320987654
+6,1,Marlee Matlin,Fabian Sanchez,Actor/Actress,Illinois,United States,42,7.333333333333333,0.0905349794238683
+6,1,Shannon Elizabeth,Derek Hough,Actor/Actress,Texas,United States,34,7.0,0.0864197530864197
+6,1,Marissa Jaret Winokur,Tony Dovolani,Actor/Actress,New York,United States,35,6.0,0.074074074074074
+6,1,Jason Taylor,Edyta Sliwinska,Athlete,Pennsylvania,United States,33,7.333333333333333,0.0905349794238683
+6,1,Kristi Yamaguchi,Mark Ballas,Athlete,California,United States,36,9.0,0.1111111111111111
+6,1,Monica Seles,Jonathan Roberts,Athlete,,Yugoslavia,34,5.0,0.0617283950617283
+6,1,Penn Jillette,Kym Johnson,Magician,Massachusetts,United States,53,5.333333333333333,0.0658436213991769
+6,1,Adam Carolla,Julianne Hough,Radio Personality,California,United States,43,5.0,0.0617283950617283
+6,1,Mario,Karina Smirnoff,Singer/Rapper,Maryland,United States,21,8.0,0.0987654320987654
+6,2,Cristian de la Fuente,Cheryl Burke,Actor/Actress,,Chile,34,6.666666666666667,0.0996108949416342
+6,2,Steve Guttenberg,Anna Trebunskaya,Actor/Actress,New York,United States,49,5.333333333333333,0.1035019455252918
+6,2,Priscilla Presley,Louis van Amstel,Actor/Actress,New York,United States,62,7.0,0.0996108949416342
+6,2,Marlee Matlin,Fabian Sanchez,Actor/Actress,Illinois,United States,42,8.0,0.0996108949416342
+6,2,Shannon Elizabeth,Derek Hough,Actor/Actress,Texas,United States,34,8.0,0.0996108949416342
+6,2,Marissa Jaret Winokur,Tony Dovolani,Actor/Actress,New York,United States,35,7.0,0.0996108949416342
+6,2,Jason Taylor,Edyta Sliwinska,Athlete,Pennsylvania,United States,33,9.0,0.0996108949416342
+6,2,Kristi Yamaguchi,Mark Ballas,Athlete,California,United States,36,9.0,0.0996108949416342
+6,2,Monica Seles,Jonathan Roberts,Athlete,,Yugoslavia,34,5.0,0.0
+6,2,Penn Jillette,Kym Johnson,Magician,Massachusetts,United States,53,5.666666666666667,0.0
+6,2,Adam Carolla,Julianne Hough,Radio Personality,California,United States,43,6.333333333333333,0.0996108949416342
+6,2,Mario,Karina Smirnoff,Singer/Rapper,Maryland,United States,21,8.666666666666666,0.0996108949416342
 6,3,Cristian de la Fuente,Cheryl Burke,Actor/Actress,,Chile,34,8.333333333333334,0.1101364522417154
 6,3,Steve Guttenberg,Anna Trebunskaya,Actor/Actress,New York,United States,49,7.0,0.0
 6,3,Priscilla Presley,Louis van Amstel,Actor/Actress,New York,United States,62,8.666666666666666,0.1101364522417154
@@ -297,15 +363,51 @@
 6,9,Marissa Jaret Winokur,Tony Dovolani,Actor/Actress,New York,United States,35,8.666666666666666,0.013
 6,9,Jason Taylor,Edyta Sliwinska,Athlete,Pennsylvania,United States,33,9.166666666666666,0.329
 6,9,Kristi Yamaguchi,Mark Ballas,Athlete,California,United States,36,9.5,0.329
-7,4,Cloris Leachman,Corky Ballas,Actor/Actress,Iowa,United States,82,7.333333333333333,0.124875
-7,4,Susan Lucci,Tony Dovolani,Actor/Actress,New York,United States,61,8.0,0.124875
-7,4,Cody Linley,Julianne Hough,Actor/Actress,Texas,United States,18,7.666666666666667,0.124875
-7,4,Maurice Greene,Cheryl Burke,Athlete,Kansas,United States,34,6.666666666666667,0.124875
-7,4,Warren Sapp,Kym Johnson,Athlete,Florida,United States,35,7.333333333333333,0.124875
-7,4,Toni Braxton,Alec Mazo,Singer/Rapper,Maryland,United States,40,7.333333333333333,0.124875
-7,4,Lance Bass,Lacey Schwimmer,Singer/Rapper,Mississippi,United States,29,8.666666666666666,0.124875
-7,4,Rocco DiSpirito,Karina Smirnoff,TV Personality,New York,United States,41,6.0,0.001
-7,4,Brooke Burke,Derek Hough,TV Personality,Connecticut,United States,37,8.666666666666666,0.124875
+6,10,Cristian de la Fuente,Cheryl Burke,Actor/Actress,,Chile,34,8.666666666666666,0.3076923076923077
+6,10,Jason Taylor,Edyta Sliwinska,Athlete,Pennsylvania,United States,33,9.5,0.3372781065088757
+6,10,Kristi Yamaguchi,Mark Ballas,Athlete,California,United States,36,10.0,0.3550295857988166
+7,1,Ted McGinley,Inna Brayer,Actor/Actress,California,United States,50,6.166666666666667,0.0
+7,1,Cloris Leachman,Corky Ballas,Actor/Actress,Iowa,United States,82,5.333333333333333,0.0995670995670995
+7,1,Susan Lucci,Tony Dovolani,Actor/Actress,New York,United States,61,6.166666666666667,0.0896464646464646
+7,1,Cody Linley,Julianne Hough,Actor/Actress,Texas,United States,18,6.833333333333333,0.0896464646464646
+7,1,Misty May-Treanor,Maksim Chmerkoskiy,Athlete,California,United States,31,7.0,0.0896464646464646
+7,1,Maurice Greene,Cheryl Burke,Athlete,Kansas,United States,34,6.5,0.0896464646464646
+7,1,Warren Sapp,Kym Johnson,Athlete,Florida,United States,35,7.166666666666667,0.0896464646464646
+7,1,Jeffrey Ross,Edyta Sliwinska,Comedian,New Jersey,United States,43,4.0,0.0
+7,1,Toni Braxton,Alec Mazo,Singer/Rapper,Maryland,United States,40,7.5,0.0896464646464646
+7,1,Lance Bass,Lacey Schwimmer,Singer/Rapper,Mississippi,United States,29,7.166666666666667,0.0896464646464646
+7,1,Kim Kardashian,Mark Ballas,TV Personality,California,United States,27,6.166666666666667,0.0896464646464646
+7,1,Rocco DiSpirito,Karina Smirnoff,TV Personality,New York,United States,41,5.833333333333333,0.0936147186147186
+7,1,Brooke Burke,Derek Hough,TV Personality,Connecticut,United States,37,8.166666666666666,0.0896464646464646
+7,2,Cloris Leachman,Corky Ballas,Actor/Actress,Iowa,United States,82,5.0,0.1312217194570135
+7,2,Susan Lucci,Tony Dovolani,Actor/Actress,New York,United States,61,7.0,0.1040723981900452
+7,2,Cody Linley,Julianne Hough,Actor/Actress,Texas,United States,18,7.0,0.1040723981900452
+7,2,Misty May-Treanor,Maksim Chmerkoskiy,Athlete,California,United States,31,7.0,0.0
+7,2,Maurice Greene,Cheryl Burke,Athlete,Kansas,United States,34,6.333333333333333,0.1131221719457013
+7,2,Warren Sapp,Kym Johnson,Athlete,Florida,United States,35,8.0,0.1040723981900452
+7,2,Toni Braxton,Alec Mazo,Singer/Rapper,Maryland,United States,40,7.666666666666667,0.1040723981900452
+7,2,Lance Bass,Lacey Schwimmer,Singer/Rapper,Mississippi,United States,29,6.666666666666667,0.1085972850678733
+7,2,Kim Kardashian,Mark Ballas,TV Personality,California,United States,27,5.666666666666667,0.0
+7,2,Rocco DiSpirito,Karina Smirnoff,TV Personality,New York,United States,41,5.333333333333333,0.1266968325791855
+7,2,Brooke Burke,Derek Hough,TV Personality,Connecticut,United States,37,8.0,0.1040723981900452
+7,3,Cloris Leachman,Corky Ballas,Actor/Actress,Iowa,United States,82,5.333333333333333,0.0804020100502512
+7,3,Susan Lucci,Tony Dovolani,Actor/Actress,New York,United States,61,7.0,0.1055276381909547
+7,3,Cody Linley,Julianne Hough,Actor/Actress,Texas,United States,18,7.0,0.1055276381909547
+7,3,Maurice Greene,Cheryl Burke,Athlete,Kansas,United States,34,8.0,0.1206030150753769
+7,3,Warren Sapp,Kym Johnson,Athlete,Florida,United States,35,8.333333333333334,0.1256281407035176
+7,3,Toni Braxton,Alec Mazo,Singer/Rapper,Maryland,United States,40,7.333333333333333,0.1105527638190954
+7,3,Lance Bass,Lacey Schwimmer,Singer/Rapper,Mississippi,United States,29,7.333333333333333,0.1105527638190954
+7,3,Rocco DiSpirito,Karina Smirnoff,TV Personality,New York,United States,41,6.666666666666667,0.100502512562814
+7,3,Brooke Burke,Derek Hough,TV Personality,Connecticut,United States,37,9.333333333333334,0.1407035175879397
+7,4,Cloris Leachman,Corky Ballas,Actor/Actress,Iowa,United States,82,7.333333333333333,0.123875
+7,4,Susan Lucci,Tony Dovolani,Actor/Actress,New York,United States,61,8.0,0.123875
+7,4,Cody Linley,Julianne Hough,Actor/Actress,Texas,United States,18,7.666666666666667,0.123875
+7,4,Maurice Greene,Cheryl Burke,Athlete,Kansas,United States,34,6.666666666666667,0.123875
+7,4,Warren Sapp,Kym Johnson,Athlete,Florida,United States,35,7.333333333333333,0.123875
+7,4,Toni Braxton,Alec Mazo,Singer/Rapper,Maryland,United States,40,7.333333333333333,0.123875
+7,4,Lance Bass,Lacey Schwimmer,Singer/Rapper,Mississippi,United States,29,8.666666666666666,0.123875
+7,4,Rocco DiSpirito,Karina Smirnoff,TV Personality,New York,United States,41,6.0,0.009
+7,4,Brooke Burke,Derek Hough,TV Personality,Connecticut,United States,37,8.666666666666666,0.123875
 7,5,Cloris Leachman,Corky Ballas,Actor/Actress,Iowa,United States,82,7.0,0.1465201465201465
 7,5,Susan Lucci,Tony Dovolani,Actor/Actress,New York,United States,61,7.333333333333333,0.1413919413919414
 7,5,Cody Linley,Julianne Hough,Actor/Actress,Texas,United States,18,9.333333333333334,0.1413919413919414
@@ -336,6 +438,22 @@
 7,9,Warren Sapp,Kym Johnson,Athlete,Florida,United States,35,8.166666666666666,0.3286666666666666
 7,9,Lance Bass,Lacey Schwimmer,Singer/Rapper,Mississippi,United States,29,9.5,0.3286666666666666
 7,9,Brooke Burke,Derek Hough,TV Personality,Connecticut,United States,37,8.166666666666666,0.3286666666666666
+7,10,Warren Sapp,Kym Johnson,Athlete,Florida,United States,35,9.166666666666666,0.3235294117647059
+7,10,Lance Bass,Lacey Schwimmer,Singer/Rapper,Mississippi,United States,29,9.166666666666666,0.3235294117647059
+7,10,Brooke Burke,Derek Hough,TV Personality,Connecticut,United States,37,10.0,0.3529411764705882
+8,1,Gilles Marini,Cheryl Burke,Actor/Actress,,France,33,8.0,0.0987654320987654
+8,1,Denise Richards,Maksim Chmerkoskiy,Actor/Actress,Illinois,United States,38,6.0,0.074074074074074
+8,1,David Alan Grier,Kym Johnson,Actor/Actress,Michigan,United States,52,6.333333333333333,0.0781893004115226
+8,1,Lawrence Taylor,Edyta Sliwinska,Athlete,Virginia,United States,50,5.333333333333333,0.0658436213991769
+8,1,Ty Murray,Chelsie Hightower,Athlete,Arizona,United States,39,4.666666666666667,0.0576131687242798
+8,1,Shawn Johnson,Mark Ballas,Athlete,Iowa,United States,17,7.666666666666667,0.0946502057613168
+8,1,Steve Wozniak,Karina Smirnoff,Entrepreneur,California,United States,58,4.333333333333333,0.0534979423868312
+8,1,Belinda Carlisle,Jonathan Roberts,Singer/Rapper,California,United States,50,5.666666666666667,0.0699588477366255
+8,1,Chuck Wicks,Julianne Hough,Singer/Rapper,Delaware,United States,29,6.666666666666667,0.0823045267489712
+8,1,Lil' Kim,Derek Hough,Singer/Rapper,New York,United States,34,7.0,0.0864197530864197
+8,1,Steve-O,Lacey Schwimmer,TV Personality,,England,34,5.666666666666667,0.0699588477366255
+8,1,Holly Madison,Dmitry Chaplin,TV Personality,Oregon,United States,30,6.0,0.074074074074074
+8,1,Melissa Rycroft,Tony Dovolani,TV Personality,Texas,United States,26,7.666666666666667,0.0946502057613168
 8,2,Gilles Marini,Cheryl Burke,Actor/Actress,,France,33,9.0,0.0814465408805031
 8,2,Denise Richards,Maksim Chmerkoskiy,Actor/Actress,Illinois,United States,38,7.0,0.0814465408805031
 8,2,David Alan Grier,Kym Johnson,Actor/Actress,Michigan,United States,52,5.666666666666667,0.0852201257861635
@@ -361,6 +479,17 @@
 8,3,Steve-O,Lacey Schwimmer,TV Personality,,England,34,5.0,0.0923407301360057
 8,3,Holly Madison,Dmitry Chaplin,TV Personality,Oregon,United States,30,5.666666666666667,0.0884037222619899
 8,3,Melissa Rycroft,Tony Dovolani,TV Personality,Texas,United States,26,9.0,0.0884037222619899
+8,4,Gilles Marini,Cheryl Burke,Actor/Actress,,France,33,10.0,0.1106519742883379
+8,4,David Alan Grier,Kym Johnson,Actor/Actress,Michigan,United States,52,7.333333333333333,0.1106519742883379
+8,4,Lawrence Taylor,Edyta Sliwinska,Athlete,Virginia,United States,50,6.333333333333333,0.1106519742883379
+8,4,Ty Murray,Chelsie Hightower,Athlete,Arizona,United States,39,8.333333333333334,0.1106519742883379
+8,4,Shawn Johnson,Mark Ballas,Athlete,Iowa,United States,17,8.333333333333334,0.1106519742883379
+8,4,Steve Wozniak,Karina Smirnoff,Entrepreneur,California,United States,58,4.0,0.0
+8,4,Chuck Wicks,Julianne Hough,Singer/Rapper,Delaware,United States,29,7.333333333333333,0.1106519742883379
+8,4,Lil' Kim,Derek Hough,Singer/Rapper,New York,United States,34,9.0,0.1106519742883379
+8,4,Steve-O,Lacey Schwimmer,TV Personality,,England,34,5.0,0.1147842056932965
+8,4,Holly Madison,Dmitry Chaplin,TV Personality,Oregon,United States,30,5.333333333333333,0.0
+8,4,Melissa Rycroft,Tony Dovolani,TV Personality,Texas,United States,26,9.666666666666666,0.1106519742883379
 8,5,Gilles Marini,Cheryl Burke,Actor/Actress,,France,33,9.666666666666666,0.1208333333333333
 8,5,David Alan Grier,Kym Johnson,Actor/Actress,Michigan,United States,52,7.333333333333333,0.0
 8,5,Lawrence Taylor,Edyta Sliwinska,Athlete,Virginia,United States,50,6.666666666666667,0.1303571428571428
@@ -400,6 +529,25 @@
 8,10,Ty Murray,Chelsie Hightower,Athlete,Arizona,United States,39,8.0,0.032
 8,10,Shawn Johnson,Mark Ballas,Athlete,Iowa,United States,17,9.333333333333334,0.3226544901065449
 8,10,Melissa Rycroft,Tony Dovolani,TV Personality,Texas,United States,26,9.166666666666666,0.3226910197869101
+8,11,Gilles Marini,Cheryl Burke,Actor/Actress,,France,33,9.666666666666666,0.3314285714285714
+8,11,Shawn Johnson,Mark Ballas,Athlete,Iowa,United States,17,10.0,0.3428571428571428
+8,11,Melissa Rycroft,Tony Dovolani,TV Personality,Texas,United States,26,9.5,0.3257142857142857
+9,1,Ashley Hamiliton,Edyta Sliwinska,Actor/Actress,California,United States,34,6.3333,0.0
+9,1,Debi Mazar,Maksim Chmerkoskiy,Actor/Actress,New York,United States,45,7.333333333333333,0.0714285714285714
+9,1,Melissa Joan Hart,Mark Ballas,Actor/Actress,New York,United States,33,8.0,0.0714285714285714
+9,1,Mark Dacascos,Lacey Schwimmer,Actor/Actress,Hawaii,United States,45,9.6666,0.0714285714285714
+9,1,Chuck Liddell,Anna Trebunskaya,Athlete,California,United States,39,7.333333333333333,0.0714285714285714
+9,1,Natalie Coughlin,Alec Mazo,Athlete,California,United States,27,8.999933333333333,0.0714285714285714
+9,1,Louie Vito,Chelsie Hightower,Athlete,Ohio,United States,21,8.999933333333333,0.0714285714285714
+9,1,Michael Irvin,Anna Demidova,Athlete,Florida,United States,43,6.333333333333333,0.0714285714285714
+9,1,Joanna Krupa,Derek Hough,Model,,Poland,30,11.3333,0.0714285714285714
+9,1,Kathy Ireland,Tony Dovolani,Model,California,United States,46,6.666633333333333,0.0714285714285714
+9,1,Tom DeLay,Cheryl Burke,Politician,Texas,United States,62,6.666633333333333,0.0714285714285714
+9,1,Macy Gray,Jonathan Roberts,Singer/Rapper,Ohio,United States,42,6.3333,0.0
+9,1,Aaron Carter,Karina Smirnoff,Singer/Rapper,Florida,United States,21,10.666633333333332,0.0714285714285714
+9,1,Mya,Dmitry Chaplin,Singer/Rapper,Washington D.C.,United States,29,10.3333,0.0714285714285714
+9,1,Donny Osmond,Kym Johnson,Singer/Rapper,Utah,United States,51,9.999966666666666,0.0714285714285714
+9,1,Kelly Osbourne,Louis van Amstel,TV Personality,,England,24,10.333266666666667,0.0714285714285714
 9,2,Debi Mazar,Maksim Chmerkoskiy,Actor/Actress,New York,United States,45,7.0,0.0769230769230769
 9,2,Melissa Joan Hart,Mark Ballas,Actor/Actress,New York,United States,33,6.333333333333333,0.0769230769230769
 9,2,Mark Dacascos,Lacey Schwimmer,Actor/Actress,Hawaii,United States,45,7.0,0.0769230769230769
@@ -414,6 +562,19 @@
 9,2,Mya,Dmitry Chaplin,Singer/Rapper,Washington D.C.,United States,29,9.0,0.0769230769230769
 9,2,Donny Osmond,Kym Johnson,Singer/Rapper,Utah,United States,51,8.333333333333334,0.0769230769230769
 9,2,Kelly Osbourne,Louis van Amstel,TV Personality,,England,24,6.333333333333333,0.0769230769230769
+9,3,Debi Mazar,Maksim Chmerkoskiy,Actor/Actress,New York,United States,45,5.666666666666667,0.0
+9,3,Melissa Joan Hart,Mark Ballas,Actor/Actress,New York,United States,33,6.333333333333333,0.0898520084566596
+9,3,Mark Dacascos,Lacey Schwimmer,Actor/Actress,Hawaii,United States,45,6.0,0.0898520084566596
+9,3,Chuck Liddell,Anna Trebunskaya,Athlete,California,United States,39,5.666666666666667,0.0898520084566596
+9,3,Natalie Coughlin,Alec Mazo,Athlete,California,United States,27,8.666666666666666,0.0898520084566596
+9,3,Louie Vito,Chelsie Hightower,Athlete,Ohio,United States,21,6.666666666666667,0.0898520084566596
+9,3,Michael Irvin,Anna Demidova,Athlete,Florida,United States,43,4.666666666666667,0.1014799154334038
+9,3,Joanna Krupa,Derek Hough,Model,,Poland,30,7.666666666666667,0.0898520084566596
+9,3,Tom DeLay,Cheryl Burke,Politician,Texas,United States,62,5.0,0.0
+9,3,Aaron Carter,Karina Smirnoff,Singer/Rapper,Florida,United States,21,7.0,0.0898520084566596
+9,3,Mya,Dmitry Chaplin,Singer/Rapper,Washington D.C.,United States,29,9.0,0.0898520084566596
+9,3,Donny Osmond,Kym Johnson,Singer/Rapper,Utah,United States,51,7.0,0.0898520084566596
+9,3,Kelly Osbourne,Louis van Amstel,TV Personality,,England,24,6.666666666666667,0.0898520084566596
 9,4,Melissa Joan Hart,Mark Ballas,Actor/Actress,New York,United States,33,9.333333333333334,0.0991735537190082
 9,4,Mark Dacascos,Lacey Schwimmer,Actor/Actress,Hawaii,United States,45,7.333333333333333,0.0991735537190082
 9,4,Chuck Liddell,Anna Trebunskaya,Athlete,California,United States,39,5.666666666666667,0.0
@@ -435,6 +596,22 @@
 9,5,Mya,Dmitry Chaplin,Singer/Rapper,Washington D.C.,United States,29,9.0,0.1106519742883379
 9,5,Donny Osmond,Kym Johnson,Singer/Rapper,Utah,United States,51,9.666666666666666,0.1106519742883379
 9,5,Kelly Osbourne,Louis van Amstel,TV Personality,,England,24,8.0,0.1106519742883379
+9,6,Melissa Joan Hart,Mark Ballas,Actor/Actress,New York,United States,33,7.9999666666666664,0.0
+9,6,Mark Dacascos,Lacey Schwimmer,Actor/Actress,Hawaii,United States,45,10.666666666666666,0.1417581280638498
+9,6,Louie Vito,Chelsie Hightower,Athlete,Ohio,United States,21,8.0,0.0
+9,6,Michael Irvin,Anna Demidova,Athlete,Florida,United States,43,7.333266666666667,0.1494512316169006
+9,6,Joanna Krupa,Derek Hough,Model,,Poland,30,11.999966666666666,0.1417581280638498
+9,6,Aaron Carter,Karina Smirnoff,Singer/Rapper,Florida,United States,21,10.999933333333333,0.1417581280638498
+9,6,Mya,Dmitry Chaplin,Singer/Rapper,Washington D.C.,United States,29,11.0,0.1417581280638498
+9,6,Donny Osmond,Kym Johnson,Singer/Rapper,Utah,United States,51,10.3333,0.1417581280638498
+9,6,Kelly Osbourne,Louis van Amstel,TV Personality,,England,24,8.333266666666667,0.1417581280638498
+9,7,Mark Dacascos,Lacey Schwimmer,Actor/Actress,Hawaii,United States,45,7.166666666666667,0.0
+9,7,Michael Irvin,Anna Demidova,Athlete,Florida,United States,43,7.833333333333333,0.05
+9,7,Joanna Krupa,Derek Hough,Model,,Poland,30,9.166666666666666,0.182022792022792
+9,7,Aaron Carter,Karina Smirnoff,Singer/Rapper,Florida,United States,21,8.833333333333334,0.1877207977207977
+9,7,Mya,Dmitry Chaplin,Singer/Rapper,Washington D.C.,United States,29,8.166666666666666,0.1991168091168091
+9,7,Donny Osmond,Kym Johnson,Singer/Rapper,Utah,United States,51,8.666666666666666,0.1905698005698005
+9,7,Kelly Osbourne,Louis van Amstel,TV Personality,,England,24,8.666666666666666,0.1905698005698005
 9,8,Joanna Krupa,Derek Hough,Model,,Poland,30,8.666666666666666,0.25
 9,8,Aaron Carter,Karina Smirnoff,Singer/Rapper,Florida,United States,21,8.333333333333334,0.0
 9,8,Mya,Dmitry Chaplin,Singer/Rapper,Washington D.C.,United States,29,9.833333333333334,0.25
@@ -444,6 +621,20 @@
 9,9,Mya,Dmitry Chaplin,Singer/Rapper,Washington D.C.,United States,29,9.666633333333333,0.322915797523054
 9,9,Donny Osmond,Kym Johnson,Singer/Rapper,Utah,United States,51,8.2222,0.3447914977207734
 9,9,Kelly Osbourne,Louis van Amstel,TV Personality,,England,24,8.6666,0.3322927047561726
+9,10,Mya,Dmitry Chaplin,Singer/Rapper,Washington D.C.,United States,29,9.4444,0.3432030932030932
+9,10,Donny Osmond,Kym Johnson,Singer/Rapper,Utah,United States,51,9.6666,0.3512776905634048
+9,10,Kelly Osbourne,Louis van Amstel,TV Personality,,England,24,8.4074,0.305519216233502
+10,1,Aiden Turner,Edyta Sliwinska,Actor/Actress,,England,32,5.0,0.0717703349282296
+10,1,Shannen Doherty,Mark Ballas,Actor/Actress,Tennessee,United States,38,6.0,0.0861244019138755
+10,1,Niecy Nash,Louis van Amstel,Actor/Actress,California,United States,40,6.0,0.0861244019138755
+10,1,Buzz Aldrin,Ashly DelGrosso,Astronaut,New Jersey,United States,80,4.666666666666667,0.0669856459330143
+10,1,Chad Ochocinco,Cheryl Burke,Athlete,Florida,United States,32,6.0,0.0861244019138755
+10,1,Evan Lysacek,Anna Trebunskaya,Athlete,Illinois,United States,24,7.666666666666667,0.1100478468899521
+10,1,Pamela Anderson,Damian Whitewood,Model,,Canada,42,7.0,0.1004784688995215
+10,1,Nicole Scherzinger,Derek Hough,Singer/Rapper,Hawaii,United States,31,8.333333333333334,0.1196172248803827
+10,1,Erin Andrews,Maksim Chmerkoskiy,Sports Broadcaster,Maine,United States,32,7.0,0.1004784688995215
+10,1,Kate Gosselin,Tony Dovolani,TV Personality,Pennsylvania,United States,35,5.333333333333333,0.0765550239234449
+10,1,Jake Pavelka,Chelsie Hightower,TV Personality,Texas,United States,32,6.666666666666667,0.0956937799043062
 10,2,Aiden Turner,Edyta Sliwinska,Actor/Actress,,England,32,6.333333333333333,0.0963636363636363
 10,2,Shannen Doherty,Mark Ballas,Actor/Actress,Tennessee,United States,38,6.666666666666667,0.0
 10,2,Niecy Nash,Louis van Amstel,Actor/Actress,California,United States,40,7.0,0.0918181818181818
@@ -504,6 +695,9 @@
 10,9,Evan Lysacek,Anna Trebunskaya,Athlete,Illinois,United States,24,9.833333333333334,0.3276666666666666
 10,9,Nicole Scherzinger,Derek Hough,Singer/Rapper,Hawaii,United States,31,9.833333333333334,0.3276666666666666
 10,9,Erin Andrews,Maksim Chmerkoskiy,Sports Broadcaster,Maine,United States,32,9.333333333333334,0.3276666666666666
+10,10,Evan Lysacek,Anna Trebunskaya,Athlete,Illinois,United States,24,8.9629,0.325268368450467
+10,10,Nicole Scherzinger,Derek Hough,Singer/Rapper,Hawaii,United States,31,9.592566666666666,0.3481193038992962
+10,10,Erin Andrews,Maksim Chmerkoskiy,Sports Broadcaster,Maine,United States,32,8.999933333333333,0.3266123276502367
 11,1,David Hasselhoff,Kym Johnson,Actor/Actress,Maryland,United States,58,5.0,0.0
 11,1,Florence Henderson,Corky Ballas,Actor/Actress,Indiana,United States,76,6.0,0.0909090909090909
 11,1,Kyle Massey,Lacey Schwimmer,Actor/Actress,Georgia,United States,19,7.666666666666667,0.0909090909090909
@@ -576,6 +770,20 @@
 11,9,Jennifer Grey,Derek Hough,Actor/Actress,New York,United States,50,10.0,0.3274853801169591
 11,9,Brandy,Maksim Chmerkoskiy,Singer/Rapper,Mississippi,United States,31,9.5,0.0
 11,9,Bristol Palin,Mark Ballas,TV Personality,Alaska,United States,19,8.833333333333334,0.3450292397660819
+11,10,Kyle Massey,Lacey Schwimmer,Actor/Actress,Georgia,United States,19,9.111066666666666,0.3293164561842317
+11,10,Jennifer Grey,Derek Hough,Actor/Actress,New York,United States,50,10.0,0.361446654088323
+11,10,Bristol Palin,Mark Ballas,TV Personality,Alaska,United States,19,8.555533333333335,0.3092368897274452
+12,1,Ralph Macchio,Karina Smirnoff,Actor/Actress,New York,United States,49,8.0,0.1159420289855072
+12,1,Chelsea Kane,Mark Ballas,Actor/Actress,Arizona,United States,22,7.0,0.1014492753623188
+12,1,Kirstie Alley,Maksim Chmerkoskiy,Actor/Actress,Kansas,United States,60,7.666666666666667,0.1111111111111111
+12,1,Hines Ward,Kym Johnson,Athlete,,South Korea,35,7.0,0.1014492753623188
+12,1,Sugar Ray Leonard,Anna Trebunskaya,Athlete,North Carolina,United States,54,5.666666666666667,0.0821256038647343
+12,1,Chris Jericho,Cheryl Burke,Athlete,New York,United States,40,6.333333333333333,0.0917874396135265
+12,1,Petra Nemcova,Dmitry Chaplin,Model,,Czechoslovakia,31,6.0,0.0869565217391304
+12,1,Mike Catherwood,Lacey Schwimmer,Radio Personality,California,United States,32,4.333333333333333,0.0628019323671497
+12,1,Romeo,Chelsie Hightower,Singer/Rapper,Louisiana,United States,21,6.333333333333333,0.0917874396135265
+12,1,Wendy Williams,Tony Dovolani,TV Personality,New Jersey,United States,46,4.666666666666667,0.0676328502415459
+12,1,Kendra Wilkinson,Louis van Amstel,TV Personality,California,United States,25,6.0,0.0869565217391304
 12,2,Ralph Macchio,Karina Smirnoff,Actor/Actress,New York,United States,49,7.0,0.1
 12,2,Chelsea Kane,Mark Ballas,Actor/Actress,Arizona,United States,22,6.0,0.1
 12,2,Kirstie Alley,Maksim Chmerkoskiy,Actor/Actress,Kansas,United States,60,6.666666666666667,0.1
@@ -636,6 +844,9 @@
 12,9,Chelsea Kane,Mark Ballas,Actor/Actress,Arizona,United States,22,12.166666666666666,0.325
 12,9,Kirstie Alley,Maksim Chmerkoskiy,Actor/Actress,Kansas,United States,60,9.0,0.325
 12,9,Hines Ward,Kym Johnson,Athlete,,South Korea,35,10.0,0.325
+12,10,Chelsea Kane,Mark Ballas,Actor/Actress,Arizona,United States,22,9.888866666666667,0.3396948007112996
+12,10,Kirstie Alley,Maksim Chmerkoskiy,Actor/Actress,Kansas,United States,60,9.3333,0.3206103985774007
+12,10,Hines Ward,Kym Johnson,Athlete,,South Korea,35,9.888866666666667,0.3396948007112996
 13,1,Elisabetta Canalis,Valentin Chmerkovskiy,Actor/Actress,,Italy,33,5.0,0.0906363636363636
 13,1,David Arquette,Kym Johnson,Actor/Actress,Virginia,United States,40,6.0,0.0906363636363636
 13,1,Ricki Lake,Derek Hough,Actor/Actress,New York,United States,42,6.666666666666667,0.0906363636363636
@@ -708,18 +919,33 @@
 13,9,J.R. Martinez,Karina Smirnoff,Actor/Actress,Louisiana,United States,28,9.333333333333334,0.3236666666666666
 13,9,Hope Solo,Maksim Chmerkoskiy,Athlete,Washington,United States,30,8.1666,0.029
 13,9,Rob Kardashian,Cheryl Burke,TV Personality,California,United States,24,10.833266666666667,0.3236666666666666
-14,2,William Levy,Cheryl Burke,Actor/Actress,,Cuba,31,8.333333333333334,0.0908181818181818
-14,2,Jack Wagner,Anna Trebunskaya,Actor/Actress,Missouri,United States,52,7.0,0.0908181818181818
-14,2,Sherri Sheperd,Valentin Chmerkovskiy,Actor/Actress,Illinois,United States,44,7.666666666666667,0.0908181818181818
-14,2,Jaleel White,Kym Johnson,Actor/Actress,California,United States,35,7.333333333333333,0.0908181818181818
-14,2,Roshon Fegan,Chelsie Hightower,Actor/Actress,California,United States,20,8.666666666666666,0.0908181818181818
-14,2,Melissa Gilbert,Maksim Chmerkoskiy,Actor/Actress,California,United States,47,6.666666666666667,0.0908181818181818
-14,2,Martina Navratilova,Tony Dovolani,Athlete,,Czechoslovakia,55,5.666666666666667,0.001
-14,2,Donald Driver,Peta Murgatroyd,Athlete,Texas,United States,37,8.0,0.0908181818181818
-14,2,Gavin DeGraw,Karina Smirnoff,Singer/Rapper,New York,United States,35,7.0,0.0908181818181818
-14,2,Gladys Knight,Tristan MacManus,Singer/Rapper,Georgia,United States,67,6.333333333333333,0.0908181818181818
-14,2,Katherine Jenkins,Mark Ballas,Singer/Rapper,,Wales,31,8.666666666666666,0.0908181818181818
-14,2,Maria Menounos,Derek Hough,TV Personality,Massachusetts,United States,33,8.333333333333334,0.0908181818181818
+13,10,Ricki Lake,Derek Hough,Actor/Actress,New York,United States,42,9.3333,0.3313613318879616
+13,10,J.R. Martinez,Karina Smirnoff,Actor/Actress,Louisiana,United States,28,9.388833333333332,0.3333329388541484
+13,10,Rob Kardashian,Cheryl Burke,TV Personality,California,United States,24,9.4444,0.33530572925789
+14,1,William Levy,Cheryl Burke,Actor/Actress,,Cuba,31,8.0,0.0888888888888888
+14,1,Jack Wagner,Anna Trebunskaya,Actor/Actress,Missouri,United States,52,7.666666666666667,0.0851851851851851
+14,1,Sherri Sheperd,Valentin Chmerkovskiy,Actor/Actress,Illinois,United States,44,7.666666666666667,0.0851851851851851
+14,1,Jaleel White,Kym Johnson,Actor/Actress,California,United States,35,8.666666666666666,0.0962962962962962
+14,1,Roshon Fegan,Chelsie Hightower,Actor/Actress,California,United States,20,7.666666666666667,0.0851851851851851
+14,1,Melissa Gilbert,Maksim Chmerkoskiy,Actor/Actress,California,United States,47,6.666666666666667,0.074074074074074
+14,1,Martina Navratilova,Tony Dovolani,Athlete,,Czechoslovakia,55,6.666666666666667,0.074074074074074
+14,1,Donald Driver,Peta Murgatroyd,Athlete,Texas,United States,37,7.0,0.0777777777777777
+14,1,Gavin DeGraw,Karina Smirnoff,Singer/Rapper,New York,United States,35,6.666666666666667,0.074074074074074
+14,1,Gladys Knight,Tristan MacManus,Singer/Rapper,Georgia,United States,67,7.666666666666667,0.0851851851851851
+14,1,Katherine Jenkins,Mark Ballas,Singer/Rapper,,Wales,31,8.666666666666666,0.0962962962962962
+14,1,Maria Menounos,Derek Hough,TV Personality,Massachusetts,United States,33,7.0,0.0777777777777777
+14,2,William Levy,Cheryl Burke,Actor/Actress,,Cuba,31,8.333333333333334,0.0902727272727272
+14,2,Jack Wagner,Anna Trebunskaya,Actor/Actress,Missouri,United States,52,7.0,0.0902727272727272
+14,2,Sherri Sheperd,Valentin Chmerkovskiy,Actor/Actress,Illinois,United States,44,7.666666666666667,0.0902727272727272
+14,2,Jaleel White,Kym Johnson,Actor/Actress,California,United States,35,7.333333333333333,0.0902727272727272
+14,2,Roshon Fegan,Chelsie Hightower,Actor/Actress,California,United States,20,8.666666666666666,0.0902727272727272
+14,2,Melissa Gilbert,Maksim Chmerkoskiy,Actor/Actress,California,United States,47,6.666666666666667,0.0902727272727272
+14,2,Martina Navratilova,Tony Dovolani,Athlete,,Czechoslovakia,55,5.666666666666667,0.007
+14,2,Donald Driver,Peta Murgatroyd,Athlete,Texas,United States,37,8.0,0.0902727272727272
+14,2,Gavin DeGraw,Karina Smirnoff,Singer/Rapper,New York,United States,35,7.0,0.0902727272727272
+14,2,Gladys Knight,Tristan MacManus,Singer/Rapper,Georgia,United States,67,6.333333333333333,0.0902727272727272
+14,2,Katherine Jenkins,Mark Ballas,Singer/Rapper,,Wales,31,8.666666666666666,0.0902727272727272
+14,2,Maria Menounos,Derek Hough,TV Personality,Massachusetts,United States,33,8.333333333333334,0.0902727272727272
 14,3,William Levy,Cheryl Burke,Actor/Actress,,Cuba,31,9.333333333333334,0.1
 14,3,Jack Wagner,Anna Trebunskaya,Actor/Actress,Missouri,United States,52,8.0,0.0
 14,3,Sherri Sheperd,Valentin Chmerkovskiy,Actor/Actress,Illinois,United States,44,8.0,0.1
@@ -765,10 +991,19 @@
 14,7,Donald Driver,Peta Murgatroyd,Athlete,Texas,United States,37,8.833333333333334,0.164850136239782
 14,7,Katherine Jenkins,Mark Ballas,Singer/Rapper,,Wales,31,9.0,0.164850136239782
 14,7,Maria Menounos,Derek Hough,TV Personality,Massachusetts,United States,33,9.5,0.164850136239782
-14,9,William Levy,Cheryl Burke,Actor/Actress,,Cuba,31,9.666666666666666,0.3019855072463768
-14,9,Donald Driver,Peta Murgatroyd,Athlete,Texas,United States,37,9.5,0.3063333333333333
-14,9,Katherine Jenkins,Mark Ballas,Singer/Rapper,,Wales,31,9.333333333333334,0.3106811594202898
-14,9,Maria Menounos,Derek Hough,TV Personality,Massachusetts,United States,33,9.833333333333334,0.081
+14,8,William Levy,Cheryl Burke,Actor/Actress,,Cuba,31,9.5,0.2063837920489296
+14,8,Roshon Fegan,Chelsie Hightower,Actor/Actress,California,United States,20,9.333333333333334,0.15
+14,8,Melissa Gilbert,Maksim Chmerkoskiy,Actor/Actress,California,United States,47,8.5,0.0
+14,8,Donald Driver,Peta Murgatroyd,Athlete,Texas,United States,37,9.166666666666666,0.2125
+14,8,Katherine Jenkins,Mark Ballas,Singer/Rapper,,Wales,31,9.166666666666666,0.2125
+14,8,Maria Menounos,Derek Hough,TV Personality,Massachusetts,United States,33,8.833333333333334,0.2186162079510703
+14,9,William Levy,Cheryl Burke,Actor/Actress,,Cuba,31,9.666666666666666,0.3013188405797101
+14,9,Donald Driver,Peta Murgatroyd,Athlete,Texas,United States,37,9.5,0.3056666666666666
+14,9,Katherine Jenkins,Mark Ballas,Singer/Rapper,,Wales,31,9.333333333333334,0.3100144927536231
+14,9,Maria Menounos,Derek Hough,TV Personality,Massachusetts,United States,33,9.833333333333334,0.083
+14,10,William Levy,Cheryl Burke,Actor/Actress,,Cuba,31,9.888866666666667,0.3320893016258233
+14,10,Donald Driver,Peta Murgatroyd,Athlete,Texas,United States,37,9.888866666666667,0.3320893016258233
+14,10,Katherine Jenkins,Mark Ballas,Singer/Rapper,,Wales,31,10.0,0.3358213967483534
 15,1,Gilles Marini,Peta Murgatroyd,Actor/Actress,,France,36,8.0,0.08325
 15,1,Sabrina Bryan,Louis van Amstel,Actor/Actress,California,United States,28,7.5,0.08325
 15,1,Kirstie Alley,Maksim Chmerkoskiy,Actor/Actress,Kansas,United States,61,6.333333333333333,0.08325
@@ -794,6 +1029,17 @@
 15,2,Drew Lachey,Anna Trebunskaya,Singer/Rapper,Ohio,United States,36,7.5,0.0887681159420289
 15,2,Bristol Palin,Mark Ballas,TV Personality,Alaska,United States,21,6.0,0.1050724637681159
 15,2,Melissa Rycroft,Tony Dovolani,TV Personality,Texas,United States,29,7.833333333333333,0.0887681159420289
+15,3,Gilles Marini,Peta Murgatroyd,Actor/Actress,,France,36,8.5,0.1051558752997601
+15,3,Sabrina Bryan,Louis van Amstel,Actor/Actress,California,United States,28,8.5,0.1051558752997601
+15,3,Kirstie Alley,Maksim Chmerkoskiy,Actor/Actress,Kansas,United States,61,8.0,0.1105515587529976
+15,3,Kelly Monaco,Valentin Chmerkovskiy,Actor/Actress,Pennsylvania,United States,36,9.0,0.0997601918465227
+15,3,Apolo Anton Ohno,Karina Smirnoff,Athlete,Washington,United States,30,8.5,0.1051558752997601
+15,3,Emmitt Smith,Cheryl Burke,Athlete,Florida,United States,43,8.333333333333334,0.1069544364508393
+15,3,Shawn Johnson,Derek Hough,Athlete,Iowa,United States,20,8.833333333333334,0.1015587529976019
+15,3,Helio Castroneves,Chelsie Hightower,Racing Driver,,Brazil,37,8.5,0.05
+15,3,Drew Lachey,Anna Trebunskaya,Singer/Rapper,Ohio,United States,36,8.0,0.0
+15,3,Bristol Palin,Mark Ballas,TV Personality,Alaska,United States,21,7.5,0.115947242206235
+15,3,Melissa Rycroft,Tony Dovolani,TV Personality,Texas,United States,29,9.0,0.0997601918465227
 15,4,Gilles Marini,Peta Murgatroyd,Actor/Actress,,France,36,9.875,0.1242223950233281
 15,4,Sabrina Bryan,Louis van Amstel,Actor/Actress,California,United States,28,8.875,0.1242223950233281
 15,4,Kirstie Alley,Maksim Chmerkoskiy,Actor/Actress,Kansas,United States,61,7.5,0.1304432348367029
@@ -803,6 +1049,14 @@
 15,4,Shawn Johnson,Derek Hough,Athlete,Iowa,United States,20,9.875,0.1242223950233281
 15,4,Bristol Palin,Mark Ballas,TV Personality,Alaska,United States,21,8.0,0.0
 15,4,Melissa Rycroft,Tony Dovolani,TV Personality,Texas,United States,29,9.25,0.1242223950233281
+15,5,Gilles Marini,Peta Murgatroyd,Actor/Actress,,France,36,9.416666666666666,0.1271091113610798
+15,5,Sabrina Bryan,Louis van Amstel,Actor/Actress,California,United States,28,9.75,0.1316085489313835
+15,5,Kirstie Alley,Maksim Chmerkoskiy,Actor/Actress,Kansas,United States,61,8.75,0.1181102362204724
+15,5,Kelly Monaco,Valentin Chmerkovskiy,Actor/Actress,Pennsylvania,United States,36,8.583333333333334,0.1158605174353206
+15,5,Apolo Anton Ohno,Karina Smirnoff,Athlete,Washington,United States,30,9.416666666666666,0.1271091113610798
+15,5,Emmitt Smith,Cheryl Burke,Athlete,Florida,United States,43,9.333333333333334,0.1259842519685039
+15,5,Shawn Johnson,Derek Hough,Athlete,Iowa,United States,20,9.416666666666666,0.1271091113610798
+15,5,Melissa Rycroft,Tony Dovolani,TV Personality,Texas,United States,29,9.416666666666666,0.1271091113610798
 15,6,Gilles Marini,Peta Murgatroyd,Actor/Actress,,France,36,9.166666666666666,0.1450695322376738
 15,6,Sabrina Bryan,Louis van Amstel,Actor/Actress,California,United States,28,10.0,0.0
 15,6,Kirstie Alley,Maksim Chmerkoskiy,Actor/Actress,Kansas,United States,61,9.166666666666666,0.1450695322376738
@@ -811,6 +1065,40 @@
 15,6,Emmitt Smith,Cheryl Burke,Athlete,Florida,United States,43,8.833333333333334,0.1494943109987357
 15,6,Shawn Johnson,Derek Hough,Athlete,Iowa,United States,20,9.333333333333334,0.1428571428571428
 15,6,Melissa Rycroft,Tony Dovolani,TV Personality,Texas,United States,29,9.833333333333334,0.1362199747155499
+15,7,Gilles Marini,Peta Murgatroyd,Actor/Actress,,France,36,11.1666,0.1384293260352406
+15,7,Kirstie Alley,Maksim Chmerkoskiy,Actor/Actress,Kansas,United States,61,9.3333,0.1157024007920684
+15,7,Kelly Monaco,Valentin Chmerkovskiy,Actor/Actress,Pennsylvania,United States,36,12.0,0.1487607608782339
+15,7,Apolo Anton Ohno,Karina Smirnoff,Athlete,Washington,United States,30,11.0,0.1363640308050477
+15,7,Emmitt Smith,Cheryl Burke,Athlete,Florida,United States,43,11.499966666666666,0.142561982617305
+15,7,Shawn Johnson,Derek Hough,Athlete,Iowa,United States,20,12.6666,0.1570244211450198
+15,7,Melissa Rycroft,Tony Dovolani,TV Personality,Texas,United States,29,12.999966666666666,0.1611570777270843
+15,8,Gilles Marini,Peta Murgatroyd,Actor/Actress,,France,36,9.759233333333333,0.15
+15,8,Kirstie Alley,Maksim Chmerkoskiy,Actor/Actress,Kansas,United States,61,8.5,0.0
+15,8,Kelly Monaco,Valentin Chmerkovskiy,Actor/Actress,Pennsylvania,United States,36,9.444433333333334,0.1728434734696458
+15,8,Apolo Anton Ohno,Karina Smirnoff,Athlete,Washington,United States,30,9.759233333333333,0.1681043510202361
+15,8,Emmitt Smith,Cheryl Burke,Athlete,Florida,United States,43,9.685133333333333,0.1692198814316124
+15,8,Shawn Johnson,Derek Hough,Athlete,Iowa,United States,20,9.277766666666666,0.175352538722404
+15,8,Melissa Rycroft,Tony Dovolani,TV Personality,Texas,United States,29,10.0,0.1644797553561016
+15,9,Kelly Monaco,Valentin Chmerkovskiy,Actor/Actress,Pennsylvania,United States,36,9.036999999999999,0.2762546303290007
+15,9,Apolo Anton Ohno,Karina Smirnoff,Athlete,Washington,United States,30,9.537,0.2
+15,9,Emmitt Smith,Cheryl Burke,Athlete,Florida,United States,43,9.0,0.0
+15,9,Shawn Johnson,Derek Hough,Athlete,Iowa,United States,20,9.833333333333334,0.259311331868082
+15,9,Melissa Rycroft,Tony Dovolani,TV Personality,Texas,United States,29,9.592566666666666,0.2644340378029173
+15,10,Kelly Monaco,Valentin Chmerkovskiy,Actor/Actress,Pennsylvania,United States,36,9.703633333333334,0.3331212530739241
+15,10,Shawn Johnson,Derek Hough,Athlete,Iowa,United States,20,9.648100000000001,0.3312148193751337
+15,10,Melissa Rycroft,Tony Dovolani,TV Personality,Texas,United States,29,9.7777,0.3356639275509421
+16,1,Ingo Rademacher,Kym Johnson,Actor/Actress,,Germany,41,6.666666666666667,0.0873362445414847
+16,1,Zendaya,Valentin Chmerkovskiy,Actor/Actress,California,United States,16,8.0,0.1048034934497816
+16,1,Dorothy Hamill,Tristan MacManus,Athlete,Illinois,United States,56,7.0,0.0917030567685589
+16,1,Victor Ortiz,Lindsay Arnold,Athlete,Kansas,United States,26,6.0,0.0786026200873362
+16,1,Alexandra Raisman,Mark Ballas,Athlete,Massachusetts,United States,18,7.0,0.0917030567685589
+16,1,Jacoby Jones,Karina Smirnoff,Athlete,Louisiana,United States,28,6.666666666666667,0.0873362445414847
+16,1,D. L. Hughley,Cheryl Burke,Comedian,Virginia,United States,50,4.0,0.0524017467248908
+16,1,Andy Dick,Sharna Burgess,Comedian,South Carolina,United States,47,5.666666666666667,0.074235807860262
+16,1,Wynonna Judd,Tony Dovolani,Singer/Rapper,Kentucky,United States,48,6.0,0.0786026200873362
+16,1,Kellie Pickler,Derek Hough,Singer/Rapper,North Carolina,United States,26,7.0,0.0917030567685589
+16,1,Lisa Vanderpump,Gleb Savchenko,TV Personality,,England,52,6.0,0.0786026200873362
+16,1,Sean Lowe,Peta Murgatroyd,TV Personality,Texas,United States,29,6.333333333333333,0.0829694323144104
 16,2,Ingo Rademacher,Kym Johnson,Actor/Actress,,Germany,41,6.666666666666667,0.0905454545454545
 16,2,Zendaya,Valentin Chmerkovskiy,Actor/Actress,California,United States,16,8.666666666666666,0.0905454545454545
 16,2,Dorothy Hamill,Tristan MacManus,Athlete,Illinois,United States,56,5.0,0.004
@@ -879,6 +1167,22 @@
 16,9,Alexandra Raisman,Mark Ballas,Athlete,Massachusetts,United States,18,9.833333333333334,0.2465
 16,9,Jacoby Jones,Karina Smirnoff,Athlete,Louisiana,United States,28,9.833333333333334,0.2465
 16,9,Kellie Pickler,Derek Hough,Singer/Rapper,North Carolina,United States,26,9.666666666666666,0.2465
+16,10,Zendaya,Valentin Chmerkovskiy,Actor/Actress,California,United States,16,10.0,0.256410475564509
+16,10,Alexandra Raisman,Mark Ballas,Athlete,Massachusetts,United States,18,9.666666666666666,0.2478634597123587
+16,10,Jacoby Jones,Karina Smirnoff,Athlete,Louisiana,United States,28,9.3333,0.2393155891586232
+16,10,Kellie Pickler,Derek Hough,Singer/Rapper,North Carolina,United States,26,10.0,0.256410475564509
+17,1,Valerie Harper,Tristan MacManus,Actor/Actress,New York,United States,74,7.0,0.0820312499999999
+17,1,Brant Daugherty,Peta Murgatroyd,Actor/Actress,Ohio,United States,28,7.333333333333333,0.0859374999999999
+17,1,Elizabeth Berkley Lauren,Valentin Chmerkovskiy,Actor/Actress,Michigan,United States,39,8.0,0.0937499999999999
+17,1,Leah Remini,Tony Dovolani,Actor/Actress,New York,United States,43,7.0,0.0820312499999999
+17,1,Corbin Bleu,Karina Smirnoff,Actor/Actress,New York,United States,24,8.0,0.0937499999999999
+17,1,Amber Riley,Derek Hough,Actor/Actress,California,United States,27,9.0,0.1054687499999999
+17,1,Keyshawn Johnson,Sharna Burgess,Athlete,California,United States,41,5.666666666666667,0.06640625
+17,1,Bill Engvall,Emma Slater,Comedian,Texas,United States,56,6.0,0.0703124999999999
+17,1,Christina Milian,Mark Ballas,Singer/Rapper,New Jersey,United States,31,7.333333333333333,0.0859374999999999
+17,1,"Nicole ""Snooki"" Polizzi",Sasha Farber,TV Personality,,Chile,25,7.666666666666667,0.08984375
+17,1,Jack Osbourne,Cheryl Burke,TV Personality,,England,27,7.666666666666667,0.08984375
+17,1,Bill Nye,Tyne Stecklein,TV Personality,Washington D.C.,United States,57,4.666666666666667,0.0546875
 17,2,Valerie Harper,Tristan MacManus,Actor/Actress,New York,United States,74,6.333333333333333,0.0905673274094326
 17,2,Brant Daugherty,Peta Murgatroyd,Actor/Actress,Ohio,United States,28,7.666666666666667,0.0905673274094326
 17,2,Elizabeth Berkley Lauren,Valentin Chmerkovskiy,Actor/Actress,Michigan,United States,39,8.333333333333334,0.0905673274094326
@@ -921,6 +1225,14 @@
 17,5,Christina Milian,Mark Ballas,Singer/Rapper,New Jersey,United States,31,9.333333333333334,0.0
 17,5,"Nicole ""Snooki"" Polizzi",Sasha Farber,TV Personality,,Chile,25,9.0,0.1202127659574468
 17,5,Jack Osbourne,Cheryl Burke,TV Personality,,England,27,9.0,0.1202127659574468
+17,6,Brant Daugherty,Peta Murgatroyd,Actor/Actress,Ohio,United States,28,10.333333333333334,0.13419959895965
+17,6,Elizabeth Berkley Lauren,Valentin Chmerkovskiy,Actor/Actress,Michigan,United States,39,10.6666,0.1385277524770648
+17,6,Leah Remini,Tony Dovolani,Actor/Actress,New York,United States,43,9.3333,0.1212121080938808
+17,6,Corbin Bleu,Karina Smirnoff,Actor/Actress,New York,United States,24,8.999966666666666,0.1168830887726017
+17,6,Amber Riley,Derek Hough,Actor/Actress,California,United States,27,10.666633333333332,0.1385281853789969
+17,6,Bill Engvall,Emma Slater,Comedian,Texas,United States,56,7.9999666666666664,0.1038960308087647
+17,6,"Nicole ""Snooki"" Polizzi",Sasha Farber,TV Personality,,Chile,25,10.0,0.129870579638371
+17,6,Jack Osbourne,Cheryl Burke,TV Personality,,England,27,8.999933333333333,0.1168826558706696
 17,7,Brant Daugherty,Peta Murgatroyd,Actor/Actress,Ohio,United States,28,9.5,0.1412447597549177
 17,7,Elizabeth Berkley Lauren,Valentin Chmerkovskiy,Actor/Actress,Michigan,United States,39,9.0,0.1412447597549177
 17,7,Leah Remini,Tony Dovolani,Actor/Actress,New York,United States,43,8.833333333333334,0.1435020960980328
@@ -947,6 +1259,10 @@
 17,10,Amber Riley,Derek Hough,Actor/Actress,California,United States,27,9.875,0.2464285714285714
 17,10,Bill Engvall,Emma Slater,Comedian,Texas,United States,56,7.5,0.2607142857142857
 17,10,Jack Osbourne,Cheryl Burke,TV Personality,,England,27,8.875,0.2464285714285714
+17,11,Corbin Bleu,Karina Smirnoff,Actor/Actress,New York,United States,24,9.8888,0.2590965542177513
+17,11,Amber Riley,Derek Hough,Actor/Actress,California,United States,27,10.4444,0.2736538357406239
+17,11,Bill Engvall,Emma Slater,Comedian,Texas,United States,56,8.499966666666666,0.2227077172456798
+17,11,Jack Osbourne,Cheryl Burke,TV Personality,,England,27,9.3333,0.2445418927959448
 18,1,Billy Dee Williams,Emma Slater,Actor/Actress,New York,United States,76,5.0,0.1013185287994448
 18,1,Danica McKellar,Valentin Chmerkovskiy,Actor/Actress,California,United States,39,8.0,0.0898681471200555
 18,1,James Maslow,Peta Murgatroyd,Actor/Actress,New York,United States,23,7.0,0.0898681471200555
@@ -959,6 +1275,35 @@
 18,1,Drew Carey,Cheryl Burke,Comedian,Ohio,United States,55,7.0,0.0898681471200555
 18,1,Cody Simpson,Witney Carson,Singer/Rapper,,Australia,17,7.333333333333333,0.0898681471200555
 18,1,NeNe Leakes,Tony Dovolani,TV Personality,New York,United States,46,7.0,0.0898681471200555
+18,2,Billy Dee Williams,Emma Slater,Actor/Actress,New York,United States,76,5.0,0.0
+18,2,Danica McKellar,Valentin Chmerkovskiy,Actor/Actress,California,United States,39,8.0,0.1111111111111111
+18,2,James Maslow,Peta Murgatroyd,Actor/Actress,New York,United States,23,8.333333333333334,0.1111111111111111
+18,2,Candace Cameron Bure,Mark Ballas,Actor/Actress,California,United States,37,7.0,0.1111111111111111
+18,2,Sean Avery,Karina Smirnoff,Athlete,,Canada,33,7.0,0.0
+18,2,Charlie White,Sharna Burgess,Athlete,Michigan,United States,26,8.333333333333334,0.1111111111111111
+18,2,Amy Purdy,Derek Hough,Athlete,Nevada,United States,34,8.0,0.1111111111111111
+18,2,Meryl Davis,Maksim Chmerkoskiy,Athlete,Michigan,United States,27,8.333333333333334,0.1111111111111111
+18,2,Drew Carey,Cheryl Burke,Comedian,Ohio,United States,55,7.0,0.1111111111111111
+18,2,Cody Simpson,Witney Carson,Singer/Rapper,,Australia,17,7.333333333333333,0.1111111111111111
+18,2,NeNe Leakes,Tony Dovolani,TV Personality,New York,United States,46,7.0,0.1111111111111111
+18,3,Danica McKellar,Valentin Chmerkovskiy,Actor/Actress,California,United States,39,9.0,0.1157556270096463
+18,3,James Maslow,Peta Murgatroyd,Actor/Actress,New York,United States,23,9.0,0.1157556270096463
+18,3,Candace Cameron Bure,Mark Ballas,Actor/Actress,California,United States,37,8.0,0.1028938906752411
+18,3,Charlie White,Sharna Burgess,Athlete,Michigan,United States,26,9.0,0.1157556270096463
+18,3,Amy Purdy,Derek Hough,Athlete,Nevada,United States,34,9.0,0.1157556270096463
+18,3,Meryl Davis,Maksim Chmerkoskiy,Athlete,Michigan,United States,27,9.75,0.1254019292604501
+18,3,Drew Carey,Cheryl Burke,Comedian,Ohio,United States,55,7.5,0.0964630225080385
+18,3,Cody Simpson,Witney Carson,Singer/Rapper,,Australia,17,8.75,0.112540192926045
+18,3,NeNe Leakes,Tony Dovolani,TV Personality,New York,United States,46,7.75,0.0996784565916398
+18,4,Danica McKellar,Valentin Chmerkovskiy,Actor/Actress,California,United States,39,8.0,0.1077441077441077
+18,4,James Maslow,Peta Murgatroyd,Actor/Actress,New York,United States,23,8.75,0.1178451178451178
+18,4,Candace Cameron Bure,Mark Ballas,Actor/Actress,California,United States,37,7.0,0.0942760942760942
+18,4,Charlie White,Sharna Burgess,Athlete,Michigan,United States,26,8.25,0.1111111111111111
+18,4,Amy Purdy,Derek Hough,Athlete,Nevada,United States,34,8.5,0.1144781144781144
+18,4,Meryl Davis,Maksim Chmerkoskiy,Athlete,Michigan,United States,27,9.75,0.1313131313131313
+18,4,Drew Carey,Cheryl Burke,Comedian,Ohio,United States,55,8.25,0.1111111111111111
+18,4,Cody Simpson,Witney Carson,Singer/Rapper,,Australia,17,7.75,0.1043771043771043
+18,4,NeNe Leakes,Tony Dovolani,TV Personality,New York,United States,46,8.0,0.1077441077441077
 18,5,Danica McKellar,Valentin Chmerkovskiy,Actor/Actress,California,United States,39,9.75,0.1226708074534161
 18,5,James Maslow,Peta Murgatroyd,Actor/Actress,New York,United States,23,10.0,0.1226708074534161
 18,5,Candace Cameron Bure,Mark Ballas,Actor/Actress,California,United States,37,8.75,0.1226708074534161
@@ -994,6 +1339,10 @@
 18,9,Charlie White,Sharna Burgess,Athlete,Michigan,United States,26,9.5,0.0
 18,9,Amy Purdy,Derek Hough,Athlete,Nevada,United States,34,9.75,0.2473821989528795
 18,9,Meryl Davis,Maksim Chmerkoskiy,Athlete,Michigan,United States,27,10.0,0.2473821989528795
+18,10,James Maslow,Peta Murgatroyd,Actor/Actress,New York,United States,23,9.666666666666666,0.2529075649013137
+18,10,Candace Cameron Bure,Mark Ballas,Actor/Actress,California,United States,37,8.6666,0.2267429691696957
+18,10,Amy Purdy,Derek Hough,Athlete,Nevada,United States,34,9.888866666666667,0.2587209505138384
+18,10,Meryl Davis,Maksim Chmerkoskiy,Athlete,Michigan,United States,27,10.0,0.2616285154151521
 19,1,Antonio Sabato Jr.,Cheryl Burke,Actor/Actress,,Italy,42,6.25,0.0828853046594982
 19,1,Jonathan Bennett,Allison Holker,Actor/Actress,Ohio,United States,33,7.5,0.0828853046594982
 19,1,Lea Thompson,Artem Chigvintsev,Actor/Actress,Minnesota,United States,53,8.0,0.0828853046594982
@@ -1040,6 +1389,15 @@
 19,4,Michael Waltrip,Emma Slater,Racing Driver,Kentucky,United States,51,6.25,0.1201388888888888
 19,4,Bethany Mota,Derek Hough,Social Media Personality,California,United States,18,8.25,0.1076388888888889
 19,4,Sadie Robertson,Mark Ballas,TV Personality,Louisiana,United States,17,9.25,0.1076388888888889
+19,5,Antonio Sabato Jr.,Cheryl Burke,Actor/Actress,,Italy,42,7.0,0.106060606060606
+19,5,Jonathan Bennett,Allison Holker,Actor/Actress,Ohio,United States,33,6.0,0.0909090909090909
+19,5,Lea Thompson,Artem Chigvintsev,Actor/Actress,Minnesota,United States,53,8.5,0.1287878787878787
+19,5,Janel Parrish,Valentin Chmerkovskiy,Actor/Actress,Hawaii,United States,25,8.25,0.125
+19,5,Alfonso Ribeiro,Witney Carson,Actor/Actress,New York,United States,42,8.5,0.1287878787878787
+19,5,Tommy Chong,Peta Murgatroyd,Comedian,,Canada,76,5.75,0.0871212121212121
+19,5,Michael Waltrip,Emma Slater,Racing Driver,Kentucky,United States,51,5.0,0.0757575757575757
+19,5,Bethany Mota,Derek Hough,Social Media Personality,California,United States,18,8.0,0.1212121212121212
+19,5,Sadie Robertson,Mark Ballas,TV Personality,Louisiana,United States,17,9.0,0.1363636363636363
 19,6,Antonio Sabato Jr.,Cheryl Burke,Actor/Actress,,Italy,42,7.0,0.1343856655290102
 19,6,Jonathan Bennett,Allison Holker,Actor/Actress,Ohio,United States,33,8.0,0.0
 19,6,Lea Thompson,Artem Chigvintsev,Actor/Actress,Minnesota,United States,53,8.0,0.1207337883959044
@@ -1075,6 +1433,22 @@
 19,10,Tommy Chong,Peta Murgatroyd,Comedian,,Canada,76,7.75,0.033
 19,10,Bethany Mota,Derek Hough,Social Media Personality,California,United States,18,9.5,0.2417191780821918
 19,10,Sadie Robertson,Mark Ballas,TV Personality,Louisiana,United States,17,9.25,0.2418424657534246
+19,11,Janel Parrish,Valentin Chmerkovskiy,Actor/Actress,Hawaii,United States,25,9.749950000000002,0.2494662035526728
+19,11,Alfonso Ribeiro,Witney Carson,Actor/Actress,New York,United States,42,10.0,0.2558640849980489
+19,11,Bethany Mota,Derek Hough,Social Media Personality,California,United States,18,9.5,0.2430708807481465
+19,11,Sadie Robertson,Mark Ballas,TV Personality,Louisiana,United States,17,9.833300000000001,0.2515988307011315
+20,1,Suzanne Somers,Tony Dovolani,Actor/Actress,California,United States,68,6.25,0.0786163522012578
+20,1,Willow Shields,Mark Ballas,Actor/Actress,New Mexico,United States,14,6.25,0.0786163522012578
+20,1,Riker Lynch,Allison Holker,Actor/Actress,Colorado,United States,23,7.75,0.0974842767295597
+20,1,Rumer Willis,Valentin Chmerkovskiy,Actor/Actress,Kentucky,United States,26,8.0,0.10062893081761
+20,1,Nastia Liukin,Derek Hough,Athlete,,Russia,25,7.5,0.0943396226415094
+20,1,Michael Sam,Peta Murgatroyd,Athlete,Texas,United States,25,6.5,0.0817610062893081
+20,1,Robert Herjavec,Kym Johnson,Entrepreneur,,Croatia,52,7.0,0.0880503144654088
+20,1,Charlotte McKinney,Keo Motsepe,Model,Florida,United States,21,5.5,0.0691823899371069
+20,1,Noah Galloway,Sharna Burgess,Motivational Speaker,Alabama,United States,33,6.5,0.0817610062893081
+20,1,Redfoo,Emma Slater,Singer/Rapper,California,United States,39,5.5,0.0691823899371069
+20,1,Patti LaBelle,Artem Chigvintsev,Singer/Rapper,Pennsylvania,United States,70,6.25,0.0786163522012578
+20,1,Chris Soules,Witney Carson,TV Personality,Iowa,United States,33,6.5,0.0817610062893081
 20,2,Suzanne Somers,Tony Dovolani,Actor/Actress,California,United States,68,7.0,0.0914330626146188
 20,2,Willow Shields,Mark Ballas,Actor/Actress,New Mexico,United States,14,8.0,0.0827875294734084
 20,2,Riker Lynch,Allison Holker,Actor/Actress,Colorado,United States,23,8.0,0.0827875294734084
@@ -1132,20 +1506,61 @@
 20,7,Robert Herjavec,Kym Johnson,Entrepreneur,,Croatia,52,7.75,0.1843832020997375
 20,7,Noah Galloway,Sharna Burgess,Motivational Speaker,Alabama,United States,33,9.5,0.1568241469816272
 20,7,Chris Soules,Witney Carson,TV Personality,Iowa,United States,33,7.75,0.1843832020997375
-20,9,Riker Lynch,Allison Holker,Actor/Actress,Colorado,United States,23,10.0,0.3152972399150743
-20,9,Rumer Willis,Valentin Chmerkovskiy,Actor/Actress,Kentucky,United States,26,9.75,0.3216666666666666
-20,9,Nastia Liukin,Derek Hough,Athlete,,Russia,25,10.0,0.035
-20,9,Noah Galloway,Sharna Burgess,Motivational Speaker,Alabama,United States,33,9.5,0.328036093418259
-21,4,Gary Busey,Anna Trebunskaya,Actor/Actress,Texas,United States,71,5.333333333333333,0.007
-21,4,Alexa PenaVega,Mark Ballas,Actor/Actress,Florida,United States,27,7.0,0.1103333333333333
-21,4,Carlos PenaVega,Witney Carson,Actor/Actress,Missouri,United States,26,8.333333333333334,0.1103333333333333
-21,4,Alek Skarlatos,Lindsay Arnold,Military,California,United States,22,8.0,0.1103333333333333
-21,4,Andy Grammer,Allison Holker,Singer/Rapper,California,United States,31,7.666666666666667,0.1103333333333333
-21,4,Tamar Braxton,Valentin Chmerkovskiy,Singer/Rapper,Maryland,United States,38,9.0,0.1103333333333333
-21,4,Nick Carter,Sharna Burgess,Singer/Rapper,New York,United States,35,9.0,0.1103333333333333
-21,4,Hayes Grier,Emma Slater,Social Media Personality,North Carolina,United States,15,9.0,0.1103333333333333
-21,4,Bindi Irwin,Derek Hough,TV Personality,,Australia,17,9.333333333333334,0.1103333333333333
-21,4,Paula Deen,Louis van Amstel,TV Personality,Georgia,United States,68,6.0,0.1103333333333333
+20,8,Riker Lynch,Allison Holker,Actor/Actress,Colorado,United States,23,9.75,0.2494089834515366
+20,8,Rumer Willis,Valentin Chmerkovskiy,Actor/Actress,Kentucky,United States,26,10.0,0.2494089834515366
+20,8,Nastia Liukin,Derek Hough,Athlete,,Russia,25,9.5,0.2494089834515366
+20,8,Robert Herjavec,Kym Johnson,Entrepreneur,,Croatia,52,7.75,0.0
+20,8,Noah Galloway,Sharna Burgess,Motivational Speaker,Alabama,United States,33,7.875,0.25177304964539
+20,8,Chris Soules,Witney Carson,TV Personality,Iowa,United States,33,8.0,0.0
+20,9,Riker Lynch,Allison Holker,Actor/Actress,Colorado,United States,23,10.0,0.314963906581741
+20,9,Rumer Willis,Valentin Chmerkovskiy,Actor/Actress,Kentucky,United States,26,9.75,0.3213333333333333
+20,9,Nastia Liukin,Derek Hough,Athlete,,Russia,25,10.0,0.036
+20,9,Noah Galloway,Sharna Burgess,Motivational Speaker,Alabama,United States,33,9.5,0.3277027600849257
+20,10,Riker Lynch,Allison Holker,Actor/Actress,Colorado,United States,23,10.0,0.3448275862068966
+20,10,Rumer Willis,Valentin Chmerkovskiy,Actor/Actress,Kentucky,United States,26,10.0,0.3448275862068966
+20,10,Noah Galloway,Sharna Burgess,Motivational Speaker,Alabama,United States,33,9.0,0.3103448275862069
+21,1,Gary Busey,Anna Trebunskaya,Actor/Actress,Texas,United States,71,5.0,0.0599999999999999
+21,1,Alexa PenaVega,Mark Ballas,Actor/Actress,Florida,United States,27,7.333333333333333,0.0879999999999999
+21,1,Carlos PenaVega,Witney Carson,Actor/Actress,Missouri,United States,26,7.666666666666667,0.092
+21,1,Victor Espinoza,Karina Smirnoff,Athlete,,Mexico,43,5.0,0.0599999999999999
+21,1,Alek Skarlatos,Lindsay Arnold,Military,California,United States,22,7.333333333333333,0.0879999999999999
+21,1,Chaka Khan,Keo Motsepe,Singer/Rapper,Illinois,United States,62,4.333333333333333,0.0519999999999999
+21,1,Andy Grammer,Allison Holker,Singer/Rapper,California,United States,31,7.0,0.0839999999999999
+21,1,Tamar Braxton,Valentin Chmerkovskiy,Singer/Rapper,Maryland,United States,38,7.666666666666667,0.092
+21,1,Nick Carter,Sharna Burgess,Singer/Rapper,New York,United States,35,8.0,0.0959999999999999
+21,1,Hayes Grier,Emma Slater,Social Media Personality,North Carolina,United States,15,7.0,0.0839999999999999
+21,1,Bindi Irwin,Derek Hough,TV Personality,,Australia,17,8.0,0.0959999999999999
+21,1,Kim Zolciak-Biermann,Tony Dovolani,TV Personality,Florida,United States,37,4.0,0.0479999999999999
+21,1,Paula Deen,Louis van Amstel,TV Personality,Georgia,United States,68,5.0,0.0599999999999999
+21,3,Gary Busey,Anna Trebunskaya,Actor/Actress,Texas,United States,71,6.25,0.081967213114754
+21,3,Alexa PenaVega,Mark Ballas,Actor/Actress,Florida,United States,27,9.0,0.1180327868852459
+21,3,Carlos PenaVega,Witney Carson,Actor/Actress,Missouri,United States,26,7.75,0.101639344262295
+21,3,Alek Skarlatos,Lindsay Arnold,Military,California,United States,22,8.25,0.1081967213114754
+21,3,Andy Grammer,Allison Holker,Singer/Rapper,California,United States,31,7.25,0.0950819672131147
+21,3,Tamar Braxton,Valentin Chmerkovskiy,Singer/Rapper,Maryland,United States,38,8.25,0.1081967213114754
+21,3,Nick Carter,Sharna Burgess,Singer/Rapper,New York,United States,35,9.0,0.1180327868852459
+21,3,Hayes Grier,Emma Slater,Social Media Personality,North Carolina,United States,15,7.5,0.0983606557377049
+21,3,Bindi Irwin,Derek Hough,TV Personality,,Australia,17,8.0,0.1049180327868852
+21,3,Paula Deen,Louis van Amstel,TV Personality,Georgia,United States,68,5.0,0.0655737704918032
+21,4,Gary Busey,Anna Trebunskaya,Actor/Actress,Texas,United States,71,5.333333333333333,0.008
+21,4,Alexa PenaVega,Mark Ballas,Actor/Actress,Florida,United States,27,7.0,0.1102222222222222
+21,4,Carlos PenaVega,Witney Carson,Actor/Actress,Missouri,United States,26,8.333333333333334,0.1102222222222222
+21,4,Alek Skarlatos,Lindsay Arnold,Military,California,United States,22,8.0,0.1102222222222222
+21,4,Andy Grammer,Allison Holker,Singer/Rapper,California,United States,31,7.666666666666667,0.1102222222222222
+21,4,Tamar Braxton,Valentin Chmerkovskiy,Singer/Rapper,Maryland,United States,38,9.0,0.1102222222222222
+21,4,Nick Carter,Sharna Burgess,Singer/Rapper,New York,United States,35,9.0,0.1102222222222222
+21,4,Hayes Grier,Emma Slater,Social Media Personality,North Carolina,United States,15,9.0,0.1102222222222222
+21,4,Bindi Irwin,Derek Hough,TV Personality,,Australia,17,9.333333333333334,0.1102222222222222
+21,4,Paula Deen,Louis van Amstel,TV Personality,Georgia,United States,68,6.0,0.1102222222222222
+21,5,Alexa PenaVega,Mark Ballas,Actor/Actress,Florida,United States,27,10.0,0.132890365448505
+21,5,Carlos PenaVega,Witney Carson,Actor/Actress,Missouri,United States,26,9.75,0.1295681063122923
+21,5,Alek Skarlatos,Lindsay Arnold,Military,California,United States,22,7.25,0.0963455149501661
+21,5,Andy Grammer,Allison Holker,Singer/Rapper,California,United States,31,9.0,0.1196013289036544
+21,5,Tamar Braxton,Valentin Chmerkovskiy,Singer/Rapper,Maryland,United States,38,7.25,0.0963455149501661
+21,5,Nick Carter,Sharna Burgess,Singer/Rapper,New York,United States,35,8.75,0.1162790697674418
+21,5,Hayes Grier,Emma Slater,Social Media Personality,North Carolina,United States,15,7.5,0.0996677740863787
+21,5,Bindi Irwin,Derek Hough,TV Personality,,Australia,17,9.25,0.1229235880398671
+21,5,Paula Deen,Louis van Amstel,TV Personality,Georgia,United States,68,6.5,0.0863787375415282
 21,6,Alexa PenaVega,Mark Ballas,Actor/Actress,Florida,United States,27,7.5,0.122625
 21,6,Carlos PenaVega,Witney Carson,Actor/Actress,Missouri,United States,26,9.5,0.122625
 21,6,Alek Skarlatos,Lindsay Arnold,Military,California,United States,22,7.5,0.122625
@@ -1170,18 +1585,44 @@
 21,8,Tamar Braxton,Valentin Chmerkovskiy,Singer/Rapper,Maryland,United States,38,9.333333333333334,0.1658333333333333
 21,8,Nick Carter,Sharna Burgess,Singer/Rapper,New York,United States,35,11.0,0.1658333333333333
 21,8,Bindi Irwin,Derek Hough,TV Personality,,Australia,17,9.333333333333334,0.1658333333333333
-22,2,Mischa Barton,Artem Chigvintsev,Actor/Actress,,England,30,5.0,0.0907272727272727
-22,2,Kim Fields,Sasha Farber,Actor/Actress,New York,United States,46,6.333333333333333,0.0907272727272727
-22,2,Jodie Sweetin,Keo Motsepe,Actor/Actress,California,United States,34,7.0,0.0907272727272727
-22,2,Doug Flutie,Karina Smirnoff,Athlete,Maryland,United States,53,6.666666666666667,0.0907272727272727
-22,2,Von Miller,Witney Carson,Athlete,Texas,United States,27,6.666666666666667,0.0907272727272727
-22,2,Antonio Brown,Sharna Burgess,Athlete,Florida,United States,27,6.333333333333333,0.0907272727272727
-22,2,Paige VanZant,Mark Ballas,Athlete,Oregon,United States,22,8.0,0.0907272727272727
-22,2,Geraldo Rivera,Edyta Sliwinska,Journalist,New York,United States,72,4.333333333333333,0.002
-22,2,Nyle DiMarco,Peta Murgatroyd,Model,New York,United States,26,6.666666666666667,0.0907272727272727
-22,2,Ginger Zee,Valentin Chmerkovskiy,News Anchor,California,United States,35,7.0,0.0907272727272727
-22,2,Wanya Morris,Lindsay Arnold,Singer/Rapper,Pennsylvania,United States,42,8.0,0.0907272727272727
-22,2,Marla Maples,Tony Dovolani,TV Personality,Georgia,United States,52,6.666666666666667,0.0907272727272727
+21,9,Alexa PenaVega,Mark Ballas,Actor/Actress,Florida,United States,27,10.0,0.15
+21,9,Carlos PenaVega,Witney Carson,Actor/Actress,Missouri,United States,26,9.0,0.2155395136778115
+21,9,Alek Skarlatos,Lindsay Arnold,Military,California,United States,22,8.5,0.2246580547112462
+21,9,Tamar Braxton,Valentin Chmerkovskiy,Singer/Rapper,Maryland,United States,38,8.166666666666666,0.0
+21,9,Nick Carter,Sharna Burgess,Singer/Rapper,New York,United States,35,9.166666666666666,0.2125
+21,9,Bindi Irwin,Derek Hough,TV Personality,,Australia,17,10.0,0.1973024316109422
+21,10,Carlos PenaVega,Witney Carson,Actor/Actress,Missouri,United States,26,10.5,0.2658227848101265
+21,10,Alek Skarlatos,Lindsay Arnold,Military,California,United States,22,9.5,0.240506329113924
+21,10,Nick Carter,Sharna Burgess,Singer/Rapper,New York,United States,35,9.0,0.2278481012658227
+21,10,Bindi Irwin,Derek Hough,TV Personality,,Australia,17,10.5,0.2658227848101265
+21,11,Carlos PenaVega,Witney Carson,Actor/Actress,Missouri,United States,26,10.0,0.2542375035911047
+21,11,Alek Skarlatos,Lindsay Arnold,Military,California,United States,22,9.3333,0.2372874892266857
+21,11,Nick Carter,Sharna Burgess,Singer/Rapper,New York,United States,35,10.0,0.2542375035911047
+21,11,Bindi Irwin,Derek Hough,TV Personality,,Australia,17,10.0,0.2542375035911047
+22,1,Mischa Barton,Artem Chigvintsev,Actor/Actress,,England,30,5.333333333333333,0.0675105485232067
+22,1,Kim Fields,Sasha Farber,Actor/Actress,New York,United States,46,6.666666666666667,0.0843881856540084
+22,1,Jodie Sweetin,Keo Motsepe,Actor/Actress,California,United States,34,6.666666666666667,0.0843881856540084
+22,1,Doug Flutie,Karina Smirnoff,Athlete,Maryland,United States,53,5.0,0.0632911392405063
+22,1,Von Miller,Witney Carson,Athlete,Texas,United States,27,7.0,0.0886075949367088
+22,1,Antonio Brown,Sharna Burgess,Athlete,Florida,United States,27,7.0,0.0886075949367088
+22,1,Paige VanZant,Mark Ballas,Athlete,Oregon,United States,22,7.0,0.0886075949367088
+22,1,Geraldo Rivera,Edyta Sliwinska,Journalist,New York,United States,72,4.333333333333333,0.0548523206751054
+22,1,Nyle DiMarco,Peta Murgatroyd,Model,New York,United States,26,7.666666666666667,0.0970464135021097
+22,1,Ginger Zee,Valentin Chmerkovskiy,News Anchor,California,United States,35,7.666666666666667,0.0970464135021097
+22,1,Wanya Morris,Lindsay Arnold,Singer/Rapper,Pennsylvania,United States,42,7.666666666666667,0.0970464135021097
+22,1,Marla Maples,Tony Dovolani,TV Personality,Georgia,United States,52,7.0,0.0886075949367088
+22,2,Mischa Barton,Artem Chigvintsev,Actor/Actress,,England,30,5.0,0.0901818181818181
+22,2,Kim Fields,Sasha Farber,Actor/Actress,New York,United States,46,6.333333333333333,0.0901818181818181
+22,2,Jodie Sweetin,Keo Motsepe,Actor/Actress,California,United States,34,7.0,0.0901818181818181
+22,2,Doug Flutie,Karina Smirnoff,Athlete,Maryland,United States,53,6.666666666666667,0.0901818181818181
+22,2,Von Miller,Witney Carson,Athlete,Texas,United States,27,6.666666666666667,0.0901818181818181
+22,2,Antonio Brown,Sharna Burgess,Athlete,Florida,United States,27,6.333333333333333,0.0901818181818181
+22,2,Paige VanZant,Mark Ballas,Athlete,Oregon,United States,22,8.0,0.0901818181818181
+22,2,Geraldo Rivera,Edyta Sliwinska,Journalist,New York,United States,72,4.333333333333333,0.008
+22,2,Nyle DiMarco,Peta Murgatroyd,Model,New York,United States,26,6.666666666666667,0.0901818181818181
+22,2,Ginger Zee,Valentin Chmerkovskiy,News Anchor,California,United States,35,7.0,0.0901818181818181
+22,2,Wanya Morris,Lindsay Arnold,Singer/Rapper,Pennsylvania,United States,42,8.0,0.0901818181818181
+22,2,Marla Maples,Tony Dovolani,TV Personality,Georgia,United States,52,6.666666666666667,0.0901818181818181
 22,3,Mischa Barton,Artem Chigvintsev,Actor/Actress,,England,30,6.0,0.008
 22,3,Kim Fields,Sasha Farber,Actor/Actress,New York,United States,46,7.333333333333333,0.0992
 22,3,Jodie Sweetin,Keo Motsepe,Actor/Actress,California,United States,34,7.666666666666667,0.0992
@@ -1203,6 +1644,15 @@
 22,4,Ginger Zee,Valentin Chmerkovskiy,News Anchor,California,United States,35,9.0,0.1093695576454197
 22,4,Wanya Morris,Lindsay Arnold,Singer/Rapper,Pennsylvania,United States,42,8.75,0.1093695576454197
 22,4,Marla Maples,Tony Dovolani,TV Personality,Georgia,United States,52,7.0,0.0
+22,5,Kim Fields,Sasha Farber,Actor/Actress,New York,United States,46,7.0,0.1014492753623188
+22,5,Jodie Sweetin,Keo Motsepe,Actor/Actress,California,United States,34,8.75,0.1268115942028985
+22,5,Doug Flutie,Karina Smirnoff,Athlete,Maryland,United States,53,7.0,0.1014492753623188
+22,5,Von Miller,Witney Carson,Athlete,Texas,United States,27,7.25,0.1050724637681159
+22,5,Antonio Brown,Sharna Burgess,Athlete,Florida,United States,27,6.5,0.0942028985507246
+22,5,Paige VanZant,Mark Ballas,Athlete,Oregon,United States,22,7.75,0.1123188405797101
+22,5,Nyle DiMarco,Peta Murgatroyd,Model,New York,United States,26,9.25,0.1340579710144927
+22,5,Ginger Zee,Valentin Chmerkovskiy,News Anchor,California,United States,35,8.0,0.1159420289855072
+22,5,Wanya Morris,Lindsay Arnold,Singer/Rapper,Pennsylvania,United States,42,7.5,0.108695652173913
 22,6,Kim Fields,Sasha Farber,Actor/Actress,New York,United States,46,8.0,0.123375
 22,6,Jodie Sweetin,Keo Motsepe,Actor/Actress,California,United States,34,8.333333333333334,0.123375
 22,6,Doug Flutie,Karina Smirnoff,Athlete,Maryland,United States,53,7.0,0.013
@@ -1212,12 +1662,41 @@
 22,6,Nyle DiMarco,Peta Murgatroyd,Model,New York,United States,26,8.333333333333334,0.123375
 22,6,Ginger Zee,Valentin Chmerkovskiy,News Anchor,California,United States,35,8.0,0.123375
 22,6,Wanya Morris,Lindsay Arnold,Singer/Rapper,Pennsylvania,United States,42,9.666666666666666,0.123375
+22,7,Kim Fields,Sasha Farber,Actor/Actress,New York,United States,46,8.666666666666666,0.0
+22,7,Jodie Sweetin,Keo Motsepe,Actor/Actress,California,United States,34,8.5,0.168613707165109
+22,7,Von Miller,Witney Carson,Athlete,Texas,United States,27,8.666666666666666,0.0
+22,7,Antonio Brown,Sharna Burgess,Athlete,Florida,United States,27,8.666666666666666,0.1662772585669782
+22,7,Paige VanZant,Mark Ballas,Athlete,Oregon,United States,22,9.166666666666666,0.1662772585669782
+22,7,Nyle DiMarco,Peta Murgatroyd,Model,New York,United States,26,9.333333333333334,0.1662772585669782
+22,7,Ginger Zee,Valentin Chmerkovskiy,News Anchor,California,United States,35,9.166666666666666,0.1662772585669782
+22,7,Wanya Morris,Lindsay Arnold,Singer/Rapper,Pennsylvania,United States,42,9.166666666666666,0.1662772585669782
 22,8,Jodie Sweetin,Keo Motsepe,Actor/Actress,California,United States,34,10.0,0.0
 22,8,Antonio Brown,Sharna Burgess,Athlete,Florida,United States,27,9.0,0.2047337278106508
 22,8,Paige VanZant,Mark Ballas,Athlete,Oregon,United States,22,9.333333333333334,0.1988165680473372
 22,8,Nyle DiMarco,Peta Murgatroyd,Model,New York,United States,26,9.666666666666666,0.1928994082840236
 22,8,Ginger Zee,Valentin Chmerkovskiy,News Anchor,California,United States,35,10.0,0.18698224852071
 22,8,Wanya Morris,Lindsay Arnold,Singer/Rapper,Pennsylvania,United States,42,8.333333333333334,0.216568047337278
+22,9,Antonio Brown,Sharna Burgess,Athlete,Florida,United States,27,9.166666666666666,0.0
+22,9,Paige VanZant,Mark Ballas,Athlete,Oregon,United States,22,9.833333333333334,0.2608594657375145
+22,9,Nyle DiMarco,Peta Murgatroyd,Model,New York,United States,26,9.5,0.2678281068524971
+22,9,Ginger Zee,Valentin Chmerkovskiy,News Anchor,California,United States,35,9.333333333333334,0.2713124274099884
+22,9,Wanya Morris,Lindsay Arnold,Singer/Rapper,Pennsylvania,United States,42,10.0,0.2
+22,10,Paige VanZant,Mark Ballas,Athlete,Oregon,United States,22,9.888866666666667,0.3409969701010119
+22,10,Nyle DiMarco,Peta Murgatroyd,Model,New York,United States,26,9.6666,0.3333325670462853
+22,10,Ginger Zee,Valentin Chmerkovskiy,News Anchor,California,United States,35,9.4444,0.3256704628527027
+23,1,Jake T. Austin,Jenna Johnson,Actor/Actress,New York,United States,21,5.5,0.0666666666666666
+23,1,Maureen McCormick,Artem Chigvintsev,Actor/Actress,California,United States,60,5.5,0.0666666666666666
+23,1,Marilu Henner,Derek Hough,Actor/Actress,Illinois,United States,64,6.75,0.0818181818181818
+23,1,Ryan Lochte,Cheryl Burke,Athlete,New York,United States,32,6.0,0.0727272727272727
+23,1,Calvin Johnson Jr.,Lindsay Arnold,Athlete,Georgia,United States,30,6.5,0.0787878787878787
+23,1,Laurie Hernandez,Valentin Chmerkovskiy,Athlete,New Jersey,United States,16,7.75,0.0939393939393939
+23,1,Amber Rose,Maksim Chmerkoskiy,Model,Pennsylvania,United States,32,6.0,0.0727272727272727
+23,1,Rick Perry,Emma Slater,Politician,Texas,United States,66,5.0,0.0606060606060606
+23,1,James Hinchcliffe,Sharna Burgess,Racing Driver,,Canada,29,7.75,0.0939393939393939
+23,1,Babyface,Allison Holker,Singer/Rapper,Indiana,United States,57,6.5,0.0787878787878787
+23,1,Vanilla Ice,Witney Carson,Singer/Rapper,Texas,United States,48,6.25,0.0757575757575757
+23,1,Jana Kramer,Gleb Savchenko,Singer/Rapper,Michigan,United States,32,6.75,0.0818181818181818
+23,1,Terra Jole,Sasha Farber,TV Personality,Texas,United States,36,6.25,0.0757575757575757
 23,2,Jake T. Austin,Jenna Johnson,Actor/Actress,New York,United States,21,6.0,0.0
 23,2,Maureen McCormick,Artem Chigvintsev,Actor/Actress,California,United States,60,6.5,0.0828598484848485
 23,2,Marilu Henner,Derek Hough,Actor/Actress,Illinois,United States,64,6.75,0.0828598484848485
@@ -1243,6 +1722,26 @@
 23,3,Vanilla Ice,Witney Carson,Singer/Rapper,Texas,United States,48,5.75,0.0909090909090909
 23,3,Jana Kramer,Gleb Savchenko,Singer/Rapper,Michigan,United States,32,6.5,0.0909090909090909
 23,3,Terra Jole,Sasha Farber,TV Personality,Texas,United States,36,7.5,0.0909090909090909
+23,4,Maureen McCormick,Artem Chigvintsev,Actor/Actress,California,United States,60,8.0,0.1098339719029374
+23,4,Marilu Henner,Derek Hough,Actor/Actress,Illinois,United States,64,7.0,0.1174968071519795
+23,4,Ryan Lochte,Cheryl Burke,Athlete,New York,United States,32,7.333333333333333,0.1136653895274585
+23,4,Calvin Johnson Jr.,Lindsay Arnold,Athlete,Georgia,United States,30,7.666666666666667,0.1098339719029374
+23,4,Laurie Hernandez,Valentin Chmerkovskiy,Athlete,New Jersey,United States,16,10.0,0.1098339719029374
+23,4,Amber Rose,Maksim Chmerkoskiy,Model,Pennsylvania,United States,32,8.0,0.1098339719029374
+23,4,James Hinchcliffe,Sharna Burgess,Racing Driver,,Canada,29,9.333333333333334,0.1098339719029374
+23,4,Babyface,Allison Holker,Singer/Rapper,Indiana,United States,57,6.0,0.0
+23,4,Vanilla Ice,Witney Carson,Singer/Rapper,Texas,United States,48,7.666666666666667,0.0
+23,4,Jana Kramer,Gleb Savchenko,Singer/Rapper,Michigan,United States,32,7.666666666666667,0.1098339719029374
+23,4,Terra Jole,Sasha Farber,TV Personality,Texas,United States,36,8.333333333333334,0.1098339719029374
+23,5,Maureen McCormick,Artem Chigvintsev,Actor/Actress,California,United States,60,8.0,0.1043478260869565
+23,5,Marilu Henner,Derek Hough,Actor/Actress,Illinois,United States,64,9.0,0.117391304347826
+23,5,Ryan Lochte,Cheryl Burke,Athlete,New York,United States,32,8.0,0.1043478260869565
+23,5,Calvin Johnson Jr.,Lindsay Arnold,Athlete,Georgia,United States,30,8.0,0.1043478260869565
+23,5,Laurie Hernandez,Valentin Chmerkovskiy,Athlete,New Jersey,United States,16,8.333333333333334,0.108695652173913
+23,5,Amber Rose,Maksim Chmerkoskiy,Model,Pennsylvania,United States,32,8.0,0.1043478260869565
+23,5,James Hinchcliffe,Sharna Burgess,Racing Driver,,Canada,29,9.666666666666666,0.1260869565217391
+23,5,Jana Kramer,Gleb Savchenko,Singer/Rapper,Michigan,United States,32,8.666666666666666,0.1130434782608695
+23,5,Terra Jole,Sasha Farber,TV Personality,Texas,United States,36,9.0,0.117391304347826
 23,6,Maureen McCormick,Artem Chigvintsev,Actor/Actress,California,United States,60,7.75,0.12425
 23,6,Marilu Henner,Derek Hough,Actor/Actress,Illinois,United States,64,8.5,0.12425
 23,6,Ryan Lochte,Cheryl Burke,Athlete,New York,United States,32,7.5,0.12425
@@ -1278,6 +1777,22 @@
 23,10,James Hinchcliffe,Sharna Burgess,Racing Driver,,Canada,29,9.833333333333334,0.2474402730375426
 23,10,Jana Kramer,Gleb Savchenko,Singer/Rapper,Michigan,United States,32,9.666666666666666,0.2508532423208191
 23,10,Terra Jole,Sasha Farber,TV Personality,Texas,United States,36,10.0,0.0
+23,11,Calvin Johnson Jr.,Lindsay Arnold,Athlete,Georgia,United States,30,9.583275,0.2519161626669803
+23,11,Laurie Hernandez,Valentin Chmerkovskiy,Athlete,New Jersey,United States,16,9.833300000000001,0.2584885858282496
+23,11,James Hinchcliffe,Sharna Burgess,Racing Driver,,Canada,29,9.74995,0.2562975590489603
+23,11,Jana Kramer,Gleb Savchenko,Singer/Rapper,Michigan,United States,32,8.875,0.2332976924558098
+24,1,Charo,Keo Motsepe,Actor/Actress,,Spain,66,5.25,0.0695364238410596
+24,1,Mr. T,Kym Herjavec,Actor/Actress,Illinois,United States,64,5.0,0.0662251655629139
+24,1,Heather Morris,Maksim Chmerkoskiy,Actor/Actress,California,United States,30,7.0,0.0927152317880794
+24,1,Nancy Kerrigan,Artem Chigvintsev,Athlete,Massachusetts,United States,47,7.0,0.0927152317880794
+24,1,Bonner Bolton,Sharna Burgess,Athlete,Texas,United States,29,5.5,0.0728476821192053
+24,1,Simone Biles,Sasha Farber,Athlete,Ohio,United States,20,8.0,0.1059602649006622
+24,1,David Ross,Lindsay Arnold,Athlete,Georgia,United States,40,7.0,0.0927152317880794
+24,1,Rashad Jennings,Emma Slater,Athlete,Virginia,United States,32,7.75,0.1026490066225165
+24,1,Chris Kattan,Witney Carson,Comedian,California,United States,46,4.25,0.0562913907284768
+24,1,Erika Jayne,Gleb Savchenko,Singer/Rapper,Georgia,United States,45,6.0,0.0794701986754966
+24,1,Normani,Valentin Chmerkovskiy,Singer/Rapper,Georgia,United States,20,6.75,0.0894039735099337
+24,1,Nick Viall,Peta Murgatroyd,TV Personality,Wisconsin,United States,36,6.0,0.0794701986754966
 24,2,Charo,Keo Motsepe,Actor/Actress,,Spain,66,6.25,0.0909090909090909
 24,2,Mr. T,Kym Herjavec,Actor/Actress,Illinois,United States,64,5.5,0.0909090909090909
 24,2,Heather Morris,Maksim Chmerkoskiy,Actor/Actress,California,United States,30,7.5,0.0909090909090909
@@ -1328,6 +1843,13 @@
 24,6,Rashad Jennings,Emma Slater,Athlete,Virginia,United States,32,8.75,0.1359532660647902
 24,6,Normani,Valentin Chmerkovskiy,Singer/Rapper,Georgia,United States,20,9.0,0.1322357939458311
 24,6,Nick Viall,Peta Murgatroyd,TV Personality,Wisconsin,United States,36,7.625,0.1526818906001062
+24,7,Nancy Kerrigan,Artem Chigvintsev,Athlete,Massachusetts,United States,47,9.0,0.0
+24,7,Bonner Bolton,Sharna Burgess,Athlete,Texas,United States,29,7.75,0.2126482213438735
+24,7,Simone Biles,Sasha Farber,Athlete,Ohio,United States,20,9.75,0.1928853754940711
+24,7,David Ross,Lindsay Arnold,Athlete,Georgia,United States,40,8.0,0.208695652173913
+24,7,Rashad Jennings,Emma Slater,Athlete,Virginia,United States,32,9.75,0.1928853754940711
+24,7,Normani,Valentin Chmerkovskiy,Singer/Rapper,Georgia,United States,20,10.5,0.1928853754940711
+24,7,Nick Viall,Peta Murgatroyd,TV Personality,Wisconsin,United States,36,8.5,0.0
 24,8,Bonner Bolton,Sharna Burgess,Athlete,Texas,United States,29,7.25,0.02
 24,8,Simone Biles,Sasha Farber,Athlete,Ohio,United States,20,9.0,0.245
 24,8,David Ross,Lindsay Arnold,Athlete,Georgia,United States,40,8.125,0.245
@@ -1337,6 +1859,46 @@
 24,9,David Ross,Lindsay Arnold,Athlete,Georgia,United States,40,8.75,0.3476347634763477
 24,9,Rashad Jennings,Emma Slater,Athlete,Virginia,United States,32,9.625,0.3245324532453245
 24,9,Normani,Valentin Chmerkovskiy,Singer/Rapper,Georgia,United States,20,9.5,0.3278327832783279
+24,10,David Ross,Lindsay Arnold,Athlete,Georgia,United States,40,9.083325,0.3150292500591764
+24,10,Rashad Jennings,Emma Slater,Athlete,Virginia,United States,32,9.91665,0.3439307536171316
+24,10,Normani,Valentin Chmerkovskiy,Singer/Rapper,Georgia,United States,20,9.833300000000001,0.341039996323692
+25,1,Sasha Pieterse,Gleb Savchenko,Actor/Actress,,South Africa,21,6.0,0.0753138075313807
+25,1,Frankie Muniz,Witney Carson,Actor/Actress,New Jersey,United States,31,6.333333333333333,0.0794979079497908
+25,1,Jordan Fisher,Lindsay Arnold,Actor/Actress,Alabama,United States,23,7.333333333333333,0.0920502092050209
+25,1,Derek Fisher,Sharna Burgess,Athlete,Arkansas,United States,43,6.0,0.0753138075313807
+25,1,Nikki Bella,Artem Chigvintsev,Athlete,California,United States,33,6.666666666666667,0.0836820083682008
+25,1,Terrell Owens,Cheryl Burke,Athlete,Alabama,United States,43,5.0,0.0627615062761506
+25,1,Victoria Arlen,Valentin Chmerkovskiy,Athlete,New Hamshire,United States,22,6.333333333333333,0.0794979079497908
+25,1,Barbara Corcoran,Keo Motsepe,Entrepreneur,New Jersey,United States,68,4.666666666666667,0.0585774058577406
+25,1,Lindsey Stirling,Mark Ballas,Musician,California,United States,31,7.333333333333333,0.0920502092050209
+25,1,Debbie Gibson,Alan Bersten,Singer/Rapper,New York,United States,47,5.666666666666667,0.0711297071129707
+25,1,Nick Lachey,Peta Murgatroyd,Singer/Rapper,Kentucky,United States,43,6.0,0.0753138075313807
+25,1,Drew Scott,Emma Slater,TV Personality,,Canada,39,5.333333333333333,0.0669456066945606
+25,1,Vanessa Lachey,Maksim Chmerkoskiy,TV Personality,,Philippines,36,7.0,0.0878661087866108
+25,2,Sasha Pieterse,Gleb Savchenko,Actor/Actress,,South Africa,21,7.5,0.0892471331228186
+25,2,Frankie Muniz,Witney Carson,Actor/Actress,New Jersey,United States,31,8.0,0.0892471331228186
+25,2,Jordan Fisher,Lindsay Arnold,Actor/Actress,Alabama,United States,23,8.0,0.0892471331228186
+25,2,Derek Fisher,Sharna Burgess,Athlete,Arkansas,United States,43,6.333333333333333,0.094731593817517
+25,2,Nikki Bella,Artem Chigvintsev,Athlete,California,United States,33,6.5,0.0929034402526175
+25,2,Terrell Owens,Cheryl Burke,Athlete,Alabama,United States,43,6.5,0.0929034402526175
+25,2,Victoria Arlen,Valentin Chmerkovskiy,Athlete,New Hamshire,United States,22,7.333333333333333,0.0892471331228186
+25,2,Barbara Corcoran,Keo Motsepe,Entrepreneur,New Jersey,United States,68,5.666666666666667,0.0
+25,2,Lindsey Stirling,Mark Ballas,Musician,California,United States,31,7.5,0.0892471331228186
+25,2,Debbie Gibson,Alan Bersten,Singer/Rapper,New York,United States,47,6.833333333333333,0.0
+25,2,Nick Lachey,Peta Murgatroyd,Singer/Rapper,Kentucky,United States,43,6.333333333333333,0.094731593817517
+25,2,Drew Scott,Emma Slater,TV Personality,,Canada,39,6.833333333333333,0.0892471331228186
+25,2,Vanessa Lachey,Maksim Chmerkoskiy,TV Personality,,Philippines,36,7.833333333333333,0.0892471331228186
+25,3,Sasha Pieterse,Gleb Savchenko,Actor/Actress,,South Africa,21,6.333333333333333,0.0778688524590163
+25,3,Frankie Muniz,Witney Carson,Actor/Actress,New Jersey,United States,31,7.0,0.0860655737704917
+25,3,Jordan Fisher,Lindsay Arnold,Actor/Actress,Alabama,United States,23,8.333333333333334,0.1024590163934426
+25,3,Derek Fisher,Sharna Burgess,Athlete,Arkansas,United States,43,7.0,0.0860655737704917
+25,3,Nikki Bella,Artem Chigvintsev,Athlete,California,United States,33,7.0,0.0860655737704917
+25,3,Terrell Owens,Cheryl Burke,Athlete,Alabama,United States,43,7.0,0.0860655737704917
+25,3,Victoria Arlen,Valentin Chmerkovskiy,Athlete,New Hamshire,United States,22,7.333333333333333,0.0901639344262295
+25,3,Lindsey Stirling,Mark Ballas,Musician,California,United States,31,9.0,0.110655737704918
+25,3,Nick Lachey,Peta Murgatroyd,Singer/Rapper,Kentucky,United States,43,7.0,0.0860655737704917
+25,3,Drew Scott,Emma Slater,TV Personality,,Canada,39,7.666666666666667,0.0942622950819672
+25,3,Vanessa Lachey,Maksim Chmerkoskiy,TV Personality,,Philippines,36,7.666666666666667,0.0942622950819672
 25,4,Sasha Pieterse,Gleb Savchenko,Actor/Actress,,South Africa,21,8.0,0.0996309963099631
 25,4,Frankie Muniz,Witney Carson,Actor/Actress,New Jersey,United States,31,8.0,0.0996309963099631
 25,4,Jordan Fisher,Lindsay Arnold,Actor/Actress,Alabama,United States,23,9.666666666666666,0.0996309963099631
@@ -1367,6 +1929,14 @@
 25,6,Nick Lachey,Peta Murgatroyd,Singer/Rapper,Kentucky,United States,43,6.5,0.013
 25,6,Drew Scott,Emma Slater,TV Personality,,Canada,39,7.5,0.123375
 25,6,Vanessa Lachey,Maksim Chmerkoskiy,TV Personality,,Philippines,36,9.0,0.123375
+25,7,Frankie Muniz,Witney Carson,Actor/Actress,New Jersey,United States,31,10.0,0.1375968992248062
+25,7,Jordan Fisher,Lindsay Arnold,Actor/Actress,Alabama,United States,23,9.0,0.1515503875968992
+25,7,Nikki Bella,Artem Chigvintsev,Athlete,California,United States,33,8.0,0.0
+25,7,Terrell Owens,Cheryl Burke,Athlete,Alabama,United States,43,8.166666666666666,0.1631782945736434
+25,7,Victoria Arlen,Valentin Chmerkovskiy,Athlete,New Hamshire,United States,22,9.5,0.1445736434108527
+25,7,Lindsey Stirling,Mark Ballas,Musician,California,United States,31,8.5,0.1585271317829457
+25,7,Drew Scott,Emma Slater,TV Personality,,Canada,39,9.5,0.1445736434108527
+25,7,Vanessa Lachey,Maksim Chmerkoskiy,TV Personality,,Philippines,36,9.0,0.1
 25,8,Frankie Muniz,Witney Carson,Actor/Actress,New Jersey,United States,31,8.833333333333334,0.1955271565495207
 25,8,Jordan Fisher,Lindsay Arnold,Actor/Actress,Alabama,United States,23,10.0,0.1955271565495207
 25,8,Terrell Owens,Cheryl Burke,Athlete,Alabama,United States,43,8.5,0.0
@@ -1378,6 +1948,31 @@
 25,9,Victoria Arlen,Valentin Chmerkovskiy,Athlete,New Hamshire,United States,22,9.333333333333334,0.0
 25,9,Lindsey Stirling,Mark Ballas,Musician,California,United States,31,9.5,0.2379629629629629
 25,9,Drew Scott,Emma Slater,TV Personality,,Canada,39,8.0,0.2675925925925926
+25,10,Frankie Muniz,Witney Carson,Actor/Actress,New Jersey,United States,31,9.722175,0.2486669433277468
+25,10,Jordan Fisher,Lindsay Arnold,Actor/Actress,Alabama,United States,23,10.0,0.2557729554628947
+25,10,Lindsey Stirling,Mark Ballas,Musician,California,United States,31,10.0,0.2557729554628947
+25,10,Drew Scott,Emma Slater,TV Personality,,Canada,39,9.375,0.2397871457464638
+26,1,Jamie Anderson,Artem Chigvintsev,Athlete,California,United States,27,6.333333333333333,0.0
+26,1,Johnny Damon,Emma Slater,Athlete,Kansas,United States,44,6.0,0.0
+26,1,Kareem Abdul-Jabbar,Lindsay Arnold,Athlete,New York,United States,71,5.666666666666667,0.1333333333333333
+26,1,Arike Ogunbowale,Gleb Savchenko,Athlete,Wisconsin,United States,21,6.666666666666667,0.1238095238095238
+26,1,Jennie Finch Daigle,Keo Motsepe,Athlete,California,United States,37,7.0,0.1238095238095238
+26,1,Chris Mazdzer,Witney Carson,Athlete,Massachusetts,United States,29,7.0,0.1238095238095238
+26,1,Mirai Nagasu,Alan Bersten,Athlete,California,United States,25,7.666666666666667,0.1238095238095238
+26,1,Tonya Harding,Sasha Farber,Athlete,Oregon,United States,47,7.666666666666667,0.1238095238095238
+26,1,Josh Norman,Sharna Burgess,Athlete,South Carolina,United States,30,8.0,0.1238095238095238
+26,1,Adam Rippon,Jenna Johnson,Athlete,Pennsylvania,United States,28,8.0,0.1238095238095238
+26,2,Kareem Abdul-Jabbar,Lindsay Arnold,Athlete,New York,United States,71,7.375,0.0
+26,2,Arike Ogunbowale,Gleb Savchenko,Athlete,Wisconsin,United States,21,8.75,0.1
+26,2,Jennie Finch Daigle,Keo Motsepe,Athlete,California,United States,37,7.875,0.1587227414330218
+26,2,Chris Mazdzer,Witney Carson,Athlete,Massachusetts,United States,29,8.25,0.1531152647975078
+26,2,Mirai Nagasu,Alan Bersten,Athlete,California,United States,25,9.25,0.1381619937694704
+26,2,Tonya Harding,Sasha Farber,Athlete,Oregon,United States,47,8.25,0.1531152647975078
+26,2,Josh Norman,Sharna Burgess,Athlete,South Carolina,United States,30,7.875,0.1587227414330218
+26,2,Adam Rippon,Jenna Johnson,Athlete,Pennsylvania,United States,28,9.25,0.1381619937694704
+26,4,Tonya Harding,Sasha Farber,Athlete,Oregon,United States,47,9.333333333333334,0.3274853801169591
+26,4,Josh Norman,Sharna Burgess,Athlete,South Carolina,United States,30,9.5,0.3333333333333333
+26,4,Adam Rippon,Jenna Johnson,Athlete,Pennsylvania,United States,28,9.666666666666666,0.3391812865497076
 27,1,Juan Pablo Di Pace,Cheryl Burke,Actor/Actress,,Argentina,39,7.333333333333333,0.0821895424836601
 27,1,Evanna Lynch,Keo Motsepe,Actor/Actress,,Ireland,27,6.0,0.0821895424836601
 27,1,Nancy McKeon,Valentin Chmerkovskiy,Actor/Actress,New York,United States,52,6.5,0.0821895424836601
@@ -1424,6 +2019,15 @@
 27,4,Tinashe,Brandon Armstrong,Singer/Rapper,Kentucky,United States,25,8.666666666666666,0.0
 27,4,Alexis Ren,Alan Bersten,Social Media Personality,California,United States,21,8.333333333333334,0.1005747126436781
 27,4,Joe Amabile,Jenna Johnson,TV Personality,Illinois,United States,32,5.0,0.1436781609195402
+27,5,Juan Pablo Di Pace,Cheryl Burke,Actor/Actress,,Argentina,39,9.666666666666666,0.1306306306306306
+27,5,Evanna Lynch,Keo Motsepe,Actor/Actress,,Ireland,27,8.0,0.1081081081081081
+27,5,John Schneider,Emma Slater,Actor/Actress,New York,United States,58,8.0,0.1081081081081081
+27,5,Milo Manheim,Witney Carson,Actor/Actress,California,United States,17,9.0,0.1216216216216216
+27,5,Mary Lou Retton,Sasha Farber,Athlete,West Virginia,United States,50,8.333333333333334,0.1126126126126126
+27,5,DeMarcus Ware,Lindsay Arnold,Athlete,Alabama,United States,36,8.666666666666666,0.1171171171171171
+27,5,Bobby Bones,Sharna Burgess,Radio Personality,Arkansas,United States,38,7.0,0.0945945945945946
+27,5,Alexis Ren,Alan Bersten,Social Media Personality,California,United States,21,9.666666666666666,0.1306306306306306
+27,5,Joe Amabile,Jenna Johnson,TV Personality,Illinois,United States,32,5.666666666666667,0.0765765765765765
 27,6,Juan Pablo Di Pace,Cheryl Burke,Actor/Actress,,Argentina,39,10.0,0.1200873362445414
 27,6,Evanna Lynch,Keo Motsepe,Actor/Actress,,Ireland,27,9.666666666666666,0.1200873362445414
 27,6,John Schneider,Emma Slater,Actor/Actress,New York,United States,58,6.333333333333333,0.1419213973799126
@@ -1433,6 +2037,58 @@
 27,6,Bobby Bones,Sharna Burgess,Radio Personality,Arkansas,United States,38,7.333333333333333,0.1288209606986899
 27,6,Alexis Ren,Alan Bersten,Social Media Personality,California,United States,21,9.0,0.1200873362445414
 27,6,Joe Amabile,Jenna Johnson,TV Personality,Illinois,United States,32,7.333333333333333,0.1288209606986899
+27,7,Juan Pablo Di Pace,Cheryl Burke,Actor/Actress,,Argentina,39,9.333333333333334,0.1636015325670498
+27,7,Evanna Lynch,Keo Motsepe,Actor/Actress,,Ireland,27,9.833333333333334,0.1636015325670498
+27,7,John Schneider,Emma Slater,Actor/Actress,New York,United States,58,9.0,0.0
+27,7,Milo Manheim,Witney Carson,Actor/Actress,California,United States,17,9.666666666666666,0.1636015325670498
+27,7,DeMarcus Ware,Lindsay Arnold,Athlete,Alabama,United States,36,8.833333333333334,0.0
+27,7,Bobby Bones,Sharna Burgess,Radio Personality,Arkansas,United States,38,8.833333333333334,0.1659003831417624
+27,7,Alexis Ren,Alan Bersten,Social Media Personality,California,United States,21,9.166666666666666,0.1636015325670498
+27,7,Joe Amabile,Jenna Johnson,TV Personality,Illinois,United States,32,7.833333333333333,0.1796934865900383
+27,8,Juan Pablo Di Pace,Cheryl Burke,Actor/Actress,,Argentina,39,10.0,0.15
+27,8,Evanna Lynch,Keo Motsepe,Actor/Actress,,Ireland,27,9.666666666666666,0.2000776397515528
+27,8,Milo Manheim,Witney Carson,Actor/Actress,California,United States,17,9.166666666666666,0.2093944099378882
+27,8,Bobby Bones,Sharna Burgess,Radio Personality,Arkansas,United States,38,7.5,0.2404503105590062
+27,8,Alexis Ren,Alan Bersten,Social Media Personality,California,United States,21,9.666666666666666,0.2000776397515528
+27,8,Joe Amabile,Jenna Johnson,TV Personality,Illinois,United States,32,7.666666666666667,0.0
+27,9,Evanna Lynch,Keo Motsepe,Actor/Actress,,Ireland,27,10.0,0.2597402597402597
+27,9,Milo Manheim,Witney Carson,Actor/Actress,California,United States,17,10.0,0.2597402597402597
+27,9,Bobby Bones,Sharna Burgess,Radio Personality,Arkansas,United States,38,9.0,0.2337662337662337
+27,9,Alexis Ren,Alan Bersten,Social Media Personality,California,United States,21,9.5,0.2467532467532467
+28,1,Kate Flannery,Pasha Pashkov,Actor/Actress,Pennsylvania,United States,55,5.0,0.0448717948717948
+28,1,James Van Der Beek,Emma Slater,Actor/Actress,Connecticut,United States,42,7.0,0.1538461538461538
+28,1,Kel Mitchell,Witney Carson,Actor/Actress,Illinois,United States,41,5.333333333333333,0.0705128205128205
+28,1,Ray Lewis,Cheryl Burke,Athlete,Florida,United States,44,5.0,0.0448717948717948
+28,1,Lamar Odom,Peta Murgatroyd,Athlete,New York,United States,39,3.6666666666666665,0.0128205128205128
+28,1,Sailor Brinkley-Cook,Valentin Chmerkovskiy,Model,New York,United States,21,6.0,0.1153846153846153
+28,1,Sean Spicer,Lindsay Arnold,Politician,New York,United States,48,4.0,0.0256410256410256
+28,1,Mary Wilson,Brandon Armstrong,Singer/Rapper,Nevada,United States,75,5.666666666666667,0.0961538461538461
+28,1,Lauren Alaina,Gleb Savchenko,Singer/Rapper,Georgia,United States,24,6.333333333333333,0.1282051282051282
+28,1,Ally Brooke,Sasha Farber,Singer/Rapper,Texas,United States,26,5.333333333333333,0.0705128205128205
+28,1,Karamo Brown,Jenna Johnson,TV Personality,Texas,United States,38,5.666666666666667,0.0961538461538461
+28,1,Hannah Brown,Alan Bersten,TV Personality,Alabama,United States,24,6.666666666666667,0.141025641025641
+28,2,Kate Flannery,Pasha Pashkov,Actor/Actress,Pennsylvania,United States,55,7.0,0.0512820512820512
+28,2,James Van Der Beek,Emma Slater,Actor/Actress,Connecticut,United States,42,6.666666666666667,0.0897435897435897
+28,2,Kel Mitchell,Witney Carson,Actor/Actress,Illinois,United States,41,6.666666666666667,0.0769230769230769
+28,2,Ray Lewis,Cheryl Burke,Athlete,Florida,United States,44,5.0,0.0128205128205128
+28,2,Lamar Odom,Peta Murgatroyd,Athlete,New York,United States,39,4.0,0.1538461538461538
+28,2,Sailor Brinkley-Cook,Valentin Chmerkovskiy,Model,New York,United States,21,6.0,0.1282051282051282
+28,2,Sean Spicer,Lindsay Arnold,Politician,New York,United States,48,5.333333333333333,0.141025641025641
+28,2,Mary Wilson,Brandon Armstrong,Singer/Rapper,Nevada,United States,75,5.0,0.0256410256410256
+28,2,Lauren Alaina,Gleb Savchenko,Singer/Rapper,Georgia,United States,24,6.333333333333333,0.1153846153846153
+28,2,Ally Brooke,Sasha Farber,Singer/Rapper,Texas,United States,26,6.666666666666667,0.0641025641025641
+28,2,Karamo Brown,Jenna Johnson,TV Personality,Texas,United States,38,6.333333333333333,0.1025641025641025
+28,2,Hannah Brown,Alan Bersten,TV Personality,Alabama,United States,24,8.0,0.0384615384615384
+28,3,Kate Flannery,Pasha Pashkov,Actor/Actress,Pennsylvania,United States,55,8.0,0.1727272727272727
+28,3,James Van Der Beek,Emma Slater,Actor/Actress,Connecticut,United States,42,7.666666666666667,0.1363636363636363
+28,3,Kel Mitchell,Witney Carson,Actor/Actress,Illinois,United States,41,6.666666666666667,0.0818181818181818
+28,3,Lamar Odom,Peta Murgatroyd,Athlete,New York,United States,39,4.0,0.0181818181818181
+28,3,Sailor Brinkley-Cook,Valentin Chmerkovskiy,Model,New York,United States,21,7.666666666666667,0.1363636363636363
+28,3,Sean Spicer,Lindsay Arnold,Politician,New York,United States,48,5.0,0.0363636363636363
+28,3,Lauren Alaina,Gleb Savchenko,Singer/Rapper,Georgia,United States,24,6.666666666666667,0.0818181818181818
+28,3,Ally Brooke,Sasha Farber,Singer/Rapper,Texas,United States,26,8.0,0.1727272727272727
+28,3,Karamo Brown,Jenna Johnson,TV Personality,Texas,United States,38,5.333333333333333,0.0545454545454545
+28,3,Hannah Brown,Alan Bersten,TV Personality,Alabama,United States,24,7.0,0.109090909090909
 28,4,Kate Flannery,Pasha Pashkov,Actor/Actress,Pennsylvania,United States,55,6.5,0.1636363636363636
 28,4,James Van Der Beek,Emma Slater,Actor/Actress,Connecticut,United States,42,7.0,0.1454545454545454
 28,4,Kel Mitchell,Witney Carson,Actor/Actress,Illinois,United States,41,8.0,0.0909090909090909
@@ -1443,6 +2099,15 @@
 28,4,Ally Brooke,Sasha Farber,Singer/Rapper,Texas,United States,26,8.0,0.0545454545454545
 28,4,Karamo Brown,Jenna Johnson,TV Personality,Texas,United States,38,7.0,0.1272727272727272
 28,4,Hannah Brown,Alan Bersten,TV Personality,Alabama,United States,24,8.0,0.0363636363636363
+28,5,Kate Flannery,Pasha Pashkov,Actor/Actress,Pennsylvania,United States,55,8.0,0.1
+28,5,James Van Der Beek,Emma Slater,Actor/Actress,Connecticut,United States,42,8.666666666666666,0.1666666666666666
+28,5,Kel Mitchell,Witney Carson,Actor/Actress,Illinois,United States,41,8.666666666666666,0.1666666666666666
+28,5,Sailor Brinkley-Cook,Valentin Chmerkovskiy,Model,New York,United States,21,8.0,0.1
+28,5,Sean Spicer,Lindsay Arnold,Politician,New York,United States,48,6.333333333333333,0.0222222222222222
+28,5,Lauren Alaina,Gleb Savchenko,Singer/Rapper,Georgia,United States,24,7.666666666666667,0.0666666666666666
+28,5,Ally Brooke,Sasha Farber,Singer/Rapper,Texas,United States,26,9.0,0.2
+28,5,Karamo Brown,Jenna Johnson,TV Personality,Texas,United States,38,7.0,0.0444444444444444
+28,5,Hannah Brown,Alan Bersten,TV Personality,Alabama,United States,24,8.333333333333334,0.1333333333333333
 28,6,Kate Flannery,Pasha Pashkov,Actor/Actress,Pennsylvania,United States,55,9.0,0.0666666666666666
 28,6,James Van Der Beek,Emma Slater,Actor/Actress,Connecticut,United States,42,9.0,0.0444444444444444
 28,6,Kel Mitchell,Witney Carson,Actor/Actress,Illinois,United States,41,8.666666666666666,0.1111111111111111
@@ -1478,6 +2143,25 @@
 28,10,Lauren Alaina,Gleb Savchenko,Singer/Rapper,Georgia,United States,24,9.0,0.3333333333333333
 28,10,Ally Brooke,Sasha Farber,Singer/Rapper,Texas,United States,26,9.833333333333334,0.1333333333333333
 28,10,Hannah Brown,Alan Bersten,TV Personality,Alabama,United States,24,9.0,0.2666666666666666
+28,11,Kel Mitchell,Witney Carson,Actor/Actress,Illinois,United States,41,9.833333333333334,0.3
+28,11,Lauren Alaina,Gleb Savchenko,Singer/Rapper,Georgia,United States,24,9.5,0.1
+28,11,Ally Brooke,Sasha Farber,Singer/Rapper,Texas,United States,26,10.0,0.4
+28,11,Hannah Brown,Alan Bersten,TV Personality,Alabama,United States,24,9.666666666666666,0.2
+29,1,Anne Heche,Keo Motsepe,Actor/Actress,Ohio,United States,51,6.0,0.0666666666666666
+29,1,Jesse Metcalfe,Sharna Burgess,Actor/Actress,California,United States,41,6.0,0.0666666666666666
+29,1,Chrishell Stause,Gleb Savchenko,Actor/Actress,Kentucky,United States,39,4.333333333333333,0.025
+29,1,Skai Jackson,Alan Bersten,Actor/Actress,New York,United States,18,7.0,0.1208333333333333
+29,1,Justina Machado,Sasha Farber,Actor/Actress,Illinois,United States,48,7.0,0.1208333333333333
+29,1,Charles Oakley,Emma Slater,Athlete,Ohio,United States,56,4.0,0.0166666666666666
+29,1,Veron Davis,Peta Murgatroyd,Athlete,Washington D.C.,United States,36,5.666666666666667,0.0416666666666666
+29,1,Johnny Weir,Britt Stewart,Athlete,Pennsylvania,United States,36,6.0,0.0666666666666666
+29,1,Nev Schulman,Jenna Johnson,Producer,New York,United States,35,6.666666666666667,0.1041666666666666
+29,1,AJ McLean,Cheryl Burke,Singer/Rapper,Florida,United States,42,6.0,0.0666666666666666
+29,1,Nelly,Daniella Karagach,Singer/Rapper,Texas,United States,45,5.333333333333333,0.0333333333333333
+29,1,Kaitlyn Bristowe,Artem Chigvintsev,TV Personality,,Canada,35,6.666666666666667,0.1041666666666666
+29,1,Carole Baskin,Pasha Pashkov,TV Personality,Texas,United States,59,3.6666666666666665,0.0083333333333333
+29,1,Monica Aldama,Valentin Chmerkovskiy,TV Personality,Alabama,United States,48,6.333333333333333,0.0916666666666666
+29,1,Jeannie Mai,Brandon Armstrong,TV Personality,California,United States,41,6.0,0.0666666666666666
 29,2,Anne Heche,Keo Motsepe,Actor/Actress,Ohio,United States,51,6.0,0.1
 29,2,Jesse Metcalfe,Sharna Burgess,Actor/Actress,California,United States,41,6.666666666666667,0.0416666666666666
 29,2,Chrishell Stause,Gleb Savchenko,Actor/Actress,Kentucky,United States,39,6.0,0.0916666666666666
@@ -1543,6 +2227,16 @@
 29,6,Kaitlyn Bristowe,Artem Chigvintsev,TV Personality,,Canada,35,9.0,0.0454545454545454
 29,6,Monica Aldama,Valentin Chmerkovskiy,TV Personality,Alabama,United States,48,9.0,0.0303030303030303
 29,6,Jeannie Mai,Brandon Armstrong,TV Personality,California,United States,41,8.333333333333334,0.106060606060606
+29,7,Chrishell Stause,Gleb Savchenko,Actor/Actress,Kentucky,United States,39,8.666666666666666,0.1636363636363636
+29,7,Skai Jackson,Alan Bersten,Actor/Actress,New York,United States,18,9.0,0.109090909090909
+29,7,Justina Machado,Sasha Farber,Actor/Actress,Illinois,United States,48,8.666666666666666,0.1454545454545454
+29,7,Johnny Weir,Britt Stewart,Athlete,Pennsylvania,United States,36,9.0,0.0909090909090909
+29,7,Nev Schulman,Jenna Johnson,Producer,New York,United States,35,10.0,0.0545454545454545
+29,7,AJ McLean,Cheryl Burke,Singer/Rapper,Florida,United States,42,8.666666666666666,0.1272727272727272
+29,7,Nelly,Daniella Karagach,Singer/Rapper,Texas,United States,45,9.0,0.0727272727272727
+29,7,Kaitlyn Bristowe,Artem Chigvintsev,TV Personality,,Canada,35,8.0,0.1818181818181818
+29,7,Monica Aldama,Valentin Chmerkovskiy,TV Personality,Alabama,United States,48,7.333333333333333,0.0181818181818181
+29,7,Jeannie Mai,Brandon Armstrong,TV Personality,California,United States,41,8.333333333333334,0.0363636363636363
 29,8,Chrishell Stause,Gleb Savchenko,Actor/Actress,Kentucky,United States,39,9.0,0.0277777777777777
 29,8,Skai Jackson,Alan Bersten,Actor/Actress,New York,United States,18,8.999933333333333,0.1944444444444444
 29,8,Justina Machado,Sasha Farber,Actor/Actress,Illinois,United States,48,9.6666,0.1111111111111111
@@ -1558,6 +2252,31 @@
 29,9,AJ McLean,Cheryl Burke,Singer/Rapper,Florida,United States,42,8.333266666666667,0.0357142857142857
 29,9,Nelly,Daniella Karagach,Singer/Rapper,Texas,United States,45,8.0,0.25
 29,9,Kaitlyn Bristowe,Artem Chigvintsev,TV Personality,,Canada,35,10.0,0.0714285714285714
+29,10,Skai Jackson,Alan Bersten,Actor/Actress,New York,United States,18,9.5,0.0952380952380952
+29,10,Justina Machado,Sasha Farber,Actor/Actress,Illinois,United States,48,9.666666666666666,0.238095238095238
+29,10,Johnny Weir,Britt Stewart,Athlete,Pennsylvania,United States,36,9.5,0.0476190476190476
+29,10,Nev Schulman,Jenna Johnson,Producer,New York,United States,35,10.0,0.1904761904761904
+29,10,Nelly,Daniella Karagach,Singer/Rapper,Texas,United States,45,9.333333333333334,0.2857142857142857
+29,10,Kaitlyn Bristowe,Artem Chigvintsev,TV Personality,,Canada,35,10.0,0.1428571428571428
+29,11,Justina Machado,Sasha Farber,Actor/Actress,Illinois,United States,48,10.0,0.3
+29,11,Nev Schulman,Jenna Johnson,Producer,New York,United States,35,10.0,0.3
+29,11,Nelly,Daniella Karagach,Singer/Rapper,Texas,United States,45,9.5,0.1
+29,11,Kaitlyn Bristowe,Artem Chigvintsev,TV Personality,,Canada,35,10.0,0.3
+30,1,Martin Kove,Britt Stewart,Actor/Actress,New York,United States,75,3.25,0.0083333333333333
+30,1,Brian Austin Green,Sharna Burgess,Actor/Actress,California,United States,48,6.0,0.0458333333333333
+30,1,Melora Hardin,Artem Chigvintsev,Actor/Actress,Texas,United States,54,6.5,0.0875
+30,1,Matt James,Lindsay Arnold,Athlete,North Carolina,United States,29,6.0,0.0458333333333333
+30,1,"Mike ""The Miz"" Mizanin",Witney Carson,Athlete,Ohio,United States,40,6.0,0.0458333333333333
+30,1,Suni Lee,Sasha Farber,Athlete,Minnesota,United States,18,7.0,0.1125
+30,1,Iman Shumpert,Daniella Karagach,Athlete,Illinois,United States,31,5.25,0.0166666666666666
+30,1,Cody Rigsby,Cheryl Burke,Fitness Instructor,California,United States,34,6.0,0.0458333333333333
+30,1,Melanie C,Gleb Savchenko,Singer/Rapper,,England,47,6.75,0.1
+30,1,Jimmie Allen,Emma Slater,Singer/Rapper,Delaware,United States,36,5.5,0.025
+30,1,Olivia Jade,Valentin Chmerkovskiy,Social Media Personality,California,United States,21,6.25,0.0708333333333333
+30,1,JoJo Siwa,Jenna Johnson,Social Media Personality,Nebraska,United States,18,7.25,0.125
+30,1,Christine Chiu,Pasha Pashkov,TV Personality,,Taiwan China,38,6.25,0.0708333333333333
+30,1,Kenya Moore,Brandon Armstrong,TV Personality,Michigan,United States,50,6.5,0.0875
+30,1,Amanda Kloots,Alan Bersten,TV Personality,Ohio,United States,39,7.0,0.1125
 30,2,Martin Kove,Britt Stewart,Actor/Actress,New York,United States,75,3.75,0.0083333333333333
 30,2,Brian Austin Green,Sharna Burgess,Actor/Actress,California,United States,48,5.75,0.1166666666666666
 30,2,Melora Hardin,Artem Chigvintsev,Actor/Actress,Texas,United States,54,6.75,0.0666666666666666
@@ -1587,6 +2306,19 @@
 30,3,Christine Chiu,Pasha Pashkov,TV Personality,,Taiwan China,38,7.0,0.0095238095238095
 30,3,Kenya Moore,Brandon Armstrong,TV Personality,Michigan,United States,50,7.0,0.0761904761904762
 30,3,Amanda Kloots,Alan Bersten,TV Personality,Ohio,United States,39,8.0,0.019047619047619
+30,4,Brian Austin Green,Sharna Burgess,Actor/Actress,California,United States,48,6.5,0.0109890109890109
+30,4,Melora Hardin,Artem Chigvintsev,Actor/Actress,Texas,United States,54,9.125,0.0329670329670329
+30,4,Matt James,Lindsay Arnold,Athlete,North Carolina,United States,29,7.125,0.0219780219780219
+30,4,"Mike ""The Miz"" Mizanin",Witney Carson,Athlete,Ohio,United States,40,8.125,0.1098901098901098
+30,4,Suni Lee,Sasha Farber,Athlete,Minnesota,United States,18,8.5,0.0769230769230769
+30,4,Iman Shumpert,Daniella Karagach,Athlete,Illinois,United States,31,7.875,0.1208791208791208
+30,4,Cody Rigsby,Cheryl Burke,Fitness Instructor,California,United States,34,7.25,0.1428571428571428
+30,4,Melanie C,Gleb Savchenko,Singer/Rapper,,England,47,8.25,0.0879120879120879
+30,4,Jimmie Allen,Emma Slater,Singer/Rapper,Delaware,United States,36,8.125,0.0989010989010989
+30,4,Olivia Jade,Valentin Chmerkovskiy,Social Media Personality,California,United States,21,8.75,0.0549450549450549
+30,4,JoJo Siwa,Jenna Johnson,Social Media Personality,Nebraska,United States,18,8.75,0.0439560439560439
+30,4,Kenya Moore,Brandon Armstrong,TV Personality,Michigan,United States,50,7.375,0.1318681318681318
+30,4,Amanda Kloots,Alan Bersten,TV Personality,Ohio,United States,39,8.5,0.0659340659340659
 30,5,Melora Hardin,Artem Chigvintsev,Actor/Actress,Texas,United States,54,9.0,0.106060606060606
 30,5,"Mike ""The Miz"" Mizanin",Witney Carson,Athlete,Ohio,United States,40,8.0,0.1515151515151515
 30,5,Suni Lee,Sasha Farber,Athlete,Minnesota,United States,18,9.0,0.0909090909090909
@@ -1617,6 +2349,24 @@
 30,7,Olivia Jade,Valentin Chmerkovskiy,Social Media Personality,California,United States,21,10.5,0.0444444444444444
 30,7,JoJo Siwa,Jenna Johnson,Social Media Personality,Nebraska,United States,18,9.75,0.0666666666666666
 30,7,Amanda Kloots,Alan Bersten,TV Personality,Ohio,United States,39,8.5,0.1555555555555555
+30,8,Melora Hardin,Artem Chigvintsev,Actor/Actress,Texas,United States,54,10.5,0.1388888888888889
+30,8,Suni Lee,Sasha Farber,Athlete,Minnesota,United States,18,10.5,0.1111111111111111
+30,8,Iman Shumpert,Daniella Karagach,Athlete,Illinois,United States,31,8.75,0.2222222222222222
+30,8,Cody Rigsby,Cheryl Burke,Fitness Instructor,California,United States,34,9.5,0.1944444444444444
+30,8,Jimmie Allen,Emma Slater,Singer/Rapper,Delaware,United States,36,8.0,0.0277777777777777
+30,8,Olivia Jade,Valentin Chmerkovskiy,Social Media Personality,California,United States,21,9.0,0.0555555555555555
+30,8,JoJo Siwa,Jenna Johnson,Social Media Personality,Nebraska,United States,18,10.25,0.1666666666666666
+30,8,Amanda Kloots,Alan Bersten,TV Personality,Ohio,United States,39,10.5,0.0833333333333333
+30,9,Melora Hardin,Artem Chigvintsev,Actor/Actress,Texas,United States,54,9.0,0.0476190476190476
+30,9,Suni Lee,Sasha Farber,Athlete,Minnesota,United States,18,9.375,0.0952380952380952
+30,9,Iman Shumpert,Daniella Karagach,Athlete,Illinois,United States,31,9.375,0.238095238095238
+30,9,Cody Rigsby,Cheryl Burke,Fitness Instructor,California,United States,34,8.875,0.2857142857142857
+30,9,JoJo Siwa,Jenna Johnson,Social Media Personality,Nebraska,United States,18,10.0,0.1428571428571428
+30,9,Amanda Kloots,Alan Bersten,TV Personality,Ohio,United States,39,9.875,0.1904761904761904
+30,10,Iman Shumpert,Daniella Karagach,Athlete,Illinois,United States,31,10.0,0.35
+30,10,Cody Rigsby,Cheryl Burke,Fitness Instructor,California,United States,34,9.5,0.1
+30,10,JoJo Siwa,Jenna Johnson,Social Media Personality,Nebraska,United States,18,10.0,0.35
+30,10,Amanda Kloots,Alan Bersten,TV Personality,Ohio,United States,39,9.75,0.2
 31,1,Jason Lewis,Peta Murgatroyd,Actor/Actress,California,United States,51,4.5,0.0073529411764705
 31,1,Cheryl Ladd,Louis van Amstel,Actor/Actress,South Dakota,United States,71,5.25,0.088235294117647
 31,1,Selma Blair,Sasha Farber,Actor/Actress,Michigan,United States,50,7.0,0.0441176470588235
@@ -1675,6 +2425,18 @@
 31,4,Vinny Guadagnino,Koko Iwasaki,TV Personality,New York,United States,34,7.25,0.1098901098901098
 31,4,Shangela,Gleb Savchenko,TV Personality,Texas,United States,40,8.0,0.0769230769230769
 31,4,Gabby Windey,Valentin Chmerkovskiy,TV Personality,Illinois,United States,31,9.0,0.0219780219780219
+31,5,Selma Blair,Sasha Farber,Actor/Actress,Michigan,United States,50,10.0,0.0256410256410256
+31,5,Joseph Baena,Daniella Karagach,Actor/Actress,California,United States,24,8.75,0.0128205128205128
+31,5,Trevor Donovan,Emma Slater,Actor/Actress,California,United States,39,9.0,0.1153846153846153
+31,5,Daniel Durant,Britt Stewart,Actor/Actress,Michigan,United States,32,8.375,0.141025641025641
+31,5,Wayne Brady,Witney Carson,Comedian,Georgia,United States,50,10.25,0.0641025641025641
+31,5,Jessie James Decker,Alan Bersten,Singer/Rapper,,Italy,34,9.0,0.1025641025641025
+31,5,Jordin Sparks,Brandon Armstrong,Singer/Rapper,Arizona,United States,32,8.875,0.1282051282051282
+31,5,Heidi D'Amelio,Artem Chigvintsev,Social Media Personality,Louisiana,United States,50,9.75,0.0769230769230769
+31,5,Charli D'Amelio,Mark Ballas,Social Media Personality,Connecticut,United States,18,10.5,0.0384615384615384
+31,5,Vinny Guadagnino,Koko Iwasaki,TV Personality,New York,United States,34,7.75,0.1538461538461538
+31,5,Shangela,Gleb Savchenko,TV Personality,Texas,United States,40,9.625,0.0897435897435897
+31,5,Gabby Windey,Valentin Chmerkovskiy,TV Personality,Illinois,United States,31,10.25,0.0512820512820512
 31,6,Trevor Donovan,Emma Slater,Actor/Actress,California,United States,39,8.5,0.1636363636363636
 31,6,Daniel Durant,Britt Stewart,Actor/Actress,Michigan,United States,32,8.5,0.1454545454545454
 31,6,Wayne Brady,Witney Carson,Comedian,Georgia,United States,50,8.5,0.1272727272727272
@@ -1694,6 +2456,24 @@
 31,7,Vinny Guadagnino,Koko Iwasaki,TV Personality,New York,United States,34,7.875,0.2
 31,7,Shangela,Gleb Savchenko,TV Personality,Texas,United States,40,9.125,0.1111111111111111
 31,7,Gabby Windey,Valentin Chmerkovskiy,TV Personality,Illinois,United States,31,8.875,0.1555555555555555
+31,8,Trevor Donovan,Emma Slater,Actor/Actress,California,United States,39,9.75,0.2222222222222222
+31,8,Daniel Durant,Britt Stewart,Actor/Actress,Michigan,United States,32,9.75,0.1944444444444444
+31,8,Wayne Brady,Witney Carson,Comedian,Georgia,United States,50,11.25,0.1111111111111111
+31,8,Heidi D'Amelio,Artem Chigvintsev,Social Media Personality,Louisiana,United States,50,8.75,0.0555555555555555
+31,8,Charli D'Amelio,Mark Ballas,Social Media Personality,Connecticut,United States,18,11.25,0.0833333333333333
+31,8,Vinny Guadagnino,Koko Iwasaki,TV Personality,New York,United States,34,7.25,0.0277777777777777
+31,8,Shangela,Gleb Savchenko,TV Personality,Texas,United States,40,10.5,0.1388888888888889
+31,8,Gabby Windey,Valentin Chmerkovskiy,TV Personality,Illinois,United States,31,10.0,0.1666666666666666
+31,9,Trevor Donovan,Emma Slater,Actor/Actress,California,United States,39,8.125,0.0476190476190476
+31,9,Daniel Durant,Britt Stewart,Actor/Actress,Michigan,United States,32,8.625,0.0952380952380952
+31,9,Wayne Brady,Witney Carson,Comedian,Georgia,United States,50,9.125,0.2857142857142857
+31,9,Charli D'Amelio,Mark Ballas,Social Media Personality,Connecticut,United States,18,10.0,0.1904761904761904
+31,9,Shangela,Gleb Savchenko,TV Personality,Texas,United States,40,9.125,0.238095238095238
+31,9,Gabby Windey,Valentin Chmerkovskiy,TV Personality,Illinois,United States,31,10.0,0.1428571428571428
+31,10,Wayne Brady,Witney Carson,Comedian,Georgia,United States,50,9.5,0.15
+31,10,Charli D'Amelio,Mark Ballas,Social Media Personality,Connecticut,United States,18,10.0,0.35
+31,10,Shangela,Gleb Savchenko,TV Personality,Texas,United States,40,9.5,0.15
+31,10,Gabby Windey,Valentin Chmerkovskiy,TV Personality,Illinois,United States,31,10.0,0.35
 32,1,Jamie Lynn Spears,Alan Bersten,Actor/Actress,Mississippi,United States,32,5.0,0.1047619047619047
 32,1,Mira Sorvino,Gleb Savchenko,Actor/Actress,New York,United States,55,5.666666666666667,0.0761904761904762
 32,1,Barry Williams,Peta Murgatroyd,Actor/Actress,California,United States,68,5.333333333333333,0.0857142857142857
@@ -1784,6 +2564,53 @@
 32,9,Harry Jowsey,Rylee Arnold,TV Personality,,Australia,26,7.5,0.0476190476190476
 32,9,Charity Lawson,Artem Chigvintsev,TV Personality,Georgia,United States,27,9.5,0.1904761904761904
 32,9,Ariana Madix,Pasha Pashkov,TV Personality,Florida,United States,38,9.25,0.238095238095238
+32,10,Alyson Hannigan,Sasha Farber,Actor/Actress,Washington D.C.,United States,49,8.5,0.0666666666666666
+32,10,Xochitl Gomez,Valentin Chmerkovskiy,Actor/Actress,California,United States,17,10.0,0.3333333333333333
+32,10,Jason Mraz,Daniella Karagach,Singer/Rapper,Virginia,United States,46,9.5,0.1333333333333333
+32,10,Charity Lawson,Artem Chigvintsev,TV Personality,Georgia,United States,27,9.833333333333334,0.2666666666666666
+32,10,Ariana Madix,Pasha Pashkov,TV Personality,Florida,United States,38,9.666666666666666,0.2
+32,11,Alyson Hannigan,Sasha Farber,Actor/Actress,Washington D.C.,United States,49,8.833333333333334,0.0666666666666666
+32,11,Xochitl Gomez,Valentin Chmerkovskiy,Actor/Actress,California,United States,17,10.0,0.3
+32,11,Jason Mraz,Daniella Karagach,Singer/Rapper,Virginia,United States,46,10.0,0.3
+32,11,Charity Lawson,Artem Chigvintsev,TV Personality,Georgia,United States,27,9.833333333333334,0.1666666666666666
+32,11,Ariana Madix,Pasha Pashkov,TV Personality,Florida,United States,38,9.833333333333334,0.1666666666666666
+33,1,Tori Spelling,Pasha Pashkov,Actor/Actress,California,United States,51,5.666666666666667,0.0329670329670329
+33,1,Eric Roberts,Britt Stewart,Actor/Actress,California,United States,68,5.0,0.0109890109890109
+33,1,Reginald VelJohnson,Emma Slater,Actor/Actress,New York,United States,74,5.333333333333333,0.0219780219780219
+33,1,Chandler Kinney,Brandon Armstrong,Actor/Actress,California,United States,24,7.666666666666667,0.1428571428571428
+33,1,Dwight Howard ,Daniella Karagach,Athlete,Georgia,United States,38,7.333333333333333,0.1318681318681318
+33,1,Danny Amendola,Witney Carson,Athlete,Texas,United States,39,6.666666666666667,0.0989010989010989
+33,1,Stephen Nedoroscik,Rylee Arnold,Athlete,Florida,United States,26,7.0,0.1153846153846153
+33,1,Ilona Maher,Alan Bersten,Athlete,California,United States,28,6.0,0.0549450549450549
+33,1,Anna Delvey,Ezra Sosa,Con artist,,Russia,33,6.0,0.0549450549450549
+33,1,Brooks Nader,Gleb Savchenko,Model,New York,United States,27,6.0,0.0549450549450549
+33,1,Phaedra Parks,Val Chmerkovskiy,TV Personality,Georgia,United States,51,6.333333333333333,0.0824175824175824
+33,1,Jenn Tran,Sasha Farber,TV Personality,Florida,United States,26,6.333333333333333,0.0824175824175824
+33,1,Joey Graziadei,Jenna Johnson,TV Personality,Louisiana,United States,29,7.0,0.1153846153846153
+33,2,Tori Spelling,Pasha Pashkov,Actor/Actress,California,United States,51,6.333333333333333,0.0219780219780219
+33,2,Eric Roberts,Britt Stewart,Actor/Actress,California,United States,68,5.0,0.1428571428571428
+33,2,Reginald VelJohnson,Emma Slater,Actor/Actress,New York,United States,74,5.0,0.1318681318681318
+33,2,Chandler Kinney,Brandon Armstrong,Actor/Actress,California,United States,24,8.0,0.0329670329670329
+33,2,Dwight Howard ,Daniella Karagach,Athlete,Georgia,United States,38,7.333333333333333,0.0659340659340659
+33,2,Danny Amendola,Witney Carson,Athlete,Texas,United States,39,7.0,0.0989010989010989
+33,2,Stephen Nedoroscik,Rylee Arnold,Athlete,Florida,United States,26,7.333333333333333,0.0549450549450549
+33,2,Ilona Maher,Alan Bersten,Athlete,California,United States,28,7.0,0.0879120879120879
+33,2,Anna Delvey,Ezra Sosa,Con artist,,Russia,33,5.666666666666667,0.0109890109890109
+33,2,Brooks Nader,Gleb Savchenko,Model,New York,United States,27,6.666666666666667,0.1098901098901098
+33,2,Phaedra Parks,Val Chmerkovskiy,TV Personality,Georgia,United States,51,7.0,0.0769230769230769
+33,2,Jenn Tran,Sasha Farber,TV Personality,Florida,United States,26,6.333333333333333,0.1208791208791208
+33,2,Joey Graziadei,Jenna Johnson,TV Personality,Louisiana,United States,29,7.333333333333333,0.0439560439560439
+33,3,Eric Roberts,Britt Stewart,Actor/Actress,California,United States,68,5.75,0.0303030303030303
+33,3,Reginald VelJohnson,Emma Slater,Actor/Actress,New York,United States,74,5.25,0.0151515151515151
+33,3,Chandler Kinney,Brandon Armstrong,Actor/Actress,California,United States,24,8.625,0.0606060606060606
+33,3,Dwight Howard ,Daniella Karagach,Athlete,Georgia,United States,38,6.5,0.1666666666666666
+33,3,Danny Amendola,Witney Carson,Athlete,Texas,United States,39,7.5,0.1212121212121212
+33,3,Stephen Nedoroscik,Rylee Arnold,Athlete,Florida,United States,26,7.75,0.0909090909090909
+33,3,Ilona Maher,Alan Bersten,Athlete,California,United States,28,7.0,0.1515151515151515
+33,3,Brooks Nader,Gleb Savchenko,Model,New York,United States,27,7.625,0.106060606060606
+33,3,Phaedra Parks,Val Chmerkovskiy,TV Personality,Georgia,United States,51,7.0,0.1363636363636363
+33,3,Jenn Tran,Sasha Farber,TV Personality,Florida,United States,26,7.75,0.0757575757575757
+33,3,Joey Graziadei,Jenna Johnson,TV Personality,Louisiana,United States,29,8.75,0.0454545454545454
 33,4,Chandler Kinney,Brandon Armstrong,Actor/Actress,California,United States,24,8.0,0.1777777777777777
 33,4,Dwight Howard ,Daniella Karagach,Athlete,Georgia,United States,38,7.25,0.2
 33,4,Danny Amendola,Witney Carson,Athlete,Texas,United States,39,9.0,0.0666666666666666
@@ -1814,6 +2641,44 @@
 33,7,Stephen Nedoroscik,Rylee Arnold,Athlete,Florida,United States,26,9.0,0.1904761904761904
 33,7,Ilona Maher,Alan Bersten,Athlete,California,United States,28,8.666666666666666,0.238095238095238
 33,7,Joey Graziadei,Jenna Johnson,TV Personality,Louisiana,United States,29,9.166666666666666,0.1428571428571428
+33,8,Chandler Kinney,Brandon Armstrong,Actor/Actress,California,United States,24,9.666666666666666,0.3
+33,8,Danny Amendola,Witney Carson,Athlete,Texas,United States,39,9.0,0.1333333333333333
+33,8,Stephen Nedoroscik,Rylee Arnold,Athlete,Florida,United States,26,8.833333333333334,0.0666666666666666
+33,8,Ilona Maher,Alan Bersten,Athlete,California,United States,28,9.5,0.2
+33,8,Joey Graziadei,Jenna Johnson,TV Personality,Louisiana,United States,29,9.666666666666666,0.3
+33,9,Chandler Kinney,Brandon Armstrong,Actor/Actress,California,United States,24,10.0,0.3333333333333333
+33,9,Danny Amendola,Witney Carson,Athlete,Texas,United States,39,9.333333333333334,0.0666666666666666
+33,9,Stephen Nedoroscik,Rylee Arnold,Athlete,Florida,United States,26,9.833333333333334,0.2333333333333333
+33,9,Ilona Maher,Alan Bersten,Athlete,California,United States,28,9.5,0.1333333333333333
+33,9,Joey Graziadei,Jenna Johnson,TV Personality,Louisiana,United States,29,9.833333333333334,0.2333333333333333
+34,1,Corey Feldman,Jenna Johnson,Actor/Actress,California,United States,54,4.5,0.0142857142857142
+34,1,Danielle Fishel,Pasha Pashkov,Actor/Actress,California,United States,44,6.0,0.0761904761904762
+34,1,Elaine Hendrix,Alan Bersten (Rashad Jennings week 9),Actor/Actress,Georgia,United States,55,6.0,0.0761904761904762
+34,1,Baron Davis,Britt Stewart,Athlete,California,United States,46,5.0,0.0428571428571428
+34,1,Jordan Chiles,Ezra Sosa (Apolo Anton Ohno week 9),Athlete,Texas,United States,24,5.0,0.0428571428571428
+34,1,Andy Richter,Emma Slater/Kaitlyn Bristowe (week 9),Comedian,California,United States,59,4.5,0.0142857142857142
+34,1,Robert Irwin,Witney Carson (Xoshitl Gomez week 9),Conservationist,,Australia,22,7.5,0.1285714285714285
+34,1,Hilaria Baldwin,Gleb Savchenko,Entrepreneur,New York,United States,41,7.0,0.1142857142857142
+34,1,Lauren Jauregui,Brandon Armstrong,Singer/Rapper,Florida,United States,29,6.5,0.1
+34,1,Scott Hoying,Rylee Arnold,Singer/Rapper,California,United States,34,5.0,0.0428571428571428
+34,1,Alix Earle,Val Chmerkovskiy (Joey Graziadei week 9),Social media personality,Florida,United States,24,6.5,0.1
+34,1,Jen Affleck,Jan Ravnik,TV Personality,Utah,United States,26,6.0,0.0761904761904762
+34,1,Whitney Leavitt,Mark Ballas,TV Personality,Utah,United States,32,7.5,0.1285714285714285
+34,1,Dylan Efron,Daniella Karagach (Rumer Willis week 9),TV Personality,California,United States,33,5.0,0.0428571428571428
+34,2,Corey Feldman,Jenna Johnson,Actor/Actress,California,United States,54,5.0,0.0095238095238095
+34,2,Danielle Fishel,Pasha Pashkov,Actor/Actress,California,United States,44,6.333333333333333,0.1142857142857142
+34,2,Elaine Hendrix,Alan Bersten (Rashad Jennings week 9),Actor/Actress,Georgia,United States,55,7.0,0.0952380952380952
+34,2,Baron Davis,Britt Stewart,Athlete,California,United States,46,6.0,0.019047619047619
+34,2,Jordan Chiles,Ezra Sosa (Apolo Anton Ohno week 9),Athlete,Texas,United States,24,7.333333333333333,0.0571428571428571
+34,2,Andy Richter,Emma Slater/Kaitlyn Bristowe (week 9),Comedian,California,United States,59,5.333333333333333,0.1333333333333333
+34,2,Robert Irwin,Witney Carson (Xoshitl Gomez week 9),Conservationist,,Australia,22,7.333333333333333,0.0476190476190476
+34,2,Hilaria Baldwin,Gleb Savchenko,Entrepreneur,New York,United States,41,7.0,0.0857142857142857
+34,2,Lauren Jauregui,Brandon Armstrong,Singer/Rapper,Florida,United States,29,7.0,0.0761904761904762
+34,2,Scott Hoying,Rylee Arnold,Singer/Rapper,California,United States,34,6.0,0.1238095238095238
+34,2,Alix Earle,Val Chmerkovskiy (Joey Graziadei week 9),Social media personality,Florida,United States,24,7.0,0.0666666666666666
+34,2,Jen Affleck,Jan Ravnik,TV Personality,Utah,United States,26,7.333333333333333,0.0380952380952381
+34,2,Whitney Leavitt,Mark Ballas,TV Personality,Utah,United States,32,7.333333333333333,0.0285714285714285
+34,2,Dylan Efron,Daniella Karagach (Rumer Willis week 9),TV Personality,California,United States,33,6.666666666666667,0.1047619047619047
 34,3,Danielle Fishel,Pasha Pashkov,Actor/Actress,California,United States,44,7.0,0.1282051282051282
 34,3,Elaine Hendrix,Alan Bersten (Rashad Jennings week 9),Actor/Actress,Georgia,United States,55,7.0,0.1153846153846153
 34,3,Jordan Chiles,Ezra Sosa (Apolo Anton Ohno week 9),Athlete,Texas,United States,24,8.0,0.0384615384615384
@@ -1837,6 +2702,16 @@
 34,4,Jen Affleck,Jan Ravnik,TV Personality,Utah,United States,26,7.666666666666667,0.106060606060606
 34,4,Whitney Leavitt,Mark Ballas,TV Personality,Utah,United States,32,8.333333333333334,0.0303030303030303
 34,4,Dylan Efron,Daniella Karagach (Rumer Willis week 9),TV Personality,California,United States,33,7.666666666666667,0.0909090909090909
+34,5,Danielle Fishel,Pasha Pashkov,Actor/Actress,California,United States,44,7.25,0.0454545454545454
+34,5,Elaine Hendrix,Alan Bersten (Rashad Jennings week 9),Actor/Actress,Georgia,United States,55,7.5,0.0818181818181818
+34,5,Jordan Chiles,Ezra Sosa (Apolo Anton Ohno week 9),Athlete,Texas,United States,24,8.0,0.109090909090909
+34,5,Andy Richter,Emma Slater/Kaitlyn Bristowe (week 9),Comedian,California,United States,59,6.0,0.0181818181818181
+34,5,Robert Irwin,Witney Carson (Xoshitl Gomez week 9),Conservationist,,Australia,22,8.75,0.1545454545454545
+34,5,Scott Hoying,Rylee Arnold,Singer/Rapper,California,United States,34,7.5,0.0818181818181818
+34,5,Alix Earle,Val Chmerkovskiy (Joey Graziadei week 9),Social media personality,Florida,United States,24,8.75,0.1545454545454545
+34,5,Jen Affleck,Jan Ravnik,TV Personality,Utah,United States,26,7.25,0.0454545454545454
+34,5,Whitney Leavitt,Mark Ballas,TV Personality,Utah,United States,32,8.25,0.1272727272727272
+34,5,Dylan Efron,Daniella Karagach (Rumer Willis week 9),TV Personality,California,United States,33,9.0,0.1818181818181818
 34,6,Danielle Fishel,Pasha Pashkov,Actor/Actress,California,United States,44,9.0,0.109090909090909
 34,6,Elaine Hendrix,Alan Bersten (Rashad Jennings week 9),Actor/Actress,Georgia,United States,55,9.0,0.0909090909090909
 34,6,Jordan Chiles,Ezra Sosa (Apolo Anton Ohno week 9),Athlete,Texas,United States,24,9.75,0.0545454545454545
@@ -1877,3 +2752,8 @@
 34,10,Alix Earle,Val Chmerkovskiy (Joey Graziadei week 9),Social media personality,Florida,United States,24,9.666666666666666,0.1428571428571428
 34,10,Whitney Leavitt,Mark Ballas,TV Personality,Utah,United States,32,9.666666666666666,0.0476190476190476
 34,10,Dylan Efron,Daniella Karagach (Rumer Willis week 9),TV Personality,California,United States,33,9.166666666666666,0.2857142857142857
+34,11,Elaine Hendrix,Alan Bersten (Rashad Jennings week 9),Actor/Actress,Georgia,United States,55,9.6666,0.0666666666666666
+34,11,Jordan Chiles,Ezra Sosa (Apolo Anton Ohno week 9),Athlete,Texas,United States,24,9.888866666666667,0.2333333333333333
+34,11,Robert Irwin,Witney Carson (Xoshitl Gomez week 9),Conservationist,,Australia,22,9.888866666666667,0.2333333333333333
+34,11,Alix Earle,Val Chmerkovskiy (Joey Graziadei week 9),Social media personality,Florida,United States,24,10.0,0.3333333333333333
+34,11,Dylan Efron,Daniella Karagach (Rumer Willis week 9),TV Personality,California,United States,33,9.777733333333334,0.1333333333333333

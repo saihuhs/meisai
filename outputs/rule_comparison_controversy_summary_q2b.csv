@@ -1,5 +1,5 @@
 ﻿season,celebrity_name,actual_elim_week,rank_elim_week,percent_elim_week,rank_judges_elim_week,percent_judges_elim_week,status
-2,Jerry Rice,,,,3.0,,processed
-4,Billy Ray Cyrus,8.0,8.0,8.0,8.0,6.0,processed
-11,Bristol Palin,,,,9.0,8.0,processed
-27,Bobby Bones,,,,,,processed
+2,Jerry Rice,,8,8,3,8,processed
+4,Billy Ray Cyrus,8.0,1,1,1,1,processed
+11,Bristol Palin,,10,10,9,8,processed
+27,Bobby Bones,,9,9,8,9,processed
