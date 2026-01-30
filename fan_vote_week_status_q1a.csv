@@ -1,0 +1,336 @@
+﻿season,week,scheme,status
+1,1,rank,processed (no elimination)
+1,2,rank,processed
+1,3,rank,processed
+1,4,rank,processed
+1,5,rank,processed
+1,6,rank,processed (no elimination)
+2,1,rank,processed
+2,2,rank,processed
+2,3,rank,processed
+2,4,rank,processed
+2,5,rank,processed
+2,6,rank,processed
+2,7,rank,processed
+2,8,rank,processed (no elimination)
+3,1,percent,processed
+3,2,percent,processed
+3,3,percent,processed
+3,4,percent,processed
+3,5,percent,processed (multi elimination)
+3,6,percent,processed (no elimination)
+3,7,percent,processed
+3,8,percent,processed
+3,9,percent,processed
+3,10,percent,processed (no elimination)
+4,1,percent,processed (no elimination)
+4,2,percent,processed
+4,3,percent,processed
+4,4,percent,processed
+4,5,percent,processed
+4,6,percent,processed
+4,7,percent,processed
+4,8,percent,processed
+4,9,percent,processed
+4,10,percent,processed (no elimination)
+5,1,percent,processed
+5,2,percent,processed
+5,3,percent,processed
+5,4,percent,processed
+5,5,percent,processed
+5,6,percent,processed
+5,7,percent,processed
+5,8,percent,processed
+5,9,percent,processed
+5,10,percent,processed (no elimination)
+6,1,percent,processed (no elimination)
+6,2,percent,processed (multi elimination)
+6,3,percent,processed
+6,4,percent,processed
+6,5,percent,processed
+6,6,percent,processed
+6,7,percent,processed
+6,8,percent,processed
+6,9,percent,processed
+6,10,percent,processed (no elimination)
+7,1,percent,processed (multi elimination)
+7,2,percent,processed (multi elimination)
+7,3,percent,processed (no elimination)
+7,4,percent,processed
+7,5,percent,processed
+7,6,percent,processed
+7,7,percent,processed
+7,8,percent,processed
+7,9,percent,processed
+7,10,percent,processed (no elimination)
+8,1,percent,processed (no elimination)
+8,2,percent,processed
+8,3,percent,processed
+8,4,percent,processed (multi elimination)
+8,5,percent,processed
+8,6,percent,processed
+8,7,percent,processed
+8,8,percent,processed
+8,9,percent,processed
+8,10,percent,processed
+8,11,percent,processed (no elimination)
+9,1,percent,processed (multi elimination)
+9,2,percent,processed
+9,3,percent,processed (multi elimination)
+9,4,percent,processed
+9,5,percent,processed
+9,6,percent,processed (multi elimination)
+9,7,percent,processed (multi elimination)
+9,8,percent,processed
+9,9,percent,processed
+9,10,percent,processed (no elimination)
+10,1,percent,processed (no elimination)
+10,2,percent,processed
+10,3,percent,processed
+10,4,percent,processed
+10,5,percent,processed
+10,6,percent,processed
+10,7,percent,processed
+10,8,percent,processed
+10,9,percent,processed
+10,10,percent,processed (no elimination)
+11,1,percent,processed
+11,2,percent,processed
+11,3,percent,processed
+11,4,percent,processed
+11,5,percent,processed
+11,6,percent,processed
+11,7,percent,processed
+11,8,percent,processed
+11,9,percent,processed
+11,10,percent,processed (no elimination)
+12,1,percent,processed (no elimination)
+12,2,percent,processed
+12,3,percent,processed
+12,4,percent,processed
+12,5,percent,processed
+12,6,percent,processed
+12,7,percent,processed
+12,8,percent,processed
+12,9,percent,processed
+12,10,percent,processed (no elimination)
+13,1,percent,processed
+13,2,percent,processed
+13,3,percent,processed
+13,4,percent,processed
+13,5,percent,processed
+13,6,percent,processed
+13,7,percent,processed
+13,8,percent,processed
+13,9,percent,processed
+13,10,percent,processed (no elimination)
+14,1,percent,processed (no elimination)
+14,2,percent,processed
+14,3,percent,processed
+14,4,percent,processed
+14,5,percent,processed
+14,6,percent,processed
+14,7,percent,processed
+14,8,percent,processed (multi elimination)
+14,9,percent,processed
+14,10,percent,processed (no elimination)
+15,1,percent,processed
+15,2,percent,processed
+15,3,percent,processed (multi elimination)
+15,4,percent,processed
+15,5,percent,processed (no elimination)
+15,6,percent,processed
+15,7,percent,processed (no elimination)
+15,8,percent,processed (multi elimination)
+15,9,percent,processed (multi elimination)
+15,10,percent,processed (no elimination)
+16,1,percent,processed (no elimination)
+16,2,percent,processed
+16,3,percent,processed
+16,4,percent,processed
+16,5,percent,processed
+16,6,percent,processed
+16,7,percent,processed
+16,8,percent,processed
+16,9,percent,processed
+16,10,percent,processed (no elimination)
+17,1,percent,processed (no elimination)
+17,2,percent,processed
+17,3,percent,processed
+17,4,percent,processed
+17,5,percent,processed
+17,6,percent,processed (no elimination)
+17,7,percent,processed
+17,8,percent,processed
+17,9,percent,processed
+17,10,percent,processed
+17,11,percent,processed (no elimination)
+18,1,percent,processed
+18,2,percent,processed (multi elimination)
+18,3,percent,processed (no elimination)
+18,4,percent,processed (no elimination)
+18,5,percent,processed
+18,6,percent,processed
+18,7,percent,processed
+18,8,percent,processed
+18,9,percent,processed
+18,10,percent,processed (no elimination)
+19,1,percent,processed
+19,2,percent,processed
+19,3,percent,processed
+19,4,percent,processed
+19,5,percent,processed (no elimination)
+19,6,percent,processed
+19,7,percent,processed
+19,8,percent,processed
+19,9,percent,processed
+19,10,percent,processed
+19,11,percent,processed (no elimination)
+20,1,percent,processed (no elimination)
+20,2,percent,processed
+20,3,percent,processed
+20,4,percent,processed
+20,5,percent,processed
+20,6,percent,processed
+20,7,percent,processed
+20,8,percent,processed (multi elimination)
+20,9,percent,processed
+20,10,percent,processed (no elimination)
+21,1,percent,processed (no elimination)
+21,2,percent,no feasible fan shares (multi or k>2)
+21,3,percent,processed (no elimination)
+21,4,percent,processed
+21,5,percent,processed (no elimination)
+21,6,percent,processed
+21,7,percent,processed
+21,8,percent,processed
+21,9,percent,processed (multi elimination)
+21,10,percent,processed (no elimination)
+21,11,percent,processed (no elimination)
+22,1,percent,processed (no elimination)
+22,2,percent,processed
+22,3,percent,processed
+22,4,percent,processed
+22,5,percent,processed (no elimination)
+22,6,percent,processed
+22,7,percent,processed (multi elimination)
+22,8,percent,processed
+22,9,percent,processed (multi elimination)
+22,10,percent,processed (no elimination)
+23,1,percent,processed (no elimination)
+23,2,percent,processed
+23,3,percent,processed
+23,4,percent,processed (multi elimination)
+23,5,percent,processed (no elimination)
+23,6,percent,processed
+23,7,percent,processed
+23,8,percent,processed
+23,9,percent,processed
+23,10,percent,processed
+23,11,percent,processed (no elimination)
+24,1,percent,processed (no elimination)
+24,2,percent,processed
+24,3,percent,processed
+24,4,percent,processed
+24,5,percent,processed
+24,6,percent,processed
+24,7,percent,processed (multi elimination)
+24,8,percent,processed
+24,9,percent,processed
+24,10,percent,processed (no elimination)
+25,1,percent,processed (no elimination)
+25,2,percent,processed (multi elimination)
+25,3,percent,processed (no elimination)
+25,4,percent,processed
+25,5,percent,processed
+25,6,percent,processed
+25,7,percent,processed (multi elimination)
+25,8,percent,processed
+25,9,percent,processed
+25,10,percent,processed (no elimination)
+26,1,percent,processed (multi elimination)
+26,2,percent,processed (multi elimination)
+26,3,percent,no feasible fan shares (multi or k>2)
+26,4,percent,processed (no elimination)
+27,1,percent,processed
+27,2,percent,processed
+27,3,percent,processed
+27,4,percent,processed
+27,5,percent,processed (no elimination)
+27,6,percent,processed
+27,7,percent,processed (multi elimination)
+27,8,percent,processed (multi elimination)
+27,9,percent,processed (no elimination)
+28,1,rank,processed (no elimination)
+28,2,rank,processed (multi elimination)
+28,3,rank,processed (no elimination)
+28,4,rank,processed
+28,5,rank,processed (no elimination)
+28,6,rank,processed
+28,7,rank,processed
+28,8,rank,processed
+28,9,rank,processed
+28,10,rank,processed
+28,11,rank,processed (no elimination)
+29,1,rank,processed (no elimination)
+29,2,rank,processed
+29,3,rank,processed
+29,4,rank,processed
+29,5,rank,processed
+29,6,rank,processed
+29,7,rank,processed (multi elimination)
+29,8,rank,processed
+29,9,rank,processed
+29,10,rank,processed (multi elimination)
+29,11,rank,processed (no elimination)
+30,1,rank,processed (no elimination)
+30,2,rank,processed
+30,3,rank,processed
+30,4,rank,processed (multi elimination)
+30,5,rank,processed
+30,6,rank,processed
+30,7,rank,processed
+30,8,rank,processed (multi elimination)
+30,9,rank,processed (multi elimination)
+30,10,rank,processed (no elimination)
+31,1,rank,processed
+31,2,rank,processed
+31,3,rank,processed
+31,4,rank,processed
+31,5,rank,processed (multi elimination)
+31,6,rank,processed
+31,7,rank,processed
+31,8,rank,processed (multi elimination)
+31,9,rank,processed (multi elimination)
+31,10,rank,processed (no elimination)
+32,1,rank,processed
+32,2,rank,processed
+32,3,rank,processed
+32,4,rank,processed
+32,5,rank,processed
+32,6,rank,processed
+32,7,rank,processed
+32,8,rank,processed
+32,9,rank,processed
+32,10,rank,processed (no elimination)
+32,11,rank,processed (no elimination)
+33,1,rank,processed (no elimination)
+33,2,rank,processed (multi elimination)
+33,3,rank,processed (multi elimination)
+33,4,rank,processed
+33,5,rank,processed
+33,6,rank,processed
+33,7,rank,processed
+33,8,rank,processed (no elimination)
+33,9,rank,processed (no elimination)
+34,1,rank,processed (no elimination)
+34,2,rank,processed (multi elimination)
+34,3,rank,processed
+34,4,rank,processed
+34,5,rank,processed (no elimination)
+34,6,rank,processed
+34,7,rank,processed
+34,8,rank,processed
+34,9,rank,processed
+34,10,rank,processed
+34,11,rank,processed (no elimination)
