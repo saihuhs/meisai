@@ -947,12 +947,14 @@ def main():
 
             # Consistency metrics
             if len(eliminated_list) > 0:
+                eliminated_set = set(eliminated_list)
                 if scheme == "rank":
                     combined = rank_judge + fan_rank
                     k = len(eliminated_list)
                     bottom_k = combined.nlargest(k).index.tolist()
-                    match = set(bottom_k) == set(eliminated_list)
-                    deviation = len(set(eliminated_list) - set(bottom_k))
+                    predicted_set = set(bottom_k)
+                    match = predicted_set == eliminated_set
+                    deviation = len(eliminated_set - predicted_set)
                     # Spearman/Kendall with judge scores
                     spearman = spearman_corr(fan_share.values, judge_scores.values)
                     kendall = kendall_tau(fan_share.values, judge_scores.values)
@@ -963,12 +965,19 @@ def main():
                     combined = (judge_scores / judge_scores.sum()) + fan_share
                     k = len(eliminated_list)
                     bottom_k = combined.nsmallest(k).index.tolist()
-                    match = set(bottom_k) == set(eliminated_list)
-                    deviation = len(set(eliminated_list) - set(bottom_k))
+                    predicted_set = set(bottom_k)
+                    match = predicted_set == eliminated_set
+                    deviation = len(eliminated_set - predicted_set)
                     spearman = spearman_corr(fan_share.values, judge_scores.values)
                     kendall = kendall_tau(fan_share.values, judge_scores.values)
                     sorted_vals = combined.sort_values(ascending=True).values
                     pressure = float(sorted_vals[1] - sorted_vals[0]) if len(sorted_vals) > 1 else 0.0
+
+                inter = len(eliminated_set & predicted_set)
+                union = len(eliminated_set | predicted_set)
+                overlap = float(inter / union) if union > 0 else np.nan
+                recall = float(inter / len(eliminated_set)) if len(eliminated_set) > 0 else np.nan
+                precision = float(inter / len(predicted_set)) if len(predicted_set) > 0 else np.nan
 
                 consistency_rows.append({
                     "season": season,
@@ -977,6 +986,9 @@ def main():
                     "eliminated_count": len(eliminated_list),
                     "bottom_k_match": int(match),
                     "deviation_count": deviation,
+                    "overlap_ratio": overlap,
+                    "recall": recall,
+                    "precision": precision,
                 })
 
                 # Extended consistency metrics
