@@ -37,20 +37,27 @@ STANDARDIZE_METHOD = "zscore"  # "zscore" or "minmax"
 # ============================
 # File paths
 # ============================
-BASE_DIR = Path(__file__).resolve().parent
-DATA_FILE = BASE_DIR / "2026_MCM_Problem_C_Data.csv"
-OUTPUT_VOTES = BASE_DIR / "fan_vote_estimates_q1a.csv"
-OUTPUT_STATUS = BASE_DIR / "fan_vote_week_status_q1a.csv"
-PLOT_FILE = BASE_DIR / "fan_vote_trends_q1a.png"
-OUTPUT_CONSISTENCY = BASE_DIR / "fan_vote_consistency_q1a.csv"
-OUTPUT_UNCERTAINTY_RANK = BASE_DIR / "fan_vote_uncertainty_rank_q1a.csv"
-OUTPUT_UNCERTAINTY_PERCENT = BASE_DIR / "fan_vote_uncertainty_percent_q1a.csv"
-HEATMAP_FILE = BASE_DIR / "fan_vote_uncertainty_heatmap_q1a.png"
-OUTPUT_CONSISTENCY_EXT = BASE_DIR / "fan_vote_consistency_extended_q1a.csv"
-OUTPUT_SENSITIVITY = BASE_DIR / "fan_vote_sensitivity_weights_q1a.csv"
-OUTPUT_JUDGE_UNCERTAINTY = BASE_DIR / "fan_vote_judge_variability_uncertainty_q1a.csv"
-PLOT_FEASIBLE_SPACE = BASE_DIR / "fan_vote_feasible_space_q1a.png"
-PLOT_PRESSURE = BASE_DIR / "fan_vote_elimination_pressure_q1a.png"
+ROOT_DIR = Path(__file__).resolve().parent.parent
+DATA_DIR = ROOT_DIR / "data"
+OUTPUT_DIR = ROOT_DIR / "outputs"
+FIG_DIR = ROOT_DIR / "figures"
+
+DATA_FILE = DATA_DIR / "2026_MCM_Problem_C_Data.csv"
+OUTPUT_VOTES = OUTPUT_DIR / "fan_vote_estimates_q1a.csv"
+OUTPUT_STATUS = OUTPUT_DIR / "fan_vote_week_status_q1a.csv"
+PLOT_FILE = FIG_DIR / "fan_vote_trends_q1a.png"
+OUTPUT_CONSISTENCY = OUTPUT_DIR / "fan_vote_consistency_q1a.csv"
+OUTPUT_UNCERTAINTY_RANK = OUTPUT_DIR / "fan_vote_uncertainty_rank_q1a.csv"
+OUTPUT_UNCERTAINTY_PERCENT = OUTPUT_DIR / "fan_vote_uncertainty_percent_q1a.csv"
+HEATMAP_FILE = FIG_DIR / "fan_vote_uncertainty_heatmap_q1a.png"
+OUTPUT_CONSISTENCY_EXT = OUTPUT_DIR / "fan_vote_consistency_extended_q1a.csv"
+OUTPUT_SENSITIVITY = OUTPUT_DIR / "fan_vote_sensitivity_weights_q1a.csv"
+OUTPUT_JUDGE_UNCERTAINTY = OUTPUT_DIR / "fan_vote_judge_variability_uncertainty_q1a.csv"
+PLOT_FEASIBLE_SPACE = FIG_DIR / "fan_vote_feasible_space_q1a.png"
+PLOT_PRESSURE = FIG_DIR / "fan_vote_elimination_pressure_q1a.png"
+
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+FIG_DIR.mkdir(parents=True, exist_ok=True)
 
 # ============================
 # Absolute vote assumption

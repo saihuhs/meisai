@@ -30,12 +30,18 @@ BETA = 0.5   # weight for fan vote share
 # ============================
 # File paths
 # ============================
-BASE_DIR = Path(__file__).resolve().parent
-INPUT_VOTES = BASE_DIR / "fan_vote_estimates_q1a.csv"
+ROOT_DIR = Path(__file__).resolve().parent.parent
+OUTPUT_DIR = ROOT_DIR / "outputs"
+FIG_DIR = ROOT_DIR / "figures"
 
-OUTPUT_WEEKLY = BASE_DIR / "fair_rule_weekly_q4.csv"
-OUTPUT_SEASON_SUM = BASE_DIR / "fair_rule_season_q4.csv"
-PLOT_FILE = BASE_DIR / "fair_rule_components_q4.png"
+INPUT_VOTES = OUTPUT_DIR / "fan_vote_estimates_q1a.csv"
+
+OUTPUT_WEEKLY = OUTPUT_DIR / "fair_rule_weekly_q4.csv"
+OUTPUT_SEASON_SUM = OUTPUT_DIR / "fair_rule_season_q4.csv"
+PLOT_FILE = FIG_DIR / "fair_rule_components_q4.png"
+
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+FIG_DIR.mkdir(parents=True, exist_ok=True)
 
 # ============================
 # Main process

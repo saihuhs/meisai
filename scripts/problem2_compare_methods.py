@@ -24,13 +24,19 @@ plt.rcParams["axes.unicode_minus"] = False
 # ============================
 # File paths
 # ============================
-BASE_DIR = Path(__file__).resolve().parent
-INPUT_VOTES = BASE_DIR / "fan_vote_estimates_q1a.csv"
-OUTPUT_WEEK_DIFF = BASE_DIR / "rule_comparison_weekly_q2a.csv"
-OUTPUT_SEASON_SUM = BASE_DIR / "rule_comparison_season_q2a.csv"
-PLOT_FILE = BASE_DIR / "rule_comparison_diff_ratio_q2a.png"
-OUTPUT_CONTROVERSY = BASE_DIR / "rule_comparison_controversy_q2b.csv"
-OUTPUT_CONTROVERSY_SUM = BASE_DIR / "rule_comparison_controversy_summary_q2b.csv"
+ROOT_DIR = Path(__file__).resolve().parent.parent
+OUTPUT_DIR = ROOT_DIR / "outputs"
+FIG_DIR = ROOT_DIR / "figures"
+
+INPUT_VOTES = OUTPUT_DIR / "fan_vote_estimates_q1a.csv"
+OUTPUT_WEEK_DIFF = OUTPUT_DIR / "rule_comparison_weekly_q2a.csv"
+OUTPUT_SEASON_SUM = OUTPUT_DIR / "rule_comparison_season_q2a.csv"
+PLOT_FILE = FIG_DIR / "rule_comparison_diff_ratio_q2a.png"
+OUTPUT_CONTROVERSY = OUTPUT_DIR / "rule_comparison_controversy_q2b.csv"
+OUTPUT_CONTROVERSY_SUM = OUTPUT_DIR / "rule_comparison_controversy_summary_q2b.csv"
+
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+FIG_DIR.mkdir(parents=True, exist_ok=True)
 
 # ============================
 # Helper functions

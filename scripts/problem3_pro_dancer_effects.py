@@ -25,15 +25,22 @@ plt.rcParams["axes.unicode_minus"] = False
 # ============================
 # File paths
 # ============================
-BASE_DIR = Path(__file__).resolve().parent
-DATA_FILE = BASE_DIR / "2026_MCM_Problem_C_Data.csv"
-FAN_VOTE_FILE = BASE_DIR / "fan_vote_estimates_q1a.csv"
+ROOT_DIR = Path(__file__).resolve().parent.parent
+DATA_DIR = ROOT_DIR / "data"
+OUTPUT_DIR = ROOT_DIR / "outputs"
+FIG_DIR = ROOT_DIR / "figures"
 
-OUTPUT_DATASET = BASE_DIR / "problem3_model_dataset.csv"
-OUTPUT_COEF_JUDGE = BASE_DIR / "problem3_ols_coeff_judge.csv"
-OUTPUT_COEF_FAN = BASE_DIR / "problem3_ols_coeff_fan.csv"
-OUTPUT_FIT = BASE_DIR / "problem3_model_fit.csv"
-OUTPUT_PLOT = BASE_DIR / "problem3_top_pro_dancer_effects.png"
+DATA_FILE = DATA_DIR / "2026_MCM_Problem_C_Data.csv"
+FAN_VOTE_FILE = OUTPUT_DIR / "fan_vote_estimates_q1a.csv"
+
+OUTPUT_DATASET = OUTPUT_DIR / "problem3_model_dataset.csv"
+OUTPUT_COEF_JUDGE = OUTPUT_DIR / "problem3_ols_coeff_judge.csv"
+OUTPUT_COEF_FAN = OUTPUT_DIR / "problem3_ols_coeff_fan.csv"
+OUTPUT_FIT = OUTPUT_DIR / "problem3_model_fit.csv"
+OUTPUT_PLOT = FIG_DIR / "problem3_top_pro_dancer_effects.png"
+
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+FIG_DIR.mkdir(parents=True, exist_ok=True)
 
 # ============================
 # Helper functions

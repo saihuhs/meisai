@@ -16,33 +16,40 @@ plt.rcParams["font.sans-serif"] = ["SimHei", "Microsoft YaHei", "Arial Unicode M
 plt.rcParams["axes.unicode_minus"] = False
 
 BASE_DIR = Path(__file__).resolve().parent
+ROOT_DIR = BASE_DIR.parent
+DATA_DIR = ROOT_DIR / "data"
+OUTPUT_DIR = ROOT_DIR / "outputs"
+FIG_DIR = ROOT_DIR / "figures"
 
 # Input files (generated previously)
-FAN_VOTES = BASE_DIR / "fan_vote_estimates_q1a.csv"
-WEEK_STATUS = BASE_DIR / "fan_vote_week_status_q1a.csv"
-RULE_WEEKLY = BASE_DIR / "rule_comparison_weekly_q2a.csv"
-RULE_SEASON = BASE_DIR / "rule_comparison_season_q2a.csv"
-CONTROVERSY_SUM = BASE_DIR / "rule_comparison_controversy_summary_q2b.csv"
-MODEL_DATASET = BASE_DIR / "problem3_model_dataset.csv"
-FIT_Q3 = BASE_DIR / "problem3_model_fit.csv"
-FAIR_WEEKLY = BASE_DIR / "fair_rule_weekly_q4.csv"
-RAW_DATA = BASE_DIR / "2026_MCM_Problem_C_Data.csv"
+FAN_VOTES = OUTPUT_DIR / "fan_vote_estimates_q1a.csv"
+WEEK_STATUS = OUTPUT_DIR / "fan_vote_week_status_q1a.csv"
+RULE_WEEKLY = OUTPUT_DIR / "rule_comparison_weekly_q2a.csv"
+RULE_SEASON = OUTPUT_DIR / "rule_comparison_season_q2a.csv"
+CONTROVERSY_SUM = OUTPUT_DIR / "rule_comparison_controversy_summary_q2b.csv"
+MODEL_DATASET = OUTPUT_DIR / "problem3_model_dataset.csv"
+FIT_Q3 = OUTPUT_DIR / "problem3_model_fit.csv"
+FAIR_WEEKLY = OUTPUT_DIR / "fair_rule_weekly_q4.csv"
+RAW_DATA = DATA_DIR / "2026_MCM_Problem_C_Data.csv"
 
 # Output files
-OUT_Q1_SUM = BASE_DIR / "eval_q1_summary.csv"
-OUT_Q1_SEASON = BASE_DIR / "eval_q1_by_season.csv"
-OUT_Q1_SENS = BASE_DIR / "eval_q1_sensitivity.csv"
-OUT_Q1_INTERVAL = BASE_DIR / "eval_q1_interval.csv"
-OUT_Q1_INTERVAL_SUM = BASE_DIR / "eval_q1_interval_summary.csv"
+OUT_Q1_SUM = OUTPUT_DIR / "eval_q1_summary.csv"
+OUT_Q1_SEASON = OUTPUT_DIR / "eval_q1_by_season.csv"
+OUT_Q1_SENS = OUTPUT_DIR / "eval_q1_sensitivity.csv"
+OUT_Q1_INTERVAL = OUTPUT_DIR / "eval_q1_interval.csv"
+OUT_Q1_INTERVAL_SUM = OUTPUT_DIR / "eval_q1_interval_summary.csv"
 
-OUT_Q2_SUM = BASE_DIR / "eval_q2_summary.csv"
-OUT_Q2_SENS = BASE_DIR / "eval_q2_sensitivity.csv"
+OUT_Q2_SUM = OUTPUT_DIR / "eval_q2_summary.csv"
+OUT_Q2_SENS = OUTPUT_DIR / "eval_q2_sensitivity.csv"
 
-OUT_Q3_LOO = BASE_DIR / "eval_q3_leave_one_season.csv"
-OUT_Q3_STAB = BASE_DIR / "eval_q3_coef_stability.csv"
+OUT_Q3_LOO = OUTPUT_DIR / "eval_q3_leave_one_season.csv"
+OUT_Q3_STAB = OUTPUT_DIR / "eval_q3_coef_stability.csv"
 
-OUT_Q4_SENS = BASE_DIR / "eval_q4_sensitivity.csv"
-PLOT_Q4 = BASE_DIR / "eval_q4_alpha_sensitivity.png"
+OUT_Q4_SENS = OUTPUT_DIR / "eval_q4_sensitivity.csv"
+PLOT_Q4 = FIG_DIR / "eval_q4_alpha_sensitivity.png"
+
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+FIG_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def week_consistency(df_week):
