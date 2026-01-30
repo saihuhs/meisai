@@ -34,10 +34,10 @@
 
 ## 问题四：公平合成系统
 **有效性**：公平规则在周次层面可生成唯一淘汰结果，并与输出文件 [outputs/fair_rule_weekly_q4.csv](../outputs/fair_rule_weekly_q4.csv) 一致。  
-**合理性**：采用占比规范化与线性加权，确保裁判与观众在同一量纲上共同决策，满足公平性与可解释性要求。  
-**灵敏度**：相对于 $\alpha=0.5$ 基准，$\alpha=0.3$ 与 $\alpha=0.7$ 的淘汰差异比例均为 0（见 [outputs/eval_q4_sensitivity.csv](../outputs/eval_q4_sensitivity.csv) 与 [figures/eval_q4_alpha_sensitivity.png](../figures/eval_q4_alpha_sensitivity.png)），表明当前输出下规则对权重扰动不敏感。  
-**稳定性与鲁棒性**：在等权结构下规则稳定；但当权重偏离 0.5 时，结果对参数敏感，说明公平规则的可解释性依赖权重设定的透明性与稳定性。  
-**适用范围与局限**：适用于强调平衡技术与人气的场景；若节目定位偏向单一目标，应在权重上作明确政策选择。
+**公平性定义与量化**：在冲突周次中比较“粉丝一致率 vs 评委一致率”的差距，并结合与实际淘汰的重合度（`overlap`）衡量平衡性与稳定性，详见 [outputs/fair_rule_metrics_q4.csv](../outputs/fair_rule_metrics_q4.csv) 与 [outputs/fair_rule_weekly_compare_q4.csv](../outputs/fair_rule_weekly_compare_q4.csv)。  
+**对比分析**：公平规则与排名法、百分比法的对比指标（bottom_k_match、overlap、recall/precision、冲突对齐率）已输出，并可在争议案例中对照淘汰周次与名次变化（见 [outputs/fair_rule_controversy_q4.csv](../outputs/fair_rule_controversy_q4.csv)、[outputs/fair_rule_placement_q4.csv](../outputs/fair_rule_placement_q4.csv)）。  
+**灵敏度**：对 $\alpha\in\{0.4,0.5,0.6\}$ 的权重变动进行一致性与重合度评估，见 [outputs/fair_rule_sensitivity_q4.csv](../outputs/fair_rule_sensitivity_q4.csv)。  
+**结论与建议**：结构化建议报告见 [outputs/fair_rule_recommendation_q4.md](../outputs/fair_rule_recommendation_q4.md)，总结公平性优势与对制作方的积极意义。
 
 ---
 
@@ -60,3 +60,10 @@
 - [outputs/eval_q3_coef_stability.csv](../outputs/eval_q3_coef_stability.csv)
 - [outputs/eval_q4_sensitivity.csv](../outputs/eval_q4_sensitivity.csv)
 - [figures/eval_q4_alpha_sensitivity.png](../figures/eval_q4_alpha_sensitivity.png)
+- [outputs/fair_rule_weekly_q4.csv](../outputs/fair_rule_weekly_q4.csv)
+- [outputs/fair_rule_weekly_compare_q4.csv](../outputs/fair_rule_weekly_compare_q4.csv)
+- [outputs/fair_rule_metrics_q4.csv](../outputs/fair_rule_metrics_q4.csv)
+- [outputs/fair_rule_controversy_q4.csv](../outputs/fair_rule_controversy_q4.csv)
+- [outputs/fair_rule_placement_q4.csv](../outputs/fair_rule_placement_q4.csv)
+- [outputs/fair_rule_sensitivity_q4.csv](../outputs/fair_rule_sensitivity_q4.csv)
+- [outputs/fair_rule_recommendation_q4.md](../outputs/fair_rule_recommendation_q4.md)

@@ -1,0 +1,4 @@
+﻿rule,weeks,bottom_k_match,overlap,recall,precision,fan_align_conflict,judge_align_conflict,balance_gap
+fair,259,1.0,1.0,1.0,1.0,0.0,0.0,0.0
+rank,259,0.9884169884169884,0.9909909909909909,0.9922779922779923,0.9922779922779923,0.0,0.0,0.0
+percent,259,1.0,1.0,1.0,1.0,0.0,0.0,0.0
