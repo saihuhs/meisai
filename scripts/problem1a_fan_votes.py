@@ -14,6 +14,8 @@ This script follows the model structure defined in the paper:
 from pathlib import Path
 import numpy as np
 import pandas as pd
+import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 # ============================
@@ -70,7 +72,13 @@ TOTAL_VOTES_PER_WEEK = 10_000_000
 # Multi-elimination sampling control
 # ============================
 MULTI_SAMPLE_SIZE = 2000
+SENSITIVITY_SAMPLE_SIZE = 500
 RANDOM_SEED = 42
+
+# ============================
+# Plotting control (non-interactive backend)
+# ============================
+SHOW_PLOTS = False
 
 # ============================
 # Helper functions
@@ -129,6 +137,10 @@ def compute_week_scores(df: pd.DataFrame, weeks):
 def validate_data_quality(df: pd.DataFrame, weeks):
     """Basic data quality checks for judge scores and placement consistency."""
     issues = []
+
+    if "last_active_week" not in df.columns:
+        df = df.copy()
+        df["last_active_week"] = df.apply(lambda r: last_active_week(r, weeks), axis=1)
 
     # Score range checks per week
     for w in weeks:
@@ -494,7 +506,8 @@ def simplex_grid(k, step):
 
 def estimate_votes_percent_based_multi(judge_scores, eliminated_indices, prev_share, grid_step=0.05,
                                        smooth_w: float = SMOOTHNESS_WEIGHT,
-                                       corr_w: float = CORRELATION_WEIGHT):
+                                       corr_w: float = CORRELATION_WEIGHT,
+                                       sample_size: int | None = None):
     contestants = list(judge_scores.index)
     n = len(contestants)
     pJ = judge_scores / judge_scores.sum()
@@ -508,7 +521,8 @@ def estimate_votes_percent_based_multi(judge_scores, eliminated_indices, prev_sh
         grid_points = simplex_grid(k, grid_step)
     else:
         rng = np.random.default_rng(RANDOM_SEED)
-        grid_points = rng.dirichlet(np.ones(k), size=MULTI_SAMPLE_SIZE).tolist()
+        size = MULTI_SAMPLE_SIZE if sample_size is None else sample_size
+        grid_points = rng.dirichlet(np.ones(k), size=size).tolist()
 
     for point in grid_points:
         pF_e = {e: v for e, v in zip(eliminated_indices, point)}
@@ -548,7 +562,8 @@ def estimate_votes_percent_based_multi(judge_scores, eliminated_indices, prev_sh
     return best_solution, solutions
 
 
-def run_estimation_for_weights(df: pd.DataFrame, weeks, smooth_w: float, corr_w: float) -> float:
+def run_estimation_for_weights(df: pd.DataFrame, weeks, smooth_w: float, corr_w: float,
+                               sample_size: int | None = None) -> float:
     """Run full estimation pipeline for given weights and return consistency rate."""
     prev_share_by_season = {}
     consistent = 0
@@ -644,6 +659,7 @@ def run_estimation_for_weights(df: pd.DataFrame, weeks, smooth_w: float, corr_w:
                         prev_share,
                         smooth_w=smooth_w,
                         corr_w=corr_w,
+                        sample_size=sample_size,
                     )
                     if fan_share is None:
                         continue
@@ -1018,7 +1034,9 @@ def main():
             plt.grid(True, linestyle="--", alpha=0.5)
             plt.tight_layout()
             plt.savefig(PLOT_FILE, dpi=300)
-            plt.show()
+            if SHOW_PLOTS:
+                plt.show()
+            plt.close()
 
     # Heatmap of uncertainty (fan share width) by season-week
     if not uncertainty_percent_df.empty:
@@ -1032,7 +1050,9 @@ def main():
         plt.ylabel("赛季")
         plt.tight_layout()
         plt.savefig(HEATMAP_FILE, dpi=300)
-        plt.show()
+        if SHOW_PLOTS:
+            plt.show()
+        plt.close()
 
     # Judge score variability vs uncertainty (relation analysis)
     variability_rows = []
@@ -1103,7 +1123,9 @@ def main():
         plt.legend()
         plt.tight_layout()
         plt.savefig(PLOT_JUDGE_UNCERTAINTY, dpi=300)
-        plt.show()
+        if SHOW_PLOTS:
+            plt.show()
+        plt.close()
 
     # Sensitivity analysis for preference weights (full re-run)
     weight_grid = [
@@ -1114,7 +1136,9 @@ def main():
     ]
     sensitivity_rows = []
     for w_smooth, w_corr in weight_grid:
-        consistency_rate = run_estimation_for_weights(df, weeks, w_smooth, w_corr)
+        consistency_rate = run_estimation_for_weights(
+            df, weeks, w_smooth, w_corr, sample_size=SENSITIVITY_SAMPLE_SIZE
+        )
         sensitivity_rows.append({
             "smoothness_weight": w_smooth,
             "correlation_weight": w_corr,
@@ -1136,7 +1160,9 @@ def main():
             plt.grid(True, linestyle="--", alpha=0.4)
             plt.tight_layout()
             plt.savefig(PLOT_FEASIBLE_SPACE, dpi=300)
-            plt.show()
+            if SHOW_PLOTS:
+                plt.show()
+            plt.close()
 
     # Elimination pressure distribution
     if not consistency_ext_df.empty:
@@ -1150,7 +1176,9 @@ def main():
             plt.grid(True, linestyle="--", alpha=0.4)
             plt.tight_layout()
             plt.savefig(PLOT_PRESSURE, dpi=300)
-            plt.show()
+            if SHOW_PLOTS:
+                plt.show()
+            plt.close()
 
     print(f"\n结果已保存至：{OUTPUT_VOTES}")
     print(f"周次状态已保存至：{OUTPUT_STATUS}")
