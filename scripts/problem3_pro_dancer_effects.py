@@ -6,9 +6,9 @@ Analyze effects of pro dancers and celebrity characteristics on
 
 This script follows the model structure in the paper:
 - Build outcome mappings J_{i,s,t} = g(x_i, p(i), s, t)
-  and F_{i,s,t} = h(x_i, p(i), s, t)
-- Use an interpretable linear framework (OLS) with fixed effects
-  for pro dancers and categorical celebrity attributes.
+    and F_{i,s,t} = h(x_i, p(i), s, t)
+- Use logit-transformed share outcomes and fixed effects
+    (season/week dummies) with interpretable linear OLS.
 """
 
 from pathlib import Path
@@ -44,6 +44,10 @@ OUTPUT_STANDARDIZED = OUTPUT_DIR / "problem3_standardized_coeff.csv"
 OUTPUT_MARGINAL = OUTPUT_DIR / "problem3_marginal_effects.csv"
 OUTPUT_VIF = OUTPUT_DIR / "problem3_vif.csv"
 OUTPUT_PLACEMENT = OUTPUT_DIR / "problem3_placement_analysis.csv"
+OUTPUT_CONSISTENCY = OUTPUT_DIR / "problem3_consistency_metrics.csv"
+OUTPUT_FIG_INDUSTRY_SCATTER = FIG_DIR / "problem3_industry_scatter.png"
+OUTPUT_FIG_TOP_JUDGE = FIG_DIR / "problem3_top_features_judge.png"
+OUTPUT_FIG_TOP_FAN = FIG_DIR / "problem3_top_features_fan.png"
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 FIG_DIR.mkdir(parents=True, exist_ok=True)
@@ -151,6 +155,7 @@ def build_design_matrix(df: pd.DataFrame):
         "celebrity_homestate",
         "celebrity_homecountry/region",
         "season",
+        "week",
         "ballroom_partner",
     ]
 
@@ -164,6 +169,12 @@ def build_design_matrix(df: pd.DataFrame):
     X = X.fillna(0).astype(float)
 
     return X
+
+
+def logit_transform(series: pd.Series, eps: float = 1e-6) -> pd.Series:
+    """Logit transform for proportions in (0, 1)."""
+    s = series.astype(float).clip(eps, 1 - eps)
+    return np.log(s / (1 - s))
 
 
 def standardize_matrix(X: pd.DataFrame) -> pd.DataFrame:
@@ -218,6 +229,9 @@ def main():
 
     panel = pd.DataFrame(panel_rows).dropna(subset=["judge_total", "fan_vote_share"])
 
+    # Compute judge share within week (proportion outcome)
+    panel["judge_share"] = panel.groupby(["season", "week"])['judge_total'].transform(lambda x: x / x.sum())
+
     # Save intermediate dataset
     panel.to_csv(OUTPUT_DATASET, index=False, encoding="utf-8-sig")
 
@@ -227,8 +241,8 @@ def main():
     # Build design matrix
     X = build_design_matrix(panel)
 
-    # Outcome 1: Judge total score
-    y_judge = panel["judge_total"].to_numpy()
+    # Outcome 1: Judge share (logit)
+    y_judge = logit_transform(panel["judge_share"]).to_numpy()
     beta_judge, r2_judge, yhat_judge = ols_fit(X.to_numpy(), y_judge)
     se_judge = ols_robust_se(X.to_numpy(), y_judge, yhat_judge)
 
@@ -241,8 +255,8 @@ def main():
     }).sort_values("coef", ascending=False)
     coef_judge.to_csv(OUTPUT_COEF_JUDGE, index=False, encoding="utf-8-sig")
 
-    # Outcome 2: Fan vote share
-    y_fan = panel["fan_vote_share"].to_numpy()
+    # Outcome 2: Fan vote share (logit)
+    y_fan = logit_transform(panel["fan_vote_share"]).to_numpy()
     beta_fan, r2_fan, yhat_fan = ols_fit(X.to_numpy(), y_fan)
     se_fan = ols_robust_se(X.to_numpy(), y_fan, yhat_fan)
 
@@ -257,8 +271,8 @@ def main():
 
     # Fit summary
     fit_df = pd.DataFrame([
-        {"model": "judge_total", "r2": r2_judge},
-        {"model": "fan_vote_share", "r2": r2_fan},
+        {"model": "judge_share_logit", "r2": r2_judge},
+        {"model": "fan_vote_share_logit", "r2": r2_fan},
     ])
     fit_df.to_csv(OUTPUT_FIT, index=False, encoding="utf-8-sig")
     # Standardized coefficients
@@ -282,6 +296,64 @@ def main():
     coef_merge["diff_t"] = coef_merge["diff"] / coef_merge["diff_se"]
     coef_merge["diff_p"] = coef_merge["diff_t"].apply(normal_pvalue)
     coef_merge.to_csv(OUTPUT_COEF_COMPARE, index=False, encoding="utf-8-sig")
+
+    # Consistency metrics: sign agreement & coefficient correlation
+    non_intercept = coef_merge[coef_merge["feature"] != "intercept"].copy()
+    sign_agree = float(non_intercept["direction_same"].mean()) if not non_intercept.empty else np.nan
+    coef_corr = float(np.corrcoef(non_intercept["coef_judge"], non_intercept["coef_fan"])[0, 1]) if non_intercept.shape[0] > 1 else np.nan
+    consistency_df = pd.DataFrame([
+        {"metric": "sign_agree", "value": sign_agree},
+        {"metric": "coef_corr", "value": coef_corr},
+    ])
+    consistency_df.to_csv(OUTPUT_CONSISTENCY, index=False, encoding="utf-8-sig")
+
+    # ============================
+    # Visualization: industry scatter & top features (standardized)
+    # ============================
+    std_non_intercept = std_df[std_df["feature"] != "intercept"].copy()
+
+    # Industry scatter: judge vs fan
+    industry = std_non_intercept[std_non_intercept["feature"].str.startswith("celebrity_industry_")].copy()
+    if not industry.empty:
+        industry["label"] = industry["feature"].str.replace("celebrity_industry_", "", regex=False)
+        plt.figure(figsize=(7, 6))
+        plt.scatter(industry["coef_std_judge"], industry["coef_std_fan"], alpha=0.8)
+        plt.axhline(0, color="#999", linewidth=1)
+        plt.axvline(0, color="#999", linewidth=1)
+        plt.xlabel("beta_J (judges, standardized)")
+        plt.ylabel("beta_V (audience, standardized)")
+        plt.title("行业效应散点图：评委 vs 观众")
+        for _, row in industry.iterrows():
+            plt.text(row["coef_std_judge"], row["coef_std_fan"], row["label"], fontsize=8, alpha=0.8)
+        plt.tight_layout()
+        plt.savefig(OUTPUT_FIG_INDUSTRY_SCATTER, dpi=300)
+        plt.close()
+
+    # Top features for audience (fan)
+    top_fan = std_non_intercept.reindex(std_non_intercept["coef_std_fan"].abs().sort_values(ascending=False).index).head(12)
+    if not top_fan.empty:
+        plt.figure(figsize=(8, 5))
+        plt.barh(top_fan["feature"].str.replace("celebrity_", "", regex=False), top_fan["coef_std_fan"], color="#4C78A8")
+        plt.axvline(0, color="#999", linewidth=1)
+        plt.xlabel("Coefficient (standardized)")
+        plt.title("Top feature effects on Audience (logit vote share)")
+        plt.gca().invert_yaxis()
+        plt.tight_layout()
+        plt.savefig(OUTPUT_FIG_TOP_FAN, dpi=300)
+        plt.close()
+
+    # Top features for judges
+    top_judge = std_non_intercept.reindex(std_non_intercept["coef_std_judge"].abs().sort_values(ascending=False).index).head(12)
+    if not top_judge.empty:
+        plt.figure(figsize=(8, 5))
+        plt.barh(top_judge["feature"].str.replace("celebrity_", "", regex=False), top_judge["coef_std_judge"], color="#F58518")
+        plt.axvline(0, color="#999", linewidth=1)
+        plt.xlabel("Coefficient (standardized)")
+        plt.title("Top feature effects on Judges (logit score share)")
+        plt.gca().invert_yaxis()
+        plt.tight_layout()
+        plt.savefig(OUTPUT_FIG_TOP_JUDGE, dpi=300)
+        plt.close()
 
     # Marginal effects for categorical factors (relative to baseline)
     marginal_rows = []
@@ -347,7 +419,11 @@ def main():
     print(f"裁判得分系数已保存：{OUTPUT_COEF_JUDGE}")
     print(f"观众投票系数已保存：{OUTPUT_COEF_FAN}")
     print(f"拟合优度已保存：{OUTPUT_FIT}")
+    print(f"一致性指标已保存：{OUTPUT_CONSISTENCY}")
     print(f"图像已保存：{OUTPUT_PLOT}")
+    print(f"行业散点图已保存：{OUTPUT_FIG_INDUSTRY_SCATTER}")
+    print(f"观众端特征图已保存：{OUTPUT_FIG_TOP_FAN}")
+    print(f"评委端特征图已保存：{OUTPUT_FIG_TOP_JUDGE}")
 
 
 if __name__ == "__main__":
