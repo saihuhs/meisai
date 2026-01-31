@@ -3,20 +3,20 @@
 1,Evander Holyfield,fair,5,5
 1,Rachel Hunter,fair,4,4
 1,Joey McIntyre,fair,3,3
-1,Kelly Monaco,fair,1,1
 1,John O'Hurley,fair,1,2
+1,Kelly Monaco,fair,1,1
 1,Trista Sutter,rank,6,6
 1,Evander Holyfield,rank,5,5
 1,Rachel Hunter,rank,4,4
 1,Joey McIntyre,rank,3,3
-1,Kelly Monaco,rank,1,1
 1,John O'Hurley,rank,1,2
+1,Kelly Monaco,rank,1,1
 1,Trista Sutter,percent,6,6
 1,Evander Holyfield,percent,5,5
 1,Rachel Hunter,percent,4,4
 1,Joey McIntyre,percent,3,3
-1,Kelly Monaco,percent,1,1
 1,John O'Hurley,percent,1,2
+1,Kelly Monaco,percent,1,1
 2,Kenny Mayne,fair,10,10
 2,Tatum O'Neal,fair,9,9
 2,Giselle Fernandez,fair,8,8
@@ -24,9 +24,9 @@
 2,Tia Carrere,fair,6,6
 2,George Hamilton,fair,5,5
 2,Lisa Rinna,fair,4,4
-2,Stacy Keibler,fair,1,3
 2,Drew Lachey,fair,1,1
 2,Jerry Rice,fair,1,2
+2,Stacy Keibler,fair,1,3
 2,Kenny Mayne,rank,10,10
 2,Tatum O'Neal,rank,9,9
 2,Giselle Fernandez,rank,8,8
@@ -34,9 +34,9 @@
 2,Tia Carrere,rank,6,6
 2,George Hamilton,rank,5,5
 2,Lisa Rinna,rank,4,4
-2,Stacy Keibler,rank,1,3
 2,Drew Lachey,rank,1,1
 2,Jerry Rice,rank,1,2
+2,Stacy Keibler,rank,1,3
 2,Kenny Mayne,percent,10,10
 2,Tatum O'Neal,percent,9,9
 2,Giselle Fernandez,percent,8,8
@@ -44,9 +44,9 @@
 2,Tia Carrere,percent,6,6
 2,George Hamilton,percent,5,5
 2,Lisa Rinna,percent,4,4
-2,Stacy Keibler,percent,1,3
 2,Drew Lachey,percent,1,1
 2,Jerry Rice,percent,1,2
+2,Stacy Keibler,percent,1,3
 3,Tucker Carlson,fair,11,11
 3,Shanna Moakler,fair,10,10
 3,Harry Hamlin,fair,9,9
@@ -56,8 +56,8 @@
 3,Jerry Springer,fair,5,5
 3,Monique Coleman,fair,4,4
 3,Joey Lawrence,fair,3,3
-3,Emmitt Smith,fair,1,1
 3,Mario Lopez,fair,1,2
+3,Emmitt Smith,fair,1,1
 3,Tucker Carlson,rank,11,11
 3,Shanna Moakler,rank,10,10
 3,Harry Hamlin,rank,9,9
@@ -67,8 +67,8 @@
 3,Jerry Springer,rank,5,5
 3,Monique Coleman,rank,4,4
 3,Joey Lawrence,rank,3,3
-3,Emmitt Smith,rank,1,1
 3,Mario Lopez,rank,1,2
+3,Emmitt Smith,rank,1,1
 3,Tucker Carlson,percent,11,11
 3,Shanna Moakler,percent,10,10
 3,Harry Hamlin,percent,9,9
@@ -78,8 +78,8 @@
 3,Jerry Springer,percent,5,5
 3,Monique Coleman,percent,4,4
 3,Joey Lawrence,percent,3,3
-3,Emmitt Smith,percent,1,1
 3,Mario Lopez,percent,1,2
+3,Emmitt Smith,percent,1,1
 4,Paulina Porizkova,fair,11,11
 4,Shandi Finnessey,fair,10,10
 4,Leeza Gibbons,fair,9,9
@@ -88,9 +88,9 @@
 4,John Ratzenberger,fair,6,6
 4,Billy Ray Cyrus,fair,5,5
 4,Ian Ziering,fair,4,4
-4,Joey Fatone,fair,1,2
 4,Apolo Anton Ohno,fair,1,1
 4,Laila Ali,fair,1,3
+4,Joey Fatone,fair,1,2
 4,Paulina Porizkova,rank,11,11
 4,Shandi Finnessey,rank,10,10
 4,Leeza Gibbons,rank,9,9
@@ -99,9 +99,9 @@
 4,John Ratzenberger,rank,6,6
 4,Billy Ray Cyrus,rank,5,5
 4,Ian Ziering,rank,4,4
-4,Joey Fatone,rank,1,2
 4,Apolo Anton Ohno,rank,1,1
 4,Laila Ali,rank,1,3
+4,Joey Fatone,rank,1,2
 4,Paulina Porizkova,percent,11,11
 4,Shandi Finnessey,percent,10,10
 4,Leeza Gibbons,percent,9,9
@@ -110,9 +110,9 @@
 4,John Ratzenberger,percent,6,6
 4,Billy Ray Cyrus,percent,5,5
 4,Ian Ziering,percent,4,4
-4,Joey Fatone,percent,1,2
 4,Apolo Anton Ohno,percent,1,1
 4,Laila Ali,percent,1,3
+4,Joey Fatone,percent,1,2
 5,Josie Maran,fair,12,12
 5,Albert Reed,fair,11,11
 5,Wayne Newton,fair,10,10
@@ -122,9 +122,9 @@
 5,Jane Seymour,fair,6,6
 5,Cameron Mathison,fair,5,5
 5,Jennie Garth,fair,4,4
+5,Helio Castroneves,fair,1,1
 5,Marie Osmond,fair,1,3
 5,Mel B,fair,1,2
-5,Helio Castroneves,fair,1,1
 5,Josie Maran,rank,12,12
 5,Albert Reed,rank,11,11
 5,Wayne Newton,rank,10,10
@@ -134,9 +134,9 @@
 5,Jane Seymour,rank,6,6
 5,Cameron Mathison,rank,5,5
 5,Jennie Garth,rank,4,4
+5,Helio Castroneves,rank,1,1
 5,Marie Osmond,rank,1,3
 5,Mel B,rank,1,2
-5,Helio Castroneves,rank,1,1
 5,Josie Maran,percent,12,12
 5,Albert Reed,percent,11,11
 5,Wayne Newton,percent,10,10
@@ -146,9 +146,9 @@
 5,Jane Seymour,percent,6,6
 5,Cameron Mathison,percent,5,5
 5,Jennie Garth,percent,4,4
+5,Helio Castroneves,percent,1,1
 5,Marie Osmond,percent,1,3
 5,Mel B,percent,1,2
-5,Helio Castroneves,percent,1,1
 6,Monica Seles,fair,12,11
 6,Penn Jillette,fair,11,12
 6,Steve Guttenberg,fair,10,10
@@ -158,9 +158,9 @@
 6,Shannon Elizabeth,fair,6,6
 6,Mario,fair,5,5
 6,Marissa Jaret Winokur,fair,4,4
-6,Jason Taylor,fair,1,2
 6,Kristi Yamaguchi,fair,1,1
 6,Cristian de la Fuente,fair,1,3
+6,Jason Taylor,fair,1,2
 6,Penn Jillette,rank,12,12
 6,Monica Seles,rank,11,11
 6,Steve Guttenberg,rank,10,10
@@ -170,9 +170,9 @@
 6,Shannon Elizabeth,rank,6,6
 6,Mario,rank,5,5
 6,Marissa Jaret Winokur,rank,4,4
-6,Jason Taylor,rank,1,2
 6,Kristi Yamaguchi,rank,1,1
 6,Cristian de la Fuente,rank,1,3
+6,Jason Taylor,rank,1,2
 6,Monica Seles,percent,12,11
 6,Penn Jillette,percent,11,12
 6,Steve Guttenberg,percent,10,10
@@ -182,9 +182,9 @@
 6,Shannon Elizabeth,percent,6,6
 6,Mario,percent,5,5
 6,Marissa Jaret Winokur,percent,4,4
-6,Jason Taylor,percent,1,2
 6,Kristi Yamaguchi,percent,1,1
 6,Cristian de la Fuente,percent,1,3
+6,Jason Taylor,percent,1,2
 7,Jeffrey Ross,fair,13,13
 7,Ted McGinley,fair,12,12
 7,Kim Kardashian,fair,11,11
@@ -195,9 +195,9 @@
 7,Susan Lucci,fair,6,6
 7,Maurice Greene,fair,5,5
 7,Cody Linley,fair,4,4
-7,Warren Sapp,fair,1,2
 7,Brooke Burke,fair,1,1
 7,Lance Bass,fair,1,3
+7,Warren Sapp,fair,1,2
 7,Ted McGinley,rank,13,12
 7,Jeffrey Ross,rank,12,13
 7,Misty May-Treanor,rank,11,10
@@ -208,9 +208,9 @@
 7,Susan Lucci,rank,6,6
 7,Maurice Greene,rank,5,5
 7,Cody Linley,rank,4,4
-7,Warren Sapp,rank,1,2
 7,Brooke Burke,rank,1,1
 7,Lance Bass,rank,1,3
+7,Warren Sapp,rank,1,2
 7,Jeffrey Ross,percent,13,13
 7,Ted McGinley,percent,12,12
 7,Kim Kardashian,percent,11,11
@@ -221,9 +221,9 @@
 7,Susan Lucci,percent,6,6
 7,Maurice Greene,percent,5,5
 7,Cody Linley,percent,4,4
-7,Warren Sapp,percent,1,2
 7,Brooke Burke,percent,1,1
 7,Lance Bass,percent,1,3
+7,Warren Sapp,percent,1,2
 8,Belinda Carlisle,fair,13,13
 8,Denise Richards,fair,12,12
 8,Steve Wozniak,fair,11,10
@@ -234,9 +234,9 @@
 8,Chuck Wicks,fair,6,6
 8,Lil' Kim,fair,5,5
 8,Ty Murray,fair,4,4
-8,Melissa Rycroft,fair,1,3
-8,Gilles Marini,fair,1,2
 8,Shawn Johnson,fair,1,1
+8,Gilles Marini,fair,1,2
+8,Melissa Rycroft,fair,1,3
 8,Belinda Carlisle,rank,13,13
 8,Denise Richards,rank,12,12
 8,Holly Madison,rank,11,11
@@ -247,9 +247,9 @@
 8,Chuck Wicks,rank,6,6
 8,Lil' Kim,rank,5,5
 8,Ty Murray,rank,4,4
-8,Melissa Rycroft,rank,1,3
-8,Gilles Marini,rank,1,2
 8,Shawn Johnson,rank,1,1
+8,Gilles Marini,rank,1,2
+8,Melissa Rycroft,rank,1,3
 8,Belinda Carlisle,percent,13,13
 8,Denise Richards,percent,12,12
 8,Steve Wozniak,percent,11,10
@@ -260,9 +260,9 @@
 8,Chuck Wicks,percent,6,6
 8,Lil' Kim,percent,5,5
 8,Ty Murray,percent,4,4
-8,Melissa Rycroft,percent,1,3
-8,Gilles Marini,percent,1,2
 8,Shawn Johnson,percent,1,1
+8,Gilles Marini,percent,1,2
+8,Melissa Rycroft,percent,1,3
 9,Ashley Hamiliton,fair,16,16
 9,Macy Gray,fair,15,15
 9,Kathy Ireland,fair,14,14
@@ -320,8 +320,8 @@
 10,Niecy Nash,fair,5,5
 10,Chad Ochocinco,fair,4,4
 10,Erin Andrews,fair,1,3
-10,Nicole Scherzinger,fair,1,1
 10,Evan Lysacek,fair,1,2
+10,Nicole Scherzinger,fair,1,1
 10,Shannen Doherty,rank,11,11
 10,Buzz Aldrin,rank,10,10
 10,Aiden Turner,rank,9,9
@@ -331,8 +331,8 @@
 10,Niecy Nash,rank,5,5
 10,Chad Ochocinco,rank,4,4
 10,Erin Andrews,rank,1,3
-10,Nicole Scherzinger,rank,1,1
 10,Evan Lysacek,rank,1,2
+10,Nicole Scherzinger,rank,1,1
 10,Shannen Doherty,percent,11,11
 10,Buzz Aldrin,percent,10,10
 10,Aiden Turner,percent,9,9
@@ -342,8 +342,8 @@
 10,Niecy Nash,percent,5,5
 10,Chad Ochocinco,percent,4,4
 10,Erin Andrews,percent,1,3
-10,Nicole Scherzinger,percent,1,1
 10,Evan Lysacek,percent,1,2
+10,Nicole Scherzinger,percent,1,1
 11,David Hasselhoff,fair,12,12
 11,Michael Bolton,fair,11,11
 11,Margaret Cho,fair,10,10
@@ -353,8 +353,8 @@
 11,Rick Fox,fair,6,6
 11,Kurt Warner,fair,5,5
 11,Brandy,fair,4,4
-11,Bristol Palin,fair,1,3
 11,Jennifer Grey,fair,1,1
+11,Bristol Palin,fair,1,3
 11,Kyle Massey,fair,1,2
 11,David Hasselhoff,rank,12,12
 11,Michael Bolton,rank,11,11
@@ -365,8 +365,8 @@
 11,Rick Fox,rank,6,6
 11,Kurt Warner,rank,5,5
 11,Brandy,rank,4,4
-11,Bristol Palin,rank,1,3
 11,Jennifer Grey,rank,1,1
+11,Bristol Palin,rank,1,3
 11,Kyle Massey,rank,1,2
 11,David Hasselhoff,percent,12,12
 11,Michael Bolton,percent,11,11
@@ -377,8 +377,8 @@
 11,Rick Fox,percent,6,6
 11,Kurt Warner,percent,5,5
 11,Brandy,percent,4,4
-11,Bristol Palin,percent,1,3
 11,Jennifer Grey,percent,1,1
+11,Bristol Palin,percent,1,3
 11,Kyle Massey,percent,1,2
 12,Mike Catherwood,fair,11,11
 12,Wendy Williams,fair,10,10
@@ -422,9 +422,9 @@
 13,David Arquette,fair,6,6
 13,Nancy Grace,fair,5,5
 13,Hope Solo,fair,4,4
-13,Rob Kardashian,fair,1,2
-13,Ricki Lake,fair,1,3
 13,J.R. Martinez,fair,1,1
+13,Ricki Lake,fair,1,3
+13,Rob Kardashian,fair,1,2
 13,Metta World Peace (Ron),rank,12,12
 13,Elisabetta Canalis,rank,11,11
 13,Kristin Cavallari,rank,10,10
@@ -434,9 +434,9 @@
 13,David Arquette,rank,6,6
 13,Nancy Grace,rank,5,5
 13,Hope Solo,rank,4,4
-13,Rob Kardashian,rank,1,2
-13,Ricki Lake,rank,1,3
 13,J.R. Martinez,rank,1,1
+13,Ricki Lake,rank,1,3
+13,Rob Kardashian,rank,1,2
 13,Metta World Peace (Ron),percent,12,12
 13,Elisabetta Canalis,percent,11,11
 13,Kristin Cavallari,percent,10,10
@@ -446,9 +446,9 @@
 13,David Arquette,percent,6,6
 13,Nancy Grace,percent,5,5
 13,Hope Solo,percent,4,4
-13,Rob Kardashian,percent,1,2
-13,Ricki Lake,percent,1,3
 13,J.R. Martinez,percent,1,1
+13,Ricki Lake,percent,1,3
+13,Rob Kardashian,percent,1,2
 14,Martina Navratilova,fair,12,12
 14,Jack Wagner,fair,11,11
 14,Sherri Sheperd,fair,10,10
@@ -458,8 +458,8 @@
 14,Melissa Gilbert,fair,6,5
 14,Roshon Fegan,fair,5,6
 14,Maria Menounos,fair,4,4
-14,Katherine Jenkins,fair,1,2
 14,William Levy,fair,1,3
+14,Katherine Jenkins,fair,1,2
 14,Donald Driver,fair,1,1
 14,Martina Navratilova,rank,12,12
 14,Jack Wagner,rank,11,11
@@ -482,8 +482,8 @@
 14,Melissa Gilbert,percent,6,5
 14,Roshon Fegan,percent,5,6
 14,Maria Menounos,percent,4,4
-14,Katherine Jenkins,percent,1,2
 14,William Levy,percent,1,3
+14,Katherine Jenkins,percent,1,2
 14,Donald Driver,percent,1,1
 15,Pamela Anderson,fair,13,13
 15,Joey Fatone,fair,12,12
@@ -495,9 +495,9 @@
 15,Gilles Marini,fair,6,6
 15,Emmitt Smith,fair,5,4
 15,Apolo Anton Ohno,fair,4,5
-15,Melissa Rycroft,fair,1,1
-15,Kelly Monaco,fair,1,3
 15,Shawn Johnson,fair,1,2
+15,Kelly Monaco,fair,1,3
+15,Melissa Rycroft,fair,1,1
 15,Pamela Anderson,rank,13,13
 15,Joey Fatone,rank,12,12
 15,Helio Castroneves,rank,11,10
@@ -508,9 +508,9 @@
 15,Kirstie Alley,rank,6,7
 15,Apolo Anton Ohno,rank,5,5
 15,Emmitt Smith,rank,4,4
-15,Melissa Rycroft,rank,1,1
-15,Kelly Monaco,rank,1,3
 15,Shawn Johnson,rank,1,2
+15,Kelly Monaco,rank,1,3
+15,Melissa Rycroft,rank,1,1
 15,Pamela Anderson,percent,13,13
 15,Joey Fatone,percent,12,12
 15,Drew Lachey,percent,11,11
@@ -521,9 +521,9 @@
 15,Gilles Marini,percent,6,6
 15,Emmitt Smith,percent,5,4
 15,Apolo Anton Ohno,percent,4,5
-15,Melissa Rycroft,percent,1,1
-15,Kelly Monaco,percent,1,3
 15,Shawn Johnson,percent,1,2
+15,Kelly Monaco,percent,1,3
+15,Melissa Rycroft,percent,1,1
 16,Dorothy Hamill,fair,12,12
 16,Wynonna Judd,fair,11,11
 16,Lisa Vanderpump,fair,10,10
@@ -533,9 +533,9 @@
 16,Sean Lowe,fair,6,6
 16,Ingo Rademacher,fair,5,5
 16,Jacoby Jones,fair,1,3
-16,Kellie Pickler,fair,1,1
-16,Alexandra Raisman,fair,1,4
 16,Zendaya,fair,1,2
+16,Alexandra Raisman,fair,1,4
+16,Kellie Pickler,fair,1,1
 16,Dorothy Hamill,rank,12,12
 16,Wynonna Judd,rank,11,11
 16,Lisa Vanderpump,rank,10,10
@@ -545,9 +545,9 @@
 16,Sean Lowe,rank,6,6
 16,Ingo Rademacher,rank,5,5
 16,Jacoby Jones,rank,1,3
-16,Kellie Pickler,rank,1,1
-16,Alexandra Raisman,rank,1,4
 16,Zendaya,rank,1,2
+16,Alexandra Raisman,rank,1,4
+16,Kellie Pickler,rank,1,1
 16,Dorothy Hamill,percent,12,12
 16,Wynonna Judd,percent,11,11
 16,Lisa Vanderpump,percent,10,10
@@ -557,9 +557,9 @@
 16,Sean Lowe,percent,6,6
 16,Ingo Rademacher,percent,5,5
 16,Jacoby Jones,percent,1,3
-16,Kellie Pickler,percent,1,1
-16,Alexandra Raisman,percent,1,4
 16,Zendaya,percent,1,2
+16,Alexandra Raisman,percent,1,4
+16,Kellie Pickler,percent,1,1
 17,Keyshawn Johnson,fair,12,12
 17,Bill Nye,fair,11,11
 17,Valerie Harper,fair,10,10
@@ -568,10 +568,10 @@
 17,Brant Daugherty,fair,7,7
 17,Elizabeth Berkley Lauren,fair,6,6
 17,Leah Remini,fair,5,5
-17,Corbin Bleu,fair,1,2
 17,Jack Osbourne,fair,1,3
-17,Amber Riley,fair,1,1
 17,Bill Engvall,fair,1,4
+17,Amber Riley,fair,1,1
+17,Corbin Bleu,fair,1,2
 17,Keyshawn Johnson,rank,12,12
 17,Bill Nye,rank,11,11
 17,Valerie Harper,rank,10,10
@@ -580,10 +580,10 @@
 17,Brant Daugherty,rank,7,7
 17,Elizabeth Berkley Lauren,rank,6,6
 17,Leah Remini,rank,5,5
-17,Corbin Bleu,rank,1,2
 17,Jack Osbourne,rank,1,3
-17,Amber Riley,rank,1,1
 17,Bill Engvall,rank,1,4
+17,Amber Riley,rank,1,1
+17,Corbin Bleu,rank,1,2
 17,Keyshawn Johnson,percent,12,12
 17,Bill Nye,percent,11,11
 17,Valerie Harper,percent,10,10
@@ -592,10 +592,10 @@
 17,Brant Daugherty,percent,7,7
 17,Elizabeth Berkley Lauren,percent,6,6
 17,Leah Remini,percent,5,5
-17,Corbin Bleu,percent,1,2
 17,Jack Osbourne,percent,1,3
-17,Amber Riley,percent,1,1
 17,Bill Engvall,percent,1,4
+17,Amber Riley,percent,1,1
+17,Corbin Bleu,percent,1,2
 18,Diana Nyad,fair,12,12
 18,Billy Dee Williams,fair,11,10
 18,Sean Avery,fair,10,11
@@ -605,9 +605,9 @@
 18,Danica McKellar,fair,6,6
 18,Charlie White,fair,5,5
 18,James Maslow,fair,1,4
-18,Candace Cameron Bure,fair,1,3
 18,Amy Purdy,fair,1,2
 18,Meryl Davis,fair,1,1
+18,Candace Cameron Bure,fair,1,3
 18,Diana Nyad,rank,12,12
 18,Sean Avery,rank,11,11
 18,Billy Dee Williams,rank,10,10
@@ -617,9 +617,9 @@
 18,Danica McKellar,rank,6,6
 18,Charlie White,rank,5,5
 18,James Maslow,rank,1,4
-18,Candace Cameron Bure,rank,1,3
 18,Amy Purdy,rank,1,2
 18,Meryl Davis,rank,1,1
+18,Candace Cameron Bure,rank,1,3
 18,Diana Nyad,percent,12,12
 18,Billy Dee Williams,percent,11,10
 18,Sean Avery,percent,10,11
@@ -629,9 +629,9 @@
 18,Danica McKellar,percent,6,6
 18,Charlie White,percent,5,5
 18,James Maslow,percent,1,4
-18,Candace Cameron Bure,percent,1,3
 18,Amy Purdy,percent,1,2
 18,Meryl Davis,percent,1,1
+18,Candace Cameron Bure,percent,1,3
 19,Lolo Jones,fair,13,13
 19,Tavis Smiley,fair,12,12
 19,Randy Couture,fair,11,11
@@ -642,9 +642,9 @@
 19,Lea Thompson,fair,6,6
 19,Tommy Chong,fair,5,5
 19,Sadie Robertson,fair,1,2
-19,Bethany Mota,fair,1,4
-19,Janel Parrish,fair,1,3
 19,Alfonso Ribeiro,fair,1,1
+19,Janel Parrish,fair,1,3
+19,Bethany Mota,fair,1,4
 19,Lolo Jones,rank,13,13
 19,Tavis Smiley,rank,12,12
 19,Randy Couture,rank,11,11
@@ -655,9 +655,9 @@
 19,Lea Thompson,rank,6,6
 19,Tommy Chong,rank,5,5
 19,Sadie Robertson,rank,1,2
-19,Bethany Mota,rank,1,4
-19,Janel Parrish,rank,1,3
 19,Alfonso Ribeiro,rank,1,1
+19,Janel Parrish,rank,1,3
+19,Bethany Mota,rank,1,4
 19,Lolo Jones,percent,13,13
 19,Tavis Smiley,percent,12,12
 19,Randy Couture,percent,11,11
@@ -668,9 +668,9 @@
 19,Lea Thompson,percent,6,6
 19,Tommy Chong,percent,5,5
 19,Sadie Robertson,percent,1,2
-19,Bethany Mota,percent,1,4
-19,Janel Parrish,percent,1,3
 19,Alfonso Ribeiro,percent,1,1
+19,Janel Parrish,percent,1,3
+19,Bethany Mota,percent,1,4
 20,Redfoo,fair,12,12
 20,Charlotte McKinney,fair,11,11
 20,Michael Sam,fair,10,10
@@ -680,9 +680,9 @@
 20,Robert Herjavec,fair,6,6
 20,Chris Soules,fair,5,5
 20,Nastia Liukin,fair,4,4
-20,Riker Lynch,fair,1,2
-20,Noah Galloway,fair,1,3
 20,Rumer Willis,fair,1,1
+20,Noah Galloway,fair,1,3
+20,Riker Lynch,fair,1,2
 20,Redfoo,rank,12,12
 20,Charlotte McKinney,rank,11,11
 20,Michael Sam,rank,10,10
@@ -692,9 +692,9 @@
 20,Chris Soules,rank,6,5
 20,Robert Herjavec,rank,5,6
 20,Nastia Liukin,rank,4,4
-20,Riker Lynch,rank,1,2
-20,Noah Galloway,rank,1,3
 20,Rumer Willis,rank,1,1
+20,Noah Galloway,rank,1,3
+20,Riker Lynch,rank,1,2
 20,Redfoo,percent,12,12
 20,Charlotte McKinney,percent,11,11
 20,Michael Sam,percent,10,10
@@ -704,21 +704,21 @@
 20,Robert Herjavec,percent,6,6
 20,Chris Soules,percent,5,5
 20,Nastia Liukin,percent,4,4
-20,Riker Lynch,percent,1,2
-20,Noah Galloway,percent,1,3
 20,Rumer Willis,percent,1,1
+20,Noah Galloway,percent,1,3
+20,Riker Lynch,percent,1,2
 21,Gary Busey,fair,13,10
 21,Paula Deen,fair,12,9
 21,Hayes Grier,fair,11,8
 21,Andy Grammer,fair,10,7
 21,Tamar Braxton,fair,9,5
 21,Alexa PenaVega,fair,8,6
-21,Alek Skarlatos,fair,1,3
-21,Chaka Khan,fair,1,13
-21,Carlos PenaVega,fair,1,4
-21,Nick Carter,fair,1,2
 21,Bindi Irwin,fair,1,1
 21,Kim Zolciak-Biermann,fair,1,11
+21,Carlos PenaVega,fair,1,4
+21,Chaka Khan,fair,1,13
+21,Nick Carter,fair,1,2
+21,Alek Skarlatos,fair,1,3
 21,Victor Espinoza,fair,1,12
 21,Gary Busey,rank,13,10
 21,Paula Deen,rank,12,9
@@ -726,12 +726,12 @@
 21,Andy Grammer,rank,10,7
 21,Alexa PenaVega,rank,9,6
 21,Tamar Braxton,rank,8,5
-21,Alek Skarlatos,rank,1,3
-21,Chaka Khan,rank,1,13
-21,Carlos PenaVega,rank,1,4
-21,Nick Carter,rank,1,2
 21,Bindi Irwin,rank,1,1
 21,Kim Zolciak-Biermann,rank,1,11
+21,Carlos PenaVega,rank,1,4
+21,Chaka Khan,rank,1,13
+21,Nick Carter,rank,1,2
+21,Alek Skarlatos,rank,1,3
 21,Victor Espinoza,rank,1,12
 21,Gary Busey,percent,13,10
 21,Paula Deen,percent,12,9
@@ -739,12 +739,12 @@
 21,Andy Grammer,percent,10,7
 21,Tamar Braxton,percent,9,5
 21,Alexa PenaVega,percent,8,6
-21,Alek Skarlatos,percent,1,3
-21,Chaka Khan,percent,1,13
-21,Carlos PenaVega,percent,1,4
-21,Nick Carter,percent,1,2
 21,Bindi Irwin,percent,1,1
 21,Kim Zolciak-Biermann,percent,1,11
+21,Carlos PenaVega,percent,1,4
+21,Chaka Khan,percent,1,13
+21,Nick Carter,percent,1,2
+21,Alek Skarlatos,percent,1,3
 21,Victor Espinoza,percent,1,12
 22,Geraldo Rivera,fair,12,12
 22,Mischa Barton,fair,11,11
@@ -755,9 +755,9 @@
 22,Jodie Sweetin,fair,6,6
 22,Antonio Brown,fair,5,5
 22,Wanya Morris,fair,4,4
-22,Ginger Zee,fair,1,3
 22,Nyle DiMarco,fair,1,1
 22,Paige VanZant,fair,1,2
+22,Ginger Zee,fair,1,3
 22,Geraldo Rivera,rank,12,12
 22,Mischa Barton,rank,11,11
 22,Marla Maples,rank,10,10
@@ -767,9 +767,9 @@
 22,Jodie Sweetin,rank,6,6
 22,Paige VanZant,rank,5,2
 22,Antonio Brown,rank,4,5
-22,Ginger Zee,rank,1,3
 22,Nyle DiMarco,rank,1,1
 22,Wanya Morris,rank,1,4
+22,Ginger Zee,rank,1,3
 22,Geraldo Rivera,percent,12,12
 22,Mischa Barton,percent,11,11
 22,Marla Maples,percent,10,10
@@ -779,9 +779,9 @@
 22,Jodie Sweetin,percent,6,6
 22,Antonio Brown,percent,5,5
 22,Wanya Morris,percent,4,4
-22,Ginger Zee,percent,1,3
 22,Nyle DiMarco,percent,1,1
 22,Paige VanZant,percent,1,2
+22,Ginger Zee,percent,1,3
 23,Jake T. Austin,fair,13,13
 23,Rick Perry,fair,12,12
 23,Babyface,fair,11,11
@@ -791,10 +791,10 @@
 23,Ryan Lochte,fair,7,7
 23,Marilu Henner,fair,6,6
 23,Terra Jole,fair,5,5
-23,James Hinchcliffe,fair,1,2
 23,Calvin Johnson Jr.,fair,1,3
-23,Jana Kramer,fair,1,4
+23,James Hinchcliffe,fair,1,2
 23,Laurie Hernandez,fair,1,1
+23,Jana Kramer,fair,1,4
 23,Jake T. Austin,rank,13,13
 23,Rick Perry,rank,12,12
 23,Vanilla Ice,rank,11,10
@@ -804,10 +804,10 @@
 23,Ryan Lochte,rank,7,7
 23,Marilu Henner,rank,6,6
 23,Terra Jole,rank,5,5
-23,James Hinchcliffe,rank,1,2
 23,Calvin Johnson Jr.,rank,1,3
-23,Jana Kramer,rank,1,4
+23,James Hinchcliffe,rank,1,2
 23,Laurie Hernandez,rank,1,1
+23,Jana Kramer,rank,1,4
 23,Jake T. Austin,percent,13,13
 23,Rick Perry,percent,12,12
 23,Babyface,percent,11,11
@@ -817,10 +817,10 @@
 23,Ryan Lochte,percent,7,7
 23,Marilu Henner,percent,6,6
 23,Terra Jole,percent,5,5
-23,James Hinchcliffe,percent,1,2
 23,Calvin Johnson Jr.,percent,1,3
-23,Jana Kramer,percent,1,4
+23,James Hinchcliffe,percent,1,2
 23,Laurie Hernandez,percent,1,1
+23,Jana Kramer,percent,1,4
 24,Chris Kattan,fair,12,12
 24,Charo,fair,11,11
 24,Mr. T,fair,10,10
@@ -831,8 +831,8 @@
 24,Bonner Bolton,fair,5,5
 24,Simone Biles,fair,4,4
 24,Normani,fair,1,3
-24,David Ross,fair,1,2
 24,Rashad Jennings,fair,1,1
+24,David Ross,fair,1,2
 24,Chris Kattan,rank,12,12
 24,Charo,rank,11,11
 24,Mr. T,rank,10,10
@@ -843,8 +843,8 @@
 24,Bonner Bolton,rank,5,5
 24,Simone Biles,rank,4,4
 24,Normani,rank,1,3
-24,David Ross,rank,1,2
 24,Rashad Jennings,rank,1,1
+24,David Ross,rank,1,2
 24,Chris Kattan,percent,12,12
 24,Charo,percent,11,11
 24,Mr. T,percent,10,10
@@ -855,8 +855,8 @@
 24,Bonner Bolton,percent,5,5
 24,Simone Biles,percent,4,4
 24,Normani,percent,1,3
-24,David Ross,percent,1,2
 24,Rashad Jennings,percent,1,1
+24,David Ross,percent,1,2
 25,Barbara Corcoran,fair,13,13
 25,Debbie Gibson,fair,12,12
 25,Derek Fisher,fair,11,11
@@ -866,9 +866,9 @@
 25,Vanessa Lachey,fair,7,7
 25,Terrell Owens,fair,6,6
 25,Victoria Arlen,fair,5,5
-25,Jordan Fisher,fair,1,1
-25,Lindsey Stirling,fair,1,2
 25,Drew Scott,fair,1,4
+25,Lindsey Stirling,fair,1,2
+25,Jordan Fisher,fair,1,1
 25,Frankie Muniz,fair,1,3
 25,Debbie Gibson,rank,13,12
 25,Barbara Corcoran,rank,12,13
@@ -879,9 +879,9 @@
 25,Nikki Bella,rank,7,8
 25,Terrell Owens,rank,6,6
 25,Victoria Arlen,rank,5,5
-25,Jordan Fisher,rank,1,1
-25,Lindsey Stirling,rank,1,2
 25,Drew Scott,rank,1,4
+25,Lindsey Stirling,rank,1,2
+25,Jordan Fisher,rank,1,1
 25,Frankie Muniz,rank,1,3
 25,Barbara Corcoran,percent,13,13
 25,Debbie Gibson,percent,12,12
@@ -892,40 +892,40 @@
 25,Vanessa Lachey,percent,7,7
 25,Terrell Owens,percent,6,6
 25,Victoria Arlen,percent,5,5
-25,Jordan Fisher,percent,1,1
-25,Lindsey Stirling,percent,1,2
 25,Drew Scott,percent,1,4
+25,Lindsey Stirling,percent,1,2
+25,Jordan Fisher,percent,1,1
 25,Frankie Muniz,percent,1,3
 26,Johnny Damon,fair,10,9
 26,Jamie Anderson,fair,9,10
 26,Kareem Abdul-Jabbar,fair,8,8
 26,Arike Ogunbowale,fair,7,7
-26,Jennie Finch Daigle,fair,1,6
-26,Tonya Harding,fair,1,3
 26,Adam Rippon,fair,1,1
-26,Josh Norman,fair,1,2
-26,Mirai Nagasu,fair,1,4
 26,Chris Mazdzer,fair,1,5
+26,Jennie Finch Daigle,fair,1,6
+26,Mirai Nagasu,fair,1,4
+26,Josh Norman,fair,1,2
+26,Tonya Harding,fair,1,3
 26,Jamie Anderson,rank,10,10
 26,Johnny Damon,rank,9,9
 26,Arike Ogunbowale,rank,8,7
 26,Kareem Abdul-Jabbar,rank,7,8
-26,Jennie Finch Daigle,rank,1,6
-26,Tonya Harding,rank,1,3
 26,Adam Rippon,rank,1,1
-26,Josh Norman,rank,1,2
-26,Mirai Nagasu,rank,1,4
 26,Chris Mazdzer,rank,1,5
+26,Jennie Finch Daigle,rank,1,6
+26,Mirai Nagasu,rank,1,4
+26,Josh Norman,rank,1,2
+26,Tonya Harding,rank,1,3
 26,Johnny Damon,percent,10,9
 26,Jamie Anderson,percent,9,10
 26,Kareem Abdul-Jabbar,percent,8,8
 26,Arike Ogunbowale,percent,7,7
-26,Jennie Finch Daigle,percent,1,6
-26,Tonya Harding,percent,1,3
 26,Adam Rippon,percent,1,1
-26,Josh Norman,percent,1,2
-26,Mirai Nagasu,percent,1,4
 26,Chris Mazdzer,percent,1,5
+26,Jennie Finch Daigle,percent,1,6
+26,Mirai Nagasu,percent,1,4
+26,Josh Norman,percent,1,2
+26,Tonya Harding,percent,1,3
 27,Nikki Glaser,fair,13,13
 27,Danelle Umstead,fair,12,12
 27,Nancy McKeon,fair,11,11
@@ -935,10 +935,10 @@
 27,John Schneider,fair,7,8
 27,Joe Amabile,fair,6,6
 27,Juan Pablo Di Pace,fair,5,5
-27,Evanna Lynch,fair,1,3
-27,Milo Manheim,fair,1,2
-27,Alexis Ren,fair,1,4
 27,Bobby Bones,fair,1,1
+27,Milo Manheim,fair,1,2
+27,Evanna Lynch,fair,1,3
+27,Alexis Ren,fair,1,4
 27,Nikki Glaser,rank,13,13
 27,Danelle Umstead,rank,12,12
 27,Nancy McKeon,rank,11,11
@@ -948,9 +948,9 @@
 27,DeMarcus Ware,rank,7,7
 27,Bobby Bones,rank,6,1
 27,Joe Amabile,rank,5,6
+27,Milo Manheim,rank,1,2
 27,Juan Pablo Di Pace,rank,1,5
 27,Evanna Lynch,rank,1,3
-27,Milo Manheim,rank,1,2
 27,Alexis Ren,rank,1,4
 27,Nikki Glaser,percent,13,13
 27,Danelle Umstead,percent,12,12
@@ -961,10 +961,10 @@
 27,John Schneider,percent,7,8
 27,Joe Amabile,percent,6,6
 27,Juan Pablo Di Pace,percent,5,5
-27,Evanna Lynch,percent,1,3
-27,Milo Manheim,percent,1,2
-27,Alexis Ren,percent,1,4
 27,Bobby Bones,percent,1,1
+27,Milo Manheim,percent,1,2
+27,Evanna Lynch,percent,1,3
+27,Alexis Ren,percent,1,4
 28,Ray Lewis,fair,12,11
 28,Mary Wilson,fair,11,12
 28,Lamar Odom,fair,10,10
@@ -974,9 +974,9 @@
 28,Sean Spicer,fair,6,6
 28,James Van Der Beek,fair,5,5
 28,Lauren Alaina,fair,1,4
+28,Ally Brooke,fair,1,3
 28,Hannah Brown,fair,1,1
 28,Kel Mitchell,fair,1,2
-28,Ally Brooke,fair,1,3
 28,Mary Wilson,rank,12,12
 28,Ray Lewis,rank,11,11
 28,Lamar Odom,rank,10,10
@@ -986,9 +986,9 @@
 28,Sean Spicer,rank,6,6
 28,James Van Der Beek,rank,5,5
 28,Lauren Alaina,rank,1,4
+28,Ally Brooke,rank,1,3
 28,Hannah Brown,rank,1,1
 28,Kel Mitchell,rank,1,2
-28,Ally Brooke,rank,1,3
 28,Ray Lewis,percent,12,11
 28,Mary Wilson,percent,11,12
 28,Lamar Odom,percent,10,10
@@ -998,9 +998,9 @@
 28,Sean Spicer,percent,6,6
 28,James Van Der Beek,percent,5,5
 28,Lauren Alaina,percent,1,4
+28,Ally Brooke,percent,1,3
 28,Hannah Brown,percent,1,1
 28,Kel Mitchell,percent,1,2
-28,Ally Brooke,percent,1,3
 29,Charles Oakley,fair,15,15
 29,Carole Baskin,fair,14,14
 29,Anne Heche,fair,13,13
@@ -1012,10 +1012,10 @@
 29,AJ McLean,fair,7,7
 29,Johnny Weir,fair,6,6
 29,Skai Jackson,fair,5,5
+29,Nev Schulman,fair,1,2
 29,Nelly,fair,1,3
 29,Kaitlyn Bristowe,fair,1,1
 29,Justina Machado,fair,1,4
-29,Nev Schulman,fair,1,2
 29,Charles Oakley,rank,15,15
 29,Carole Baskin,rank,14,14
 29,Anne Heche,rank,13,13
@@ -1027,10 +1027,10 @@
 29,AJ McLean,rank,7,7
 29,Skai Jackson,rank,6,5
 29,Johnny Weir,rank,5,6
+29,Nev Schulman,rank,1,2
 29,Nelly,rank,1,3
 29,Kaitlyn Bristowe,rank,1,1
 29,Justina Machado,rank,1,4
-29,Nev Schulman,rank,1,2
 29,Charles Oakley,percent,15,15
 29,Carole Baskin,percent,14,14
 29,Anne Heche,percent,13,13
@@ -1042,10 +1042,10 @@
 29,AJ McLean,percent,7,7
 29,Johnny Weir,percent,6,6
 29,Skai Jackson,percent,5,5
+29,Nev Schulman,percent,1,2
 29,Nelly,percent,1,3
 29,Kaitlyn Bristowe,percent,1,1
 29,Justina Machado,percent,1,4
-29,Nev Schulman,percent,1,2
 30,Martin Kove,fair,15,15
 30,Christine Chiu,fair,14,14
 30,Brian Austin Green,fair,13,13
@@ -1058,9 +1058,9 @@
 30,Melora Hardin,fair,6,6
 30,Suni Lee,fair,5,5
 30,Cody Rigsby,fair,1,3
-30,JoJo Siwa,fair,1,2
-30,Amanda Kloots,fair,1,4
 30,Iman Shumpert,fair,1,1
+30,Amanda Kloots,fair,1,4
+30,JoJo Siwa,fair,1,2
 30,Martin Kove,rank,15,15
 30,Christine Chiu,rank,14,14
 30,Matt James,rank,13,12
@@ -1073,9 +1073,9 @@
 30,Suni Lee,rank,6,5
 30,Melora Hardin,rank,5,6
 30,Cody Rigsby,rank,1,3
-30,JoJo Siwa,rank,1,2
-30,Amanda Kloots,rank,1,4
 30,Iman Shumpert,rank,1,1
+30,Amanda Kloots,rank,1,4
+30,JoJo Siwa,rank,1,2
 30,Martin Kove,percent,15,15
 30,Christine Chiu,percent,14,14
 30,Brian Austin Green,percent,13,13
@@ -1088,9 +1088,9 @@
 30,Melora Hardin,percent,6,6
 30,Suni Lee,percent,5,5
 30,Cody Rigsby,percent,1,3
-30,JoJo Siwa,percent,1,2
-30,Amanda Kloots,percent,1,4
 30,Iman Shumpert,percent,1,1
+30,Amanda Kloots,percent,1,4
+30,JoJo Siwa,percent,1,2
 31,Jason Lewis,fair,16,16
 31,Teresa Giudice,fair,15,15
 31,Cheryl Ladd,fair,14,14
@@ -1103,10 +1103,10 @@
 31,Heidi D'Amelio,fair,7,8
 31,Trevor Donovan,fair,6,6
 31,Daniel Durant,fair,5,5
-31,Charli D'Amelio,fair,1,1
-31,Gabby Windey,fair,1,2
 31,Wayne Brady,fair,1,3
 31,Shangela,fair,1,4
+31,Charli D'Amelio,fair,1,1
+31,Gabby Windey,fair,1,2
 31,Jason Lewis,rank,16,16
 31,Teresa Giudice,rank,15,15
 31,Cheryl Ladd,rank,14,14
@@ -1119,10 +1119,10 @@
 31,Vinny Guadagnino,rank,7,7
 31,Daniel Durant,rank,6,5
 31,Trevor Donovan,rank,5,6
-31,Charli D'Amelio,rank,1,1
-31,Gabby Windey,rank,1,2
 31,Wayne Brady,rank,1,3
 31,Shangela,rank,1,4
+31,Charli D'Amelio,rank,1,1
+31,Gabby Windey,rank,1,2
 31,Jason Lewis,percent,16,16
 31,Teresa Giudice,percent,15,15
 31,Cheryl Ladd,percent,14,14
@@ -1135,10 +1135,10 @@
 31,Heidi D'Amelio,percent,7,8
 31,Trevor Donovan,percent,6,6
 31,Daniel Durant,percent,5,5
-31,Charli D'Amelio,percent,1,1
-31,Gabby Windey,percent,1,2
 31,Wayne Brady,percent,1,3
 31,Shangela,percent,1,4
+31,Charli D'Amelio,percent,1,1
+31,Gabby Windey,percent,1,2
 32,Matt Walsh,fair,14,14
 32,Jamie Lynn Spears,fair,13,13
 32,Tyson Beckford,fair,12,12
@@ -1149,10 +1149,10 @@
 32,Barry Williams,fair,7,7
 32,Harry Jowsey,fair,6,6
 32,Ariana Madix,fair,1,3
-32,Xochitl Gomez,fair,1,1
-32,Charity Lawson,fair,1,4
-32,Alyson Hannigan,fair,1,5
 32,Jason Mraz,fair,1,2
+32,Xochitl Gomez,fair,1,1
+32,Alyson Hannigan,fair,1,5
+32,Charity Lawson,fair,1,4
 32,Matt Walsh,rank,14,14
 32,Jamie Lynn Spears,rank,13,13
 32,Tyson Beckford,rank,12,12
@@ -1163,10 +1163,10 @@
 32,Barry Williams,rank,7,7
 32,Harry Jowsey,rank,6,6
 32,Ariana Madix,rank,1,3
-32,Xochitl Gomez,rank,1,1
-32,Charity Lawson,rank,1,4
-32,Alyson Hannigan,rank,1,5
 32,Jason Mraz,rank,1,2
+32,Xochitl Gomez,rank,1,1
+32,Alyson Hannigan,rank,1,5
+32,Charity Lawson,rank,1,4
 32,Matt Walsh,percent,14,14
 32,Jamie Lynn Spears,percent,13,13
 32,Tyson Beckford,percent,12,12
@@ -1177,10 +1177,10 @@
 32,Barry Williams,percent,7,7
 32,Harry Jowsey,percent,6,6
 32,Ariana Madix,percent,1,3
-32,Xochitl Gomez,percent,1,1
-32,Charity Lawson,percent,1,4
-32,Alyson Hannigan,percent,1,5
 32,Jason Mraz,percent,1,2
+32,Xochitl Gomez,percent,1,1
+32,Alyson Hannigan,percent,1,5
+32,Charity Lawson,percent,1,4
 33,Anna Delvey,fair,13,12
 33,Tori Spelling,fair,12,12
 33,Reginald VelJohnson,fair,11,10
@@ -1190,9 +1190,9 @@
 33,Jenn Tran,fair,7,7
 33,Dwight Howard ,fair,6,6
 33,Ilona Maher,fair,1,2
+33,Chandler Kinney,fair,1,3
 33,Danny Amendola,fair,1,5
 33,Stephen Nedoroscik,fair,1,4
-33,Chandler Kinney,fair,1,3
 33,Joey Graziadei,fair,1,1
 33,Tori Spelling,rank,13,12
 33,Anna Delvey,rank,12,12
@@ -1203,9 +1203,9 @@
 33,Jenn Tran,rank,7,7
 33,Dwight Howard ,rank,6,6
 33,Ilona Maher,rank,1,2
+33,Chandler Kinney,rank,1,3
 33,Danny Amendola,rank,1,5
 33,Stephen Nedoroscik,rank,1,4
-33,Chandler Kinney,rank,1,3
 33,Joey Graziadei,rank,1,1
 33,Anna Delvey,percent,13,12
 33,Tori Spelling,percent,12,12
@@ -1216,9 +1216,9 @@
 33,Jenn Tran,percent,7,7
 33,Dwight Howard ,percent,6,6
 33,Ilona Maher,percent,1,2
+33,Chandler Kinney,percent,1,3
 33,Danny Amendola,percent,1,5
 33,Stephen Nedoroscik,percent,1,4
-33,Chandler Kinney,percent,1,3
 33,Joey Graziadei,percent,1,1
 34,Corey Feldman,fair,14,13
 34,Baron Davis,fair,13,13
@@ -1229,11 +1229,11 @@
 34,Danielle Fishel,fair,8,8
 34,Andy Richter,fair,7,7
 34,Whitney Leavitt,fair,6,6
-34,Alix Earle,fair,1,2
 34,Robert Irwin,fair,1,1
 34,Dylan Efron,fair,1,4
-34,Jordan Chiles,fair,1,3
 34,Elaine Hendrix,fair,1,5
+34,Jordan Chiles,fair,1,3
+34,Alix Earle,fair,1,2
 34,Baron Davis,rank,14,13
 34,Corey Feldman,rank,13,13
 34,Lauren Jauregui,rank,12,12
@@ -1243,11 +1243,11 @@
 34,Danielle Fishel,rank,8,8
 34,Andy Richter,rank,7,7
 34,Whitney Leavitt,rank,6,6
-34,Alix Earle,rank,1,2
 34,Robert Irwin,rank,1,1
 34,Dylan Efron,rank,1,4
-34,Jordan Chiles,rank,1,3
 34,Elaine Hendrix,rank,1,5
+34,Jordan Chiles,rank,1,3
+34,Alix Earle,rank,1,2
 34,Corey Feldman,percent,14,13
 34,Baron Davis,percent,13,13
 34,Lauren Jauregui,percent,12,12
@@ -1257,8 +1257,8 @@
 34,Danielle Fishel,percent,8,8
 34,Andy Richter,percent,7,7
 34,Whitney Leavitt,percent,6,6
-34,Alix Earle,percent,1,2
 34,Robert Irwin,percent,1,1
 34,Dylan Efron,percent,1,4
-34,Jordan Chiles,percent,1,3
 34,Elaine Hendrix,percent,1,5
+34,Jordan Chiles,percent,1,3
+34,Alix Earle,percent,1,2
