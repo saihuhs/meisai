@@ -1263,29 +1263,18 @@
 17,11,Amber Riley,Derek Hough,Actor/Actress,California,United States,27,10.4444,0.2736538357406239,0.27365383574062396
 17,11,Bill Engvall,Emma Slater,Comedian,Texas,United States,56,8.499966666666666,0.2227077172456798,0.22270771724567986
 17,11,Jack Osbourne,Cheryl Burke,TV Personality,,England,27,9.3333,0.2445418927959448,0.2445418927959448
-18,1,Billy Dee Williams,Emma Slater,Actor/Actress,New York,United States,76,5.0,0.1013185287994448,0.05725190839694657
-18,1,Danica McKellar,Valentin Chmerkovskiy,Actor/Actress,California,United States,39,8.0,0.0898681471200555,0.0916030534351145
-18,1,James Maslow,Peta Murgatroyd,Actor/Actress,New York,United States,23,7.0,0.0898681471200555,0.0801526717557252
-18,1,Candace Cameron Bure,Mark Ballas,Actor/Actress,California,United States,37,8.333333333333334,0.0898681471200555,0.09541984732824428
-18,1,Sean Avery,Karina Smirnoff,Athlete,,Canada,33,6.666666666666667,0.0898681471200555,0.07633587786259542
-18,1,Diana Nyad,Henry Byalikov,Athlete,New York,United States,64,6.0,0.0,0.06870229007633588
-18,1,Charlie White,Sharna Burgess,Athlete,Michigan,United States,26,9.0,0.0898681471200555,0.10305343511450382
-18,1,Amy Purdy,Derek Hough,Athlete,Nevada,United States,34,8.0,0.0898681471200555,0.0916030534351145
-18,1,Meryl Davis,Maksim Chmerkoskiy,Athlete,Michigan,United States,27,8.0,0.0898681471200555,0.0916030534351145
-18,1,Drew Carey,Cheryl Burke,Comedian,Ohio,United States,55,7.0,0.0898681471200555,0.0801526717557252
-18,1,Cody Simpson,Witney Carson,Singer/Rapper,,Australia,17,7.333333333333333,0.0898681471200555,0.08396946564885496
-18,1,NeNe Leakes,Tony Dovolani,TV Personality,New York,United States,46,7.0,0.0898681471200555,0.0801526717557252
-18,2,Billy Dee Williams,Emma Slater,Actor/Actress,New York,United States,76,5.0,0.0,0.06147540983606558
-18,2,Danica McKellar,Valentin Chmerkovskiy,Actor/Actress,California,United States,39,8.0,0.1111111111111111,0.09836065573770493
-18,2,James Maslow,Peta Murgatroyd,Actor/Actress,New York,United States,23,8.333333333333334,0.1111111111111111,0.10245901639344264
-18,2,Candace Cameron Bure,Mark Ballas,Actor/Actress,California,United States,37,7.0,0.1111111111111111,0.0860655737704918
-18,2,Sean Avery,Karina Smirnoff,Athlete,,Canada,33,7.0,0.0,0.0860655737704918
-18,2,Charlie White,Sharna Burgess,Athlete,Michigan,United States,26,8.333333333333334,0.1111111111111111,0.10245901639344264
-18,2,Amy Purdy,Derek Hough,Athlete,Nevada,United States,34,8.0,0.1111111111111111,0.09836065573770493
-18,2,Meryl Davis,Maksim Chmerkoskiy,Athlete,Michigan,United States,27,8.333333333333334,0.1111111111111111,0.10245901639344264
-18,2,Drew Carey,Cheryl Burke,Comedian,Ohio,United States,55,7.0,0.1111111111111111,0.0860655737704918
-18,2,Cody Simpson,Witney Carson,Singer/Rapper,,Australia,17,7.333333333333333,0.1111111111111111,0.09016393442622951
-18,2,NeNe Leakes,Tony Dovolani,TV Personality,New York,United States,46,7.0,0.1111111111111111,0.0860655737704918
+18,1,Billy Dee Williams,Emma Slater,Actor/Actress,New York,United States,76,5.0,0.0572519083969465,0.05725190839694657
+18,1,Danica McKellar,Valentin Chmerkovskiy,Actor/Actress,California,United States,39,8.0,0.0916030534351145,0.0916030534351145
+18,1,James Maslow,Peta Murgatroyd,Actor/Actress,New York,United States,23,7.0,0.0801526717557252,0.0801526717557252
+18,1,Candace Cameron Bure,Mark Ballas,Actor/Actress,California,United States,37,8.333333333333334,0.0954198473282442,0.09541984732824428
+18,1,Sean Avery,Karina Smirnoff,Athlete,,Canada,33,6.666666666666667,0.0763358778625954,0.07633587786259542
+18,1,Diana Nyad,Henry Byalikov,Athlete,New York,United States,64,6.0,0.0687022900763358,0.06870229007633588
+18,1,Charlie White,Sharna Burgess,Athlete,Michigan,United States,26,9.0,0.1030534351145038,0.10305343511450382
+18,1,Amy Purdy,Derek Hough,Athlete,Nevada,United States,34,8.0,0.0916030534351145,0.0916030534351145
+18,1,Meryl Davis,Maksim Chmerkoskiy,Athlete,Michigan,United States,27,8.0,0.0916030534351145,0.0916030534351145
+18,1,Drew Carey,Cheryl Burke,Comedian,Ohio,United States,55,7.0,0.0801526717557252,0.0801526717557252
+18,1,Cody Simpson,Witney Carson,Singer/Rapper,,Australia,17,7.333333333333333,0.0839694656488549,0.08396946564885496
+18,1,NeNe Leakes,Tony Dovolani,TV Personality,New York,United States,46,7.0,0.0801526717557252,0.0801526717557252
 18,3,Danica McKellar,Valentin Chmerkovskiy,Actor/Actress,California,United States,39,9.0,0.1157556270096463,0.1157556270096463
 18,3,James Maslow,Peta Murgatroyd,Actor/Actress,New York,United States,23,9.0,0.1157556270096463,0.1157556270096463
 18,3,Candace Cameron Bure,Mark Ballas,Actor/Actress,California,United States,37,8.0,0.1028938906752411,0.10289389067524116

@@ -188,6 +188,25 @@ def last_active_week(row, weeks):
     return max(active_weeks) if active_weeks else 0
 
 
+def extract_elimination_week(row):
+    """
+    Extract elimination week from 'results' column using Regex as per guidelines.
+    Pattern: (Eliminated|Withdrew).*Week (\d+)
+    Returns the week number or NaN if not found.
+    """
+    import re
+    res = str(row.get("results", ""))
+    match = re.search(r"(Eliminated|Withdrew).*Week\s+(\d+)", res, re.IGNORECASE)
+    if match:
+        return int(match.group(2))
+    
+    # Handle Winner/Runner-up cases or active finalists
+    # If placement is 1, 2, 3, they are likely active until the end.
+    # But strictly speaking, the image asks to extract elimination week.
+    return np.nan
+
+
+
 def season_rule(season_number: int) -> str:
     """
     Voting scheme by season:
@@ -689,8 +708,32 @@ def main():
     weeks = identify_week_columns(df.columns)
     df = compute_week_scores(df, weeks)
 
-    # Compute last active week for each contestant
-    df["last_active_week"] = df.apply(lambda r: last_active_week(r, weeks), axis=1)
+    # -------------------------------------------------------------
+    # Data Cleaning Alignment with Problem Description
+    # -------------------------------------------------------------
+    # 1. Elimination Extraction via Regex
+    df["elimination_week_regex"] = df.apply(extract_elimination_week, axis=1)
+    
+    # 2. Last Active Week Calculation
+    # Priority: Use Regex extraction if available, otherwise fallback to score presence.
+    # Note: If someone withdrew in Week 4, they are active in Week 4?
+    # Usually "Eliminated Week 4" means they competed in Week 4 and left.
+    # So last_active_week should be 4.
+    
+    def determine_final_last_active(row):
+        score_last = last_active_week(row, weeks)
+        regex_last = row["elimination_week_regex"]
+        
+        # If regex provides a specific week, use it to validate or override
+        if pd.notna(regex_last):
+            # If regex says Eliminated Week X, they are active up to X.
+            return int(regex_last)
+        
+        # If no elimination info (e.g. Winner/Runner-up), rely on scores
+        return score_last
+
+    df["last_active_week"] = df.apply(determine_final_last_active, axis=1)
+    # -------------------------------------------------------------
 
     # Data quality checks
     quality_df = validate_data_quality(df, weeks)

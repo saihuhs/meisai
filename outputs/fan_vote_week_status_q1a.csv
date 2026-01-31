@@ -165,8 +165,8 @@
 17,9,percent,processed
 17,10,percent,processed
 17,11,percent,processed (no elimination)
-18,1,percent,processed
-18,2,percent,processed (multi elimination)
+18,1,percent,processed (no elimination)
+18,2,percent,no feasible fan shares (multi)
 18,3,percent,processed (no elimination)
 18,4,percent,processed (no elimination)
 18,5,percent,processed
