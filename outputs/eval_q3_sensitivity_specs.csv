@@ -1,0 +1,7 @@
+model,outcome,avg_abs_pro_coef
+Logit_SeasonWeekFE,judge,0.13252007338909838
+Logit_SeasonWeekFE,fan,1.3018352400931226
+Logit_SeasonOnlyFE,judge,0.23767193653525823
+Logit_SeasonOnlyFE,fan,1.3171575879043165
+Linear_SeasonWeekFE,judge,0.015551724077188377
+Linear_SeasonWeekFE,fan,0.03416354239265847
