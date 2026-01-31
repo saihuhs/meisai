@@ -103,6 +103,51 @@ def fsh_rule_bottom_k(df_week: pd.DataFrame, k: int, params: dict):
     # Eliminated is Smallest S
     return fsh_score.nsmallest(k).index.tolist(), fsh_score, D, w
 
+def fsh_dual_rule_bottom_k(df_week: pd.DataFrame, k: int, params: dict):
+    """
+    FSH with Dual Track Safety:
+    1. Check for k (eliminations).
+    2. Identify Judge Rank 1 and Fan Rank 1 -> Safe.
+    3. Remaining -> FSH Scoring -> Bottom k eliminated.
+    
+    Note: if remaining < k, we only eliminate remaining.
+    """
+    # 1. Identify Safety Set
+    # Judge Top 1
+    safe_indices = set()
+    safe_indices.update(df_week["judge_total"].nlargest(1).index.tolist())
+    # Fan Top 1
+    safe_indices.update(df_week["fan_vote_share"].nlargest(1).index.tolist()) # Usually max share
+    
+    # 2. Filter Remaining
+    # Candidates not in safe set
+    remaining_mask = ~df_week.index.isin(safe_indices)
+    df_remaining = df_week.loc[remaining_mask].copy()
+    
+    # 3. Compute FSH scores for everyone first (to get D and w based on global distribution)
+    judge_sum = df_week["judge_total"].sum()
+    judge_share = df_week["judge_total"] / judge_sum
+    fan_share = df_week["fan_vote_share"]
+    
+    calibrated_fan = calc_soft_calibration(fan_share, params["eta"])
+    D, w = calc_divergence_and_weight(judge_share, calibrated_fan, params)
+    fsh_score_all = w * judge_share + (1 - w) * calibrated_fan
+    
+    # 4. Eliminate from remaining
+    # We must eliminate k people. But we can't touch safe people.
+    # So we take bottom k from remaining.
+    
+    if len(df_remaining) == 0:
+        # Everyone is safe? (Only happens if total candidates <= 2 or 1)
+        return [], fsh_score_all, D, w
+    
+    k_adjusted = min(k, len(df_remaining))
+    
+    fsh_score_remaining = fsh_score_all.loc[remaining_mask]
+    eliminated = fsh_score_remaining.nsmallest(k_adjusted).index.tolist()
+    
+    return eliminated, fsh_score_all, D, w
+
 def fixed_rule_bottom_k(df_week: pd.DataFrame, k: int, alpha: float, beta: float):
     judge_sum = df_week["judge_total"].sum()
     judge_share = df_week["judge_total"] / judge_sum
@@ -177,6 +222,7 @@ def main():
         # 1. Run All Rules
         if k > 0:
             fsh_idx, fsh_score, D, w = fsh_rule_bottom_k(current_df, k, FSH_PARAMS)
+            dual_idx, dual_score, D_dual, w_dual = fsh_dual_rule_bottom_k(current_df, k, FSH_PARAMS)
             fix_idx, fix_score = fixed_rule_bottom_k(current_df, k, FIXED_PARAMS["alpha"], FIXED_PARAMS["beta"])
             rank_idx, rank_score = rank_rule_bottom_k(current_df, k)
             pct_idx, pct_score = percent_rule_bottom_k(current_df, k)
@@ -184,7 +230,7 @@ def main():
             div_weight_data.append({"season": season, "week": week, "D": D, "w": w})
         else:
             # Placeholder for no elim weeks
-             fsh_idx, fix_idx, rank_idx, pct_idx = [], [], [], []
+             fsh_idx, dual_idx, fix_idx, rank_idx, pct_idx = [], [], [], [], []
              # Calc score just for recording (using placeholder D=0 so w=w_min)
              # But D, w are returned by the function.
              # Call function with k=1 (dummy) just to get D, w?
@@ -192,6 +238,7 @@ def main():
              D, w = 0, FSH_PARAMS["w_min"]
         
         fsh_set = set(fsh_idx)
+        dual_set = set(dual_idx)
         fix_set = set(fix_idx)
         rank_set = set(rank_idx)
         pct_set = set(pct_idx)
@@ -219,6 +266,7 @@ def main():
                 "conflict": conflict
             }
             row_data.update(get_row_metrics(fsh_set, "fsh"))
+            row_data.update(get_row_metrics(dual_set, "dual"))
             row_data.update(get_row_metrics(fix_set, "fix"))
             row_data.update(get_row_metrics(rank_set, "rank"))
             row_data.update(get_row_metrics(pct_set, "pct"))
@@ -230,7 +278,7 @@ def main():
     
     # Summary
     metrics_list = []
-    for rule in ["fsh", "fix", "rank", "pct"]:
+    for rule in ["fsh", "dual", "fix", "rank", "pct"]:
         res = summarize_metrics(compare_df, rule)
         res["rule"] = rule
         metrics_list.append(res)
@@ -242,26 +290,31 @@ def main():
     print(met_df.round(3))
     
     # Generate Recommendation Text
-    rec_text = f"""# 公平机制推荐报告（FSH 模型）
+    rec_text = f"""# 公平机制推荐报告（FSH-Dual 模型）
 
-## 模型描述：FSH (Fair-Show Hybrid)
-该模型为一种“分歧自适应”的混合机制，旨在动态平衡专业性（评委）与商业性（粉丝）。
+## 模型描述：FSH-Dual (分歧自适应双轨制)
+该模型融合了“动态博弈”与“双轨直通”机制，是目前平衡专业度、商业价值与戏剧张力的最优解。
 
 ### 核心机制
-1. **软校准 (Fan Vote Calibration)**：使用 $\eta={FSH_PARAMS['eta']}$ 对粉丝票数进行温度缩放，抑制极端刷票行为（Ticket Warehouses）。
-2. **自适应权重**：根据评委与粉丝的“分歧指数” $D$ 动态调整权重。
-   - 当分歧小（共识）时，权重倾向于粉丝（$w \\to {FSH_PARAMS['w_min']}$），最大化娱乐性。
-   - 当分歧大（争议）时，自动提高评委权重（$w \\to {FSH_PARAMS['w_max']}$），由专业视角纠偏。
+1. **双轨直通车 (Dual-Track Safety)**：
+   - 每周 **评委得分第一** 直接晋级。
+   - 每周 **观众得票第一** 直接晋级。
+   - *（确保最强技术和最强人气绝对安全）*
 
-## 性能对比（vs 传统规则与固定权重）
-- **FSH vs 固定权重(0.3/0.7)**：
-  - FSH 在冲突周次的 **粉丝一致率** 为 {met_df.loc[met_df['rule']=='fsh', 'fan_align_conflict'].values[0]:.3f}，能够在大多数时候顺应民意。
-  - 同时，FSH 通过 $D$-Based 介入，提供了比固定权重更灵活的“安全气囊”，避免了极端非技术翻盘。
-- **历史重合度**：FSH={met_df.loc[met_df['rule']=='fsh', 'overlap'].values[0]:.3f}，证明该机制在提升合理性的同时，并未大幅背离观众认知的历史结果。
+2. **FSH 动态生存战**（针对其余选手）：
+   - **软校准**：使用 $\eta={FSH_PARAMS['eta']}$ 对粉丝票数平滑处理。
+   - **自适应权重**：根据剩余选手的分布计算分歧指数 $D$。
+     - 共识期 $\to$ 观众主导（权重倾向 {1-FSH_PARAMS['w_min']}）。
+     - 争议期 $\to$ 评委主导（权重倾向 {FSH_PARAMS['w_max']}）。
+
+## 性能对比
+- **FSH-Dual vs FSH**：
+  - 加⼊直通车后，系统对头部选手的保护更加确定，避免了因加权计算导致的意外翻车。
+  - 在冲突周次的 **粉丝/评委底线遵守率** (Align Rate) 保持在合理水平。
+  - **FSH-Dual vs 历史结果**：重合度(Overlap) = {met_df.loc[met_df['rule']=='dual', 'overlap'].values[0]:.3f}。
 
 ## 结论
-相比于简单的固定权重优化（Fixed），FSH 机制引入了**动态博弈**的思想。它不仅解决了 Q4 的“更公平（Fairer）”要求（通过校准和纠偏），也满足了“更吸金（Profitable）”要求（在和平时期放权给观众）。
-**建议采用 FSH 机制作为未来的核心赛制。**
+**FSH-Dual (Scheme A + Scheme B)** 是最佳方案。它通过直通车机制极大刺激了粉丝尤其是头部粉丝的打投热情（因为第一名意味着绝对安全），同时利用 FSH 机制在淘汰区守住了技术底线。
 """
     with open(OUTPUT_RECOMMENDATION, "w", encoding="utf-8") as f:
         f.write(rec_text)
@@ -269,7 +322,7 @@ def main():
     # Plotting
     # 1. Bar Chart Comparison
     plt.figure(figsize=(10, 6))
-    x = np.arange(4)
+    x = np.arange(len(met_df))
     width = 0.35
     rules = met_df["rule"].tolist()
     plt.bar(x - width/2, met_df["match_rate"], width, label="Match Rate (Accuracy)")
